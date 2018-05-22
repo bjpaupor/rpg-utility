@@ -1,0 +1,130 @@
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/
+Name : Lord Landlubber
+Basic Name (Dinosaur):
+Short description: An imposing figure stands in segmented samurai armor, his katana wreathed in orange flames
+Title Name : Lord Landlubber
+CR: 6
+Type: Humanoid
+Terrain: Urban
+Climate: Temperate
+XP:2,400
+Race:Half-elf
+Number of classes with levels in (First is Favored):1
+Class: samurai (sword saint)
+Levels in class above:6
+Alignment:CE
+Size:Medium
+Number of subtypes:2
+Subtype:elf
+Subtype:human
+Init:5
+Number of senses (#I means to make italic, for spells):1
+Sense:low-light vision
+Perception:11
+Number of auras (#I means to make italic, for spells):0
+AC:21
+touch:12
+flat-footed:19
+Number of AC modifiers:2
+Modifier:9
+Type of above Modifier:armor
+Modifier:2
+Type of above Modifier:Dex
+Number of Conditional AC modifiers:0
+HP:68
+HP breakdown:6d10+18
+Fast Healing:0
+Regeneration:0
+fort:7
+ref:5
+will:2
+Number of Conditional Save modifiers:1
+Modifier:2
+Type of above Modifier:vs. enchantment
+Number of Defensive Abilities: 2
+Defensive Ability: self reliant
+Defensive Ability: resolve (3/day)
+DR: 0
+Immunities : 1
+Immunity:magic sleep
+Resistances: 0
+SR: 0
+Num of Weaknesses: 0
+Speed: 20
+Other Speeds(#B means base speed if reduced normally): 1
+Other Speed: #B30 ft.
+Melee: #I+1 #Iflaming #Ikatana +13/+8 (1d8+10 plus 1d6 fire/18–20)
+Ranged: mwk composite daikyu (+4 Str bonus) +10/+5 (1d8+4/19–20)
+Space: 5
+Reach: 5
+Num of Special Attacks: 2
+Special Attack: challenge (+6, +2 morale attack/+2 dodge AC vs. target if challenged/similar by target, 2/day)
+Special Attack: iaijutsu strike (+3d6, +3 confirm crit, Will DC 11)
+SLA Use Categories (1/day, 3/week, etc.): 0
+Spells Known Levels: 0
+Spells Prepared Levels: 0
+Before Combat:
+During Combat:
+Morale: 
+Base Statistics:
+Str:20
+Dex:16
+Con:14
+Int:10
+Wis:11
+Cha:7
+BAB:6
+CMB:11
+Num of Special CMBs:0
+CMD:24
+Num of Special CMDs:0
+Num of Feats: 5
+Feat: Intimidating Prowess
+Feat: Skill Focus (Perception)#UB
+Feat: Power Attack
+Feat: Weapon Focus (katana)
+Feat: Weapon Specialization (katana)#UB
+Num of Skills: 7
+Skill: Diplomacy +7
+Skill: Handle Animal +3
+Skill: Intimidate +15
+Skill: Perception +11
+Skill: Sense Motive +5
+Skill: Stealth +2
+Skill: Swim +8
+Num of Racial Mods: 1
+Racial Mod: +2 Perception
+Num of Lanugagues: 2
+Language: Common
+Language: Elven
+Num of Special Languages: 0
+Num of Special Qualities: 2
+SQ: ronin
+SQ: weapon expertise (katana)
+Num of Combat Gear: 1
+Combat Gear: #Ipotion #Iof #Ibull's #Istrength
+Num of Other Gear: 7
+Other Gear: #I+1 #IO-Yoroi
+Other Gear: #I+1 #Iflaming #Ikatana
+Other Gear: #Ibelt #Iof #Igiant's #Istrength #I+2
+Other Gear: masterwork composite daikyu (+4 Str bonus) with 40 arrows
+Other Gear: dagger
+Other Gear: figher's kit
+Other Gear: 1069 gp
+Environment: any
+Organization: solitary, pair, team (3–6), or crew (7–54)
+Treasure: PC gear
+Num of Special Abilities: 4
+Ability Name: Self Reliant (EX)
+Abliity Text: At 2nd level, the ronin learns to rely solely on himself, even in the most difficult of times. Whenever the ronin fails a Will saving throw against an effect with a duration greater than 1 round, he can attempt another saving throw at the end of the second round of the effect. If he makes this saving throw, it has the same effect as if he had made the original save (negating part or all of the effect). In addition, whenever a ronin is brought below 0 hit points, on his next turn he can roll twice to stabilize, taking the better result. 
+Num of Sub-Descriptions: 0
+Ability Name: Iaijutsu Strike (EX)
+Abliity Text: A sword saint can perform a lightning-quick iaijutsu strike against the target of his challenge to inflict devastating wounds while drawing his sword. After the sword saint has challenged a foe but before he has attacked the target of his challenge, he may choose to use his iaijutsu strike as a full-round action, making an attack roll with his weapon as normal. In order to use this ability, the sword saint’s weapon must be sheathed at the start of his turn. If he successfully hits his opponent with an iaijutsu strike, his attack deals an additional +1d6 points of damage. This bonus damage increases by an additional +1d6 at 3rd level and every two levels thereafter to a maximum of +10d6 damage at 19th level. Any extra damage as a result of a successful iaijutsu strike is not multiplied by a critical hit. After making an iaijutsu strike, a sword saint takes a –4 penalty to his AC until his next turn, but his weapon is now drawn and he may continually to fight normally. Regardless of whether he hits his opponent with the iaijutsu strike, a sword saint cannot use this ability on the same foe more than once per day. At 10th level, a sword saint learns to focus faster and is able to make an iaijutsu strike as a standard action, and the penalty to his AC is reduced to –2. This ability replaces a samurai’s mount.
+Num of Sub-Descriptions: 0
+Ability Name: Brutal Slash (EX)
+Abliity Text: At 3rd level, a sword saint’s iaijutsu strike becomes even more deadly. If a sword saint threatens a critical hit with his iaijutsu strike, he adds a bonus equal to 1/2 his class level to the attack roll to confirm a critical hit. This ability replaces mounted archer.
+Num of Sub-Descriptions: 0
+Ability Name: Terrifying Iaijutsu (EX)
+Abliity Text: At 5th level, a sword saint’s iaijutsu strike devastates the morale of foes that witness it. When a sword saint successfully hits with an iaijutsu strike, all foes within 30 feet must succeed at a Will save (DC 10 + 1/2 the sword saint’s class level + the sword saint’s Cha modifier) or become shaken for 1d4+1 rounds. This ability replaces banner.
+Num of Sub-Descriptions: 0
+Description: 

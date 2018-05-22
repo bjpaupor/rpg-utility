@@ -1,0 +1,91 @@
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/Hollow'sLastHope/
+Name : Zombie Kobold Shaman
+Basic Name (Dinosaur):
+Short description: The zombie kobold now wanders the forest aimlessly, wearing a crude wood sign bearing the word “shaman” in Draconic.
+Title Name : Zombie Kobold Shaman
+CR: 1/2
+Type: Undead
+Terrain: Ruins_Dungeon
+Climate: Temperate
+XP: 200
+Race: 
+Number of classes with levels in (First is Favored): 0
+Alignment:NE
+Size:Small
+Number of subtypes:1
+Subtype : reptilian
+Init:-1
+Number of senses (#I means to make italic, for spells):1
+Sense: darkvision 60 ft.
+Perception:+0
+Number of auras (#I means to make italic, for spells):0
+AC:12
+touch:10
+flat-footed:12
+Number of AC modifiers:3
+Modifier:-1
+Type of above Modifier: Dex
+Modifier: 2
+Type of above Modifier: natural
+Modifier: 1
+Type of above Modifier: size
+Number of Conditional AC modifiers:0
+HP:12
+HP breakdown:2d8+3
+Fast Healing:0
+Regeneration:0
+fort:0
+ref:-1
+will:3
+Number of Conditional Save modifiers:0
+Number of Defensive Abilities: 0
+DR: 5
+Bypass : slashing
+Immunities : 1
+Immunity : undead traits
+Resistances: 0
+SR: 0
+Num of Weaknesses: 0
+Speed: 30
+Other Speeds(#B means base speed if reduced normally): 0
+Melee: slam +1 (1d4-1)
+Ranged: 
+Space: 5
+Reach: 5
+Num of Special Attacks: 0
+SLA Use Categories (1/day, 3/week, etc.): 0
+Spells Known Levels: 0
+Spells Prepared Levels: 0
+Before Combat: 
+During Combat: 
+Morale: 
+Base Statistics:
+Str:8
+Dex:8
+Con:-25000
+Int:-25000
+Wis:10
+Cha:10
+BAB:1
+CMB:-1
+Num of Special CMBs:0
+CMD:8
+Num of Special CMDs:0
+Num of Feats: 1
+Feat: Toughness#UB
+Num of Skills: 0
+Num of Racial Mods: 0
+Num of Lanugagues: 0
+Num of Special Languages: 0
+Num of Special Qualities: 1
+SQ : staggered
+Num of Combat Gear: 0
+Num of Other Gear: 0
+Environment: any
+Organization: any
+Treasure: none
+Num of Special Abilities: 1
+Ability Name: Staggered (Ex)
+Abliity Text: Zombies have poor reflexes and can only perform a single move action or standard action each round. A zombie can move up to its speed and attack in the same round as a charge action.
+Number of Sub-descriptions: 0
+Description :

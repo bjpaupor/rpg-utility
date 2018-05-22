@@ -1,0 +1,92 @@
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/Hollow'sLastHope/
+Name : Dunlied
+Basic Name (Dinosaur):
+Short description: A particularly stout breed of small-antlered deer, often trained by foresters as mounts
+Title Name : Dunlied
+CR: 1
+Type: Animal
+Terrain: Plain
+Climate: Temperate
+XP: 400
+Race: 
+Number of classes with levels in (First is Favored): 0
+Alignment:N
+Size:Large
+Number of subtypes:0
+Init:2
+Number of senses (#I means to make italic, for spells):2
+Sense: low-light vision
+Sense: scent
+Perception:+6
+Number of auras (#I means to make italic, for spells):0
+AC:11
+touch:11
+flat-footed:9
+Number of AC modifiers:2
+Modifier:2
+Type of above Modifier: Dex
+Modifier:-1
+Type of above Modifier: size
+Number of Conditional AC modifiers:0
+HP:15
+HP breakdown:2d8+6
+Fast Healing:0
+Regeneration:0
+fort:6
+ref:5
+will:1
+Number of Conditional Save modifiers:0
+Number of Defensive Abilities: 0
+DR: 0
+Immunities : 2
+Immunity : paralysis
+Immunity : sleep
+Resistances: 0
+SR: 0
+Num of Weaknesses: 0
+Speed: 50
+Other Speeds(#B means base speed if reduced normally): 0
+Melee: 2 hooves –2 (1d4+1)
+Ranged: 
+Space: 10
+Reach: 5
+Num of Special Attacks: 0
+SLA Use Categories (1/day, 3/week, etc.): 0
+Spells Known Levels: 0
+Spells Prepared Levels: 0
+Before Combat: 
+During Combat: 
+Morale: 
+Base Statistics:
+Str:16
+Dex:14
+Con:17
+Int:2
+Wis:13
+Cha:7
+BAB:1
+CMB:5
+Num of Special CMBs:0
+CMD:17
+Num of Special CMDs:1
+Special CMD : 21 vs. trip
+Num of Feats: 2
+Feat: Endurance
+Feat: Run#UB
+Num of Skills: 1
+Skill: Perception +6
+Num of Racial Mods: 0
+Num of Lanugagues: 0
+Num of Special Languages: 0
+Num of Special Qualities: 1
+SQ : docile
+Num of Combat Gear: 0
+Num of Other Gear: 0
+Environment: temperate plains
+Organization: solitary, pair, or herd (3–30)
+Treasure: none
+Num of Special Abilities: 1
+Ability Name: Docile (Ex)
+Abliity Text: Unless specifically trained for combat, a dunlied’s hooves are treated as secondary attacks.
+Number of Sub-descriptions: 0
+Description :
