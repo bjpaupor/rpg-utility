@@ -1,0 +1,103 @@
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/Hollow'sLastHope/
+Name : Tatzlwyrm
+Basic Name (Dinosaur):
+Short description: This serpentine creature has the head of a ferocious dragon and two relatively small forearms that end in tiny claws.
+Title Name : Tatzlwyrm
+CR: 2
+Type: Dragon
+Terrain: Forest_Jungle
+Climate: Temperate
+XP: 600
+Race: 
+Number of classes with levels in (First is Favored): 0
+Alignment:N
+Size:Medium
+Number of subtypes:0
+Init:2
+Number of senses (#I means to make italic, for spells):2
+Sense:darkvision 60ft.
+Sense: low-light vision
+Perception:+8
+Number of auras (#I means to make italic, for spells):0
+AC:15
+touch:12
+flat-footed:13
+Number of AC modifiers:2
+Modifier:2
+Type of above Modifier: Dex
+Modifier:3
+Type of above Modifier: natural
+Number of Conditional AC modifiers:0
+HP:22
+HP breakdown:3d12+3
+Fast Healing:0
+Regeneration:0
+fort:4
+ref:5
+will:5
+Number of Conditional Save modifiers:0
+Number of Defensive Abilities: 0
+DR: 0
+Immunities : 2
+Immunity : paralysis
+Immunity : sleep
+Resistances: 0
+SR: 0
+Num of Weaknesses: 0
+Speed: 30
+Other Speeds(#B means base speed if reduced normally): 1
+Other Speed : climb 30 ft.
+Melee: bite +5 (1d8+3 plus grab)
+Ranged: 
+Space: 5
+Reach: 5
+Num of Special Attacks: 3
+Special Attack : poison gasp
+Special Attack : pounce
+Special Attack : rake (2 claws +5, 1d4+2)
+SLA Use Categories (1/day, 3/week, etc.): 0
+Spells Known Levels: 0
+Spells Prepared Levels: 0
+Before Combat: Tatzlwyrms attempt to remain hidden before attacking their prey, preferring areas of dense vegetation.
+During Combat: Tatzlwyrms attempt to charge as often as possible, using their pounce and rake abilities. Given the opportunity, they grapple their foes and use their poison gasp.
+Morale: If reduced to 7 or fewer hit points, tatzlwyrms attempt to flee.
+Base Statistics:
+Str:14
+Dex:15
+Con:12
+Int:5
+Wis:14
+Cha:11
+BAB:3
+CMB:5
+Num of Special CMBs:1
+Special CMB : +9 grapple
+CMD:17
+Num of Special CMDs:1
+Special CMD : can't be tripped
+Num of Feats: 2
+Feat: Nimble Moves
+Feat: Stealthy
+Num of Skills: 5
+Skill: Climb +14
+Skill: Escape Artist +5
+Skill: Intimidate +4
+Skill: Perception +8
+Skill: Stealth +10 (+16 in dense vegetation)
+Num of Racial Mods: 1
+Racial Mod: +6 Stealth in dense vegetation 
+Num of Lanugagues: 1
+Language: Draconic
+Num of Special Languages: 0
+Num of Special Qualities: 0
+Num of Combat Gear: 0
+Num of Other Gear: 0
+Environment: any forests
+Organization: solitary or nest (2–5)
+Treasure: standard
+Num of Special Abilities: 1
+Ability Name: Poison Gasp (Ex)
+Abliity Text: A tatzlwyrm’s breath contains a poisonous vapor. While grappling, instead of making a bite or rake attack, a tatzlwyrm can breathe poison into its victim’s face. A tatzlwyrm must begin its turn grappling to use this ability—it can’t begin a grapple and use its poison gasp in the same turn.
+Num of Sub-Descriptions: 1
+Sub Description : #ITatzlwyrm #Ipoison#: Breath—inhaled; #Isave Fort DC 12; #Ifrequency 1/round for 2 rounds; #Ieffect 1d2 Str damage; #Icure 1 save. The save DC is Constitution-based.
+Description: Tatzlwyrms are thought to be primeval relatives of true dragons, having branched off the line millennia ago and evolved in a way that sets them notably apart. Undersized compared to their larger cousins, tatzlwyrms are nonetheless ferocious in their own right. And while tatzlwyrms are hardly impressive specimens when put beside their notorious relatives, most other reptiles can’t compare to them mentally. They understand Draconic, though other languages are beyond most tatzlwyrms’ limited comprehension. Nevertheless, tatzlwyrms are deeply cunning, building complex lairs and rudimentary traps. #PTatzlwyrms are quite rare, and only a few particularly curious and lucky adventurers can claim to have seen a living specimen. Reports do agree on some basic features, however. About the size of a full-grown human, tatzlwyrms have only two limbs and no wings, and possess a weak poisonous breath similar to the breath weapons of their true dragon relatives. An adult tatzlwyrm is 6 to 8 feet long, including its winding, organless tail, and it weighs between 400 and 500 pounds. A tatzlwyrm’s scales give the creature limited camouflage, ranging through various shades of green, brown, and gray. #PLike true dragons, tatzlwyrms are strict carnivores. They spend most of their time hiding, waiting to attack any prey that ventures too near. They consume their food slowly in the dark security and seclusion of their lairs. Tatzlwyrms have a remarkable knack for ambush and camouflage.
