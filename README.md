@@ -10,7 +10,3 @@ The tool that are being worked on currently and the goals of each:
 Ideas for tools that may be worked on in the future:
 - Item Cards
 - Spell Cards
- 
-Credits:
-Images for Creature types, terrains, climates from Bestiary 1 by Paizo Publishing
-- temporary, to be replaced with alternatives
