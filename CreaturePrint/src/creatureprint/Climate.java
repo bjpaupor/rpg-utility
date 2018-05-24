@@ -25,4 +25,7 @@ public enum Climate {
 	public String getPic() {
 		return "src/Pictures/CreatureClimates/Temperate.png";
 	}
+	public static void main(String[] args) {
+		
+	}
 }

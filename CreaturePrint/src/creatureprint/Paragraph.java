@@ -1,6 +1,5 @@
 package creatureprint;
 
-import java.awt.Color;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -84,18 +83,16 @@ public class Paragraph {
     public static void main(String[] args) {
     	PDFont font = PDType1Font.TIMES_ROMAN;
     	int fontSize = 10;
-    	Color color = Color.BLACK;
     	String longText = "Nine lantern archons can fuse together as a full-round action, becoming a single Large entity that is more powerful than the individual archons that make up its parts. Looking like a whirlwind of dancing firefly lights, the gestalt has all the powers and abilities of a Large air elemental plus the following: archon, good, and lawful subtypes; archon traits (aura of menace DC 16); 2 light rays (2d6); DR 5/evil and magic. The archons can remain in this form for 2d4 rounds. When the gestalt separates back into individual lantern archons, its remaining hit points are divided evenly among them; if it had less than 9 hit points, some of the component archons die when the gestalt ends." + "";
     	try (PDDocument pdoc = new PDDocument();) {
 			PDPage page = new PDPage();
 			PDPageContentStream contentStream = new PDPageContentStream(pdoc, page);
 			contentStream.setFont( font, fontSize );
-			contentStream.setNonStrokingColor(color);
+			System.out.println(font.getFontDescriptor().getFontBoundingBox().getHeight() / 1000 * fontSize);
 			contentStream.setLeading(font.getFontDescriptor().getFontBoundingBox().getHeight() / 1000 * fontSize);
 			Paragraph paragraph = new Paragraph(200, font, fontSize, longText);
-			PDRectangle mediaBox = PDRectangle.LETTER;
 			contentStream.beginText();
-			contentStream.newLineAtOffset(.9f * 72, mediaBox.getHeight() - (.9f * 72));
+			contentStream.newLineAtOffset(.9f * 72, PDRectangle.LETTER.getHeight() - (.9f * 72));
 	    	for (String line : paragraph.getLines()) {
 	    	    // increase value of position Y to mimic line breaking
 	    	    contentStream.showText(line);

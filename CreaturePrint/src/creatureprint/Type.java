@@ -70,4 +70,7 @@ public enum Type {
 	public String getPic() {
 		return null;
 	}
+	public static void main(String[] args) {
+		
+	}
 }

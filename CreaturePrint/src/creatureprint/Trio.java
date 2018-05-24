@@ -27,4 +27,7 @@ public class Trio<X, Y, Z> {
 	public void setZ(Z z) {
 		this.z = z;
 	}
+	public static void main(String[] args) {
+		
+	}
 }

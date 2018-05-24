@@ -187,6 +187,7 @@ public class Creature {
 				String modifierTypeAndCondition = readALine(read);
 				saveModifiers[i] = new Pair<Integer, String>(modifier, modifierTypeAndCondition);
 			}
+			
 			defensiveAbilities = new String[Integer.parseInt(readALine(read))];
 			for (int i = 0; i < defensiveAbilities.length; i++)
 				defensiveAbilities[i] = readALine(read);
@@ -2208,21 +2209,27 @@ public class Creature {
 		}
 		return lineNumber;
 	}
-	private void drawPictures(PDPageContentStream contentStream, PDDocument pdoc) throws IOException {
+	private void drawPictures(PDPageContentStream contentStream, PDDocument pdoc) {
+		try {
 		contentStream.drawImage(PDImageXObject.createFromFile(type.getPic() , pdoc), 458, shortDesc.length() > 62 ? 638 : 655);
 		contentStream.drawImage(PDImageXObject.createFromFile(terrain.getPic() , pdoc), 490, shortDesc.length() > 62 ? 638 : 655);
 		contentStream.drawImage(PDImageXObject.createFromFile(climate.getPic() , pdoc), 522, shortDesc.length() > 62 ? 638 : 655);
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("->The images at the top right didn't print because they don't exist. You can add them yourself if you'd like.");
+			return;
+		}
 	}
 	//Prints every creature within the given folder
 	public static void printSet(String folderPath) throws IOException {
 		try (Stream<Path> paths = Files.walk(Paths.get(folderPath))) {
 		    paths
 		        .filter(Files::isRegularFile)
-		        .forEach(s -> new Creature(s.toString()).printToPdf()); 
+		    	.forEach(s -> new Creature(s.toString()).printToPdf()); 
 		} 
 	}
-	public static void main(String[] args) throws IOException  {
-		printSet("src/CreatureFiles/Hollow'sLastHope/");
+	public static void main(String[] args) throws IOException {
+		//printSet("src/CreatureFiles/Hollow'sLastHope/");
 		printSet("src/CreatureFiles/StrangeAeonsPC's/");
 		//Creature d = new Creature("src/CreatureFiles/Monty.creature");
 		//d.printToPdf();

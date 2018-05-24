@@ -19,4 +19,7 @@ public class Pair<X, Y> {
 	public void setY(Y y) {
 		this.y = y;
 	}
+	public static void main(String[] args) {
+		
+	}
 }
