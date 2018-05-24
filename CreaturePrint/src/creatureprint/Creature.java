@@ -14,6 +14,7 @@ import java.util.stream.Stream;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
+import org.apache.pdfbox.pdmodel.common.PDRectangle;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
 import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject;
 
@@ -2057,8 +2058,9 @@ public class Creature {
 		return writeAuras(contentStream, lineNumber);
 	}
 	private void writeHeader(PDPageContentStream contentStream) throws IOException {
-		contentStream.newLineAtOffset(50, 715);
-		contentStream.setFont(PDType1Font.TIMES_BOLD, 38);
+		int titleSize = 38;
+		contentStream.newLineAtOffset(.9f * 72, PDRectangle.LETTER.getHeight() - .9f * 72 - PDType1Font.TIMES_BOLD.getFontDescriptor().getCapHeight() / 1000 * titleSize);
+		contentStream.setFont(PDType1Font.TIMES_BOLD, titleSize);
 		if (!basicName.equals(""))
 			contentStream.showText(basicName.toUpperCase() +", " + name.toUpperCase());
 		else
@@ -2230,7 +2232,7 @@ public class Creature {
 	}
 	public static void main(String[] args) throws IOException {
 		//printSet("src/CreatureFiles/Hollow'sLastHope/");
-		printSet("src/CreatureFiles/StrangeAeonsPC's/");
+		printSet("src/CreatureFiles/Bestiary1/");
 		//Creature d = new Creature("src/CreatureFiles/Monty.creature");
 		//d.printToPdf();
 		//d.saveToFile();
