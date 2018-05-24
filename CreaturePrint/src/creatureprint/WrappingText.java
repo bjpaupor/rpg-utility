@@ -11,10 +11,10 @@ import org.apache.pdfbox.pdmodel.common.PDRectangle;
 import org.apache.pdfbox.pdmodel.font.PDFont;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
 
-public class Paragraph {
+public class WrappingText {
 
     /** width of this paragraph */
-    private int width;
+    private float width;
 
     /** text to write */
     private String text;
@@ -23,9 +23,9 @@ public class Paragraph {
     private PDFont font;
 
     /** font size to use */
-    private int fontSize;
+    private float fontSize;
 
-    public Paragraph(int width, PDFont font, int fontSize, String text) {
+    public WrappingText(String text, PDFont font, float width, float fontSize) {
         this.text = text;
         this.font = font;
         this.width = width;
@@ -65,7 +65,7 @@ public class Paragraph {
         return font.getFontDescriptor().getFontBoundingBox().getHeight() / 1000 * fontSize;
     }
 
-    public int getWidth() {
+    public float getWidth() {
         return width;
     }
 
@@ -77,7 +77,7 @@ public class Paragraph {
         return font;
     }
 
-    public int getFontSize() {
+    public float getFontSize() {
         return fontSize;
     }
     public static void main(String[] args) {
@@ -90,7 +90,7 @@ public class Paragraph {
 			contentStream.setFont( font, fontSize );
 			System.out.println(font.getFontDescriptor().getFontBoundingBox().getHeight() / 1000 * fontSize);
 			contentStream.setLeading(font.getFontDescriptor().getFontBoundingBox().getHeight() / 1000 * fontSize);
-			Paragraph paragraph = new Paragraph(200, font, fontSize, longText);
+			WrappingText paragraph = new WrappingText(longText, font, 200, fontSize);
 			contentStream.beginText();
 			contentStream.newLineAtOffset(.9f * 72, PDRectangle.LETTER.getHeight() - (.9f * 72));
 	    	for (String line : paragraph.getLines()) {

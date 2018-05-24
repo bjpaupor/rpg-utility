@@ -15,6 +15,7 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
 import org.apache.pdfbox.pdmodel.common.PDRectangle;
+import org.apache.pdfbox.pdmodel.font.PDFont;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
 import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject;
 
@@ -25,6 +26,7 @@ public class Creature {
 	private String fileName;
 	private String basicName;
 	private String shortDesc;
+	private boolean shortDescLong;
 	private String titleName;
 	private String cr;
 	private Type type;
@@ -621,15 +623,15 @@ public class Creature {
 	 * @throws IOException
 	 */
 	private int nextLine(PDPageContentStream contentStream, int lineNumber) throws IOException {
-		if (lineNumber == 53 && shortDesc.length() > 62) 
+		if (lineNumber == 53 && shortDescLong) 
 			contentStream.newLineAtOffset(256, 583);
-		else if (lineNumber == 55 && shortDesc.length() < 63) 
+		else if (lineNumber == 55 && !shortDescLong) 
 			contentStream.newLineAtOffset(256, 605);
-		else if (lineNumber == 107 && shortDesc.length() > 62) {
+		else if (lineNumber == 107 && shortDescLong) {
 			//TODO Handle page turn
 			contentStream.newLine();
 		}
-		else if (lineNumber == 111 && shortDesc.length() < 63) {
+		else if (lineNumber == 111 && !shortDescLong) {
 			//TODO Handle page turn
 			contentStream.newLine();
 		}
@@ -2058,34 +2060,44 @@ public class Creature {
 		return writeAuras(contentStream, lineNumber);
 	}
 	private void writeHeader(PDPageContentStream contentStream) throws IOException {
-		int titleSize = 38;
-		contentStream.newLineAtOffset(.9f * 72, PDRectangle.LETTER.getHeight() - .9f * 72 - PDType1Font.TIMES_BOLD.getFontDescriptor().getCapHeight() / 1000 * titleSize);
-		contentStream.setFont(PDType1Font.TIMES_BOLD, titleSize);
+		//Image locations depend on some of these values
+		float nameSize = 38, shortDescSize = 18, titleNameSize = 18, border = .9f * 72;
+		PDFont italics = PDType1Font.TIMES_ITALIC, bold = PDType1Font.TIMES_BOLD, normal = PDType1Font.TIMES_ROMAN;
+		contentStream.newLineAtOffset(border, PDRectangle.LETTER.getHeight() - border - bold.getFontDescriptor().getCapHeight() / 1000 * nameSize);
+		contentStream.setFont(bold, nameSize);
 		if (!basicName.equals(""))
 			contentStream.showText(basicName.toUpperCase() +", " + name.toUpperCase());
 		else
 			contentStream.showText(name.toUpperCase());
-		contentStream.setLeading(22);
-		contentStream.newLine();
-		contentStream.setLeading(18);
-		contentStream.setFont(PDType1Font.TIMES_ITALIC, (float) 19.5);
-		if (shortDesc.length() > 62) {
-			int lineBreak = 62;
-			char c = shortDesc.charAt(62);
-			while (c != ' ') 
-				c = shortDesc.charAt(--lineBreak);
-			contentStream.showText(shortDesc.substring(0, lineBreak));
+		contentStream.setLeading(italics.getFontDescriptor().getFontBoundingBox().getHeight() / 1000 * shortDescSize);
+		contentStream.setFont(italics, shortDescSize);
+		WrappingText shortDesc = new WrappingText(this.shortDesc, italics, PDRectangle.LETTER.getWidth() - 2 * border, shortDescSize);
+		for (String s : shortDesc.getLines()) {
 			contentStream.newLine();
-			contentStream.showText(shortDesc.substring(lineBreak));
+			contentStream.showText(s);
 		}
+		if (shortDesc.getLines().size() > 1)
+			shortDescLong = true;
 		else
-			contentStream.showText(shortDesc);
-		contentStream.newLineAtOffset(0, -27);
-		contentStream.setFont(PDType1Font.TIMES_ROMAN, 18);
+			shortDescLong = false;
+//		if (shortDesc.length() > 62) {
+//			int lineBreak = 62;
+//			char c = shortDesc.charAt(62);
+//			while (c != ' ') 
+//				c = shortDesc.charAt(--lineBreak);
+//			contentStream.showText(shortDesc.substring(0, lineBreak));
+//			contentStream.newLine();
+//			contentStream.showText(shortDesc.substring(lineBreak));
+//		}
+//		else
+//			contentStream.showText(shortDesc);
+		contentStream.setLeading(normal.getFontDescriptor().getFontBoundingBox().getHeight() / 1000 * titleNameSize);
+		contentStream.newLine();
+		contentStream.setFont(normal, titleNameSize);
 		contentStream.showText(titleName.toUpperCase());
-		contentStream.newLineAtOffset(357, 0);
+		contentStream.newLineAtOffset(PDRectangle.LETTER.getWidth() / 2, 0);
 		contentStream.showText("CR " + cr);
-		contentStream.newLineAtOffset(-357, -25);
+		contentStream.newLineAtOffset(-PDRectangle.LETTER.getWidth() / 2, -bold.getFontDescriptor().getCapHeight() / 1000 * titleNameSize);
 		contentStream.setLeading(11);
 	}
 	private int writeNPC(PDPageContentStream contentStream, int lineNumber) throws IOException {
@@ -2213,16 +2225,20 @@ public class Creature {
 	}
 	private void drawPictures(PDPageContentStream contentStream, PDDocument pdoc) {
 		try {
-		contentStream.drawImage(PDImageXObject.createFromFile(type.getPic() , pdoc), 458, shortDesc.length() > 62 ? 638 : 655);
-		contentStream.drawImage(PDImageXObject.createFromFile(terrain.getPic() , pdoc), 490, shortDesc.length() > 62 ? 638 : 655);
-		contentStream.drawImage(PDImageXObject.createFromFile(climate.getPic() , pdoc), 522, shortDesc.length() > 62 ? 638 : 655);
+			contentStream.drawImage(PDImageXObject.createFromFile(type.getPic() , pdoc), 424, shortDescLong ? 634 : 655);
+			contentStream.drawImage(PDImageXObject.createFromFile(terrain.getPic() , pdoc), 456, shortDescLong ? 634 : 655);
+			contentStream.drawImage(PDImageXObject.createFromFile(climate.getPic() , pdoc), 488, shortDescLong ? 634 : 655);
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("->The images at the top right didn't print because they don't exist. You can add them yourself if you'd like.");
+			System.out.println("->The images at the top right didn't print because they don't exist. You can add them yourself if you'd like, as described at https://github.com/bjpaupor/rpg-utility/tree/master.");
 			return;
 		}
 	}
-	//Prints every creature within the given folder
+	/**
+	 * Prints every creature within the given folder
+	 * @param folderPath - folder containing creature files
+	 * @throws IOException
+	 */
 	public static void printSet(String folderPath) throws IOException {
 		try (Stream<Path> paths = Files.walk(Paths.get(folderPath))) {
 		    paths
@@ -2230,9 +2246,16 @@ public class Creature {
 		    	.forEach(s -> new Creature(s.toString()).printToPdf()); 
 		} 
 	}
+	/**
+	 * Prints all creatures within folders given by args
+	 * @param args - folders containing creature files
+	 * @throws IOException
+	 */
 	public static void main(String[] args) throws IOException {
 		//printSet("src/CreatureFiles/Hollow'sLastHope/");
 		printSet("src/CreatureFiles/Bestiary1/");
+		for (String s : args)
+			printSet(s);
 		//Creature d = new Creature("src/CreatureFiles/Monty.creature");
 		//d.printToPdf();
 		//d.saveToFile();
