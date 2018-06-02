@@ -72,12 +72,12 @@ public class WrappingText {
         		else if (text.charAt(text.indexOf("#", end) + 1) == 'U') {
         			if (text.substring(text.indexOf("#U", end) + 2, i).contains("#")) {
         				wordWidth += PDType1Font.TIMES_ROMAN.getStringWidth(text.substring(
-        						text.indexOf("#U", end) + 2, text.indexOf("#", text.indexOf("#U", end) + 2))) / 1000 * fontSize * 6 / 11;
+        						text.indexOf("#U", end) + 2, text.indexOf("#", text.indexOf("#U", end) + 2))) / 1000 * fontSize * 4.5f / 9.5;
         				wordWidth += PDType1Font.TIMES_ROMAN.getStringWidth(text.substring(
         						text.indexOf("#", text.indexOf("#U", end) + 2) + 1, i)) / 1000 * fontSize;
         			}
         			else
-        				wordWidth += PDType1Font.TIMES_ROMAN.getStringWidth(text.substring(text.indexOf("#U", end) + 2, i)) / 1000 * fontSize * 6 / 11;
+        				wordWidth += PDType1Font.TIMES_ROMAN.getStringWidth(text.substring(text.indexOf("#U", end) + 2, i)) / 1000 * fontSize * 4.5f / 9.5;
         		}
         		else if (text.charAt(text.indexOf("#", end) + 1) == 'P') {
         			result.add(text.substring(start,end));
@@ -145,13 +145,15 @@ public class WrappingText {
         		else if (text.charAt(text.indexOf("#", end) + 1) == 'U') {
         			if (text.substring(text.indexOf("#U", end) + 2, i).contains("#")) {
         				wordWidth += PDType1Font.TIMES_ROMAN.getStringWidth(text.substring(
-        						text.indexOf("#U", end) + 2, text.indexOf("#", text.indexOf("#U", end) + 2))) / 1000 * fontSize * 6 / 11;
+        						text.indexOf("#U", end) + 2, text.indexOf("#", text.indexOf("#U", end) + 2))) / 1000 * fontSize * 4.5f / 9.5;
         				wordWidth += PDType1Font.TIMES_ROMAN.getStringWidth(text.substring(
         						text.indexOf("#", text.indexOf("#U", end) + 2) + 1, i)) / 1000 * fontSize;
         			}
         			else
-        				wordWidth += PDType1Font.TIMES_ROMAN.getStringWidth(text.substring(text.indexOf("#U", end) + 2, i)) / 1000 * fontSize * 6 / 11;
+        				wordWidth += PDType1Font.TIMES_ROMAN.getStringWidth(text.substring(text.indexOf("#U", end) + 2, i)) / 1000 * fontSize * 4.5f / 9.5;
         		}
+        		else
+        			wordWidth = PDType1Font.TIMES_ROMAN.getStringWidth(text.substring(end, i)) / 1000 * fontSize;
         	}
         	//if there aren't any special effects in the word
         	else
@@ -211,12 +213,12 @@ public class WrappingText {
         		else if (text.charAt(text.indexOf("#", end) + 1) == 'U') {
         			if (text.substring(text.indexOf("#U", end) + 2, i).contains("#")) {
         				wordWidth += PDType1Font.TIMES_ROMAN.getStringWidth(text.substring(
-        						text.indexOf("#U", end) + 2, text.indexOf("#", text.indexOf("#U", end) + 2))) / 1000 * fontSize * 6 / 11;
+        						text.indexOf("#U", end) + 2, text.indexOf("#", text.indexOf("#U", end) + 2))) / 1000 * fontSize * 4.5f / 9.5;
         				wordWidth += PDType1Font.TIMES_ROMAN.getStringWidth(text.substring(
         						text.indexOf("#", text.indexOf("#U", end) + 2) + 1, i)) / 1000 * fontSize;
         			}
         			else
-        				wordWidth += PDType1Font.TIMES_ROMAN.getStringWidth(text.substring(text.indexOf("#U", end) + 2, i)) / 1000 * fontSize * 6 / 11;
+        				wordWidth += PDType1Font.TIMES_ROMAN.getStringWidth(text.substring(text.indexOf("#U", end) + 2, i)) / 1000 * fontSize * 4.5f / 9.5;
         		}
         	}
         	//if there aren't any special effects in the word

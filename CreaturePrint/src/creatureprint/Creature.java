@@ -42,7 +42,7 @@ public class Creature {
 	private String[] senses; //OPT
 	private int perception;
 	private String[] auras; //OPT
-	
+
 	//Defense
 	private int ac;
 	private int touch;
@@ -63,7 +63,7 @@ public class Creature {
 	private Pair<String, Integer>[] resistances; //OPT <type, amount>
 	private int sr;
 	private String[] weaknesses;
-	
+
 	//Offense
 	private int speed;
 	private String[] speeds; //OPT each additional speed
@@ -75,13 +75,13 @@ public class Creature {
 	private Pair<String[], Integer[]> spellLikeAbilities; //OPT <[use-spells], [cl, concentration]>
 	private Trio<Integer[], String[], String[]> spellsKnown; //OPT <[cl, concentration], [use-spells], [className, special, special ...]>
 	private Trio<Integer[], String[], String[]> spellsPrepared; //OPT <[cl, concentration], [use-spells], [className, special, special ...]>
-	
+
 	//Tactics
 	private String beforeCombat; //OPT
 	private String duringCombat; //OPT
 	private String morale; //OPT
 	private String baseStatistics; //OPT
-	
+
 	//Statistics
 	private final int EMDASH = -25000;
 	// -25000 represents —
@@ -104,18 +104,18 @@ public class Creature {
 	private String[] sq; //OPT
 	private String[] combatGear; //OPT
 	private String[] otherGear; //OPT
-	
+
 	//Ecology
 	private String environment; //OPT
 	private String organization; //OPT
 	private String treasure; //OPT
-	
+
 	//Special Abilities
 	private Pair<String, Pair<String, String[]>>[] specialAbilities; //OPT <Ability Name <Ability Description, Ability Sub-Description>>
-	
+
 	//Description
 	private String description;
-	
+
 	@SuppressWarnings("unchecked")
 	public Creature(String fileName) {
 		if (!fileName.endsWith(".creature")) {
@@ -128,8 +128,6 @@ public class Creature {
 			name = readALine(read);
 			basicName = readALine(read);
 			shortDesc = readALine(read);
-			if (shortDesc.length() > 128)
-				System.out.println("Short Description of " + name + " is long!(max sugg. 128 chars)");
 			titleName = readALine(read);
 			this.fileName = titleName + ".pdf";
 			cr = readALine(read);
@@ -190,7 +188,7 @@ public class Creature {
 				String modifierTypeAndCondition = readALine(read);
 				saveModifiers[i] = new Pair<Integer, String>(modifier, modifierTypeAndCondition);
 			}
-			
+
 			defensiveAbilities = new String[Integer.parseInt(readALine(read))];
 			for (int i = 0; i < defensiveAbilities.length; i++)
 				defensiveAbilities[i] = readALine(read);
@@ -341,195 +339,396 @@ public class Creature {
 	//Obliterates comments
 	public void saveToFile() throws IOException {
 		BufferedWriter file = new BufferedWriter(new FileWriter(creatureFileLocation));
-		writeALine(file, "Where to place finished PDF:" + path);
-		writeALine(file, "Name:" + name);
-		writeALine(file, "Basic Name:" + basicName);
-		writeALine(file, "Short Description:" + shortDesc);
-		writeALine(file, "Title Name:" + titleName);
-		writeALine(file, "CR:" + cr);
-		writeALine(file, "Type:" + type);
-		writeALine(file, "Terrain:" + terrain);
-		writeALine(file, "Climate:" + climate);
-		writeALine(file, "XP:" + xp);
-		writeALine(file, "Race:" + race);
-		writeALine(file, "Number of classes with levels (First is favored):" + classes.length);
-		for (Pair<String, Integer> p : classes) {
-			writeALine(file, "Class:" + p.getX());
-			writeALine(file, "Levels in above:" + p.getY());
+		writeALine(file, "Where to place finished PDF: " + path);
+		writeALine(file, "Name: " + name);
+		writeALine(file, "Basic Name: " + basicName);
+		writeALine(file, "Short Description: " + shortDesc);
+		writeALine(file, "Title Name: " + titleName);
+		writeALine(file, "CR: " + cr);
+		writeALine(file, "Type: " + type);
+		writeALine(file, "Terrain: " + terrain);
+		writeALine(file, "Climate: " + climate);
+		writeALine(file, "XP: " + xp);
+		writeALine(file, "Race: " + race);
+		writeALine(file, "Number of classes with levels (First is favored): " + classes.length);
+		for (Pair<String, Integer> p :  classes) {
+			writeALine(file, "Class: " + p.getX());
+			writeALine(file, "Levels in above: " + p.getY());
 		}
-		writeALine(file, "Alignment:" + alignment);
-		writeALine(file, "Size:" + size);
-		writeALine(file, "Number of Subtypes:" + subtypes.length);
-		for (String s : subtypes)
-			writeALine(file, "Subtype:" + s);
-		writeALine(file, "Init:" + init);
-		writeALine(file, "Number of senses:" + senses.length);
-		for (String s : senses)
-			writeALine(file, "Sense:" + s);
-		writeALine(file, "Perception:" + perception);
-		writeALine(file, "Number of auras:" + auras.length);
-		for (String s : auras)
-			writeALine(file, "Aura:" + s);
-		writeALine(file, "AC:" + ac);
-		writeALine(file, "touch:" + touch);
-		writeALine(file, "flat-footed:"  + flatFooted);
-		writeALine(file, "Number of AC Modifiers:" + acModifiers.length);
-		for (Pair<Integer, String> p : acModifiers) {
-			writeALine(file, "Modifier:" + p.getX());
-			writeALine(file, "Type of above Modifier:" + p.getY());
+		writeALine(file, "Alignment: " + alignment);
+		writeALine(file, "Size: " + size);
+		writeALine(file, "Number of Subtypes: " + subtypes.length);
+		for (String s :  subtypes)
+			writeALine(file, "Subtype: " + s);
+		writeALine(file, "Init: " + init);
+		writeALine(file, "Number of senses: " + senses.length);
+		for (String s :  senses)
+			writeALine(file, "Sense: " + s);
+		writeALine(file, "Perception: " + perception);
+		writeALine(file, "Number of auras: " + auras.length);
+		for (String s :  auras)
+			writeALine(file, "Aura: " + s);
+		writeALine(file, "AC: " + ac);
+		writeALine(file, "touch: " + touch);
+		writeALine(file, "flat-footed: "  + flatFooted);
+		writeALine(file, "Number of AC Modifiers: " + acModifiers.length);
+		for (Pair<Integer, String> p :  acModifiers) {
+			writeALine(file, "Modifier: " + p.getX());
+			writeALine(file, "Type of above Modifier: " + p.getY());
 		}
-		writeALine(file, "Number of Conditional AC Modifiers:" + conditionalACModifiers.length);
-		for (Pair<Integer, String> p : conditionalACModifiers) {
-			writeALine(file, "Modifier:" + p.getX());
-			writeALine(file, "Type of above Modifier:" + p.getY());
+		writeALine(file, "Number of Conditional AC Modifiers: " + conditionalACModifiers.length);
+		for (Pair<Integer, String> p :  conditionalACModifiers) {
+			writeALine(file, "Modifier: " + p.getX());
+			writeALine(file, "Type of above Modifier: " + p.getY());
 		}
-		writeALine(file, "HP:" + hp);
-		writeALine(file, "HP breakdown:" + hpBreakdown);
-		writeALine(file, "Fast Healing:" + fastHealing);
+		writeALine(file, "HP: " + hp);
+		writeALine(file, "HP breakdown: " + hpBreakdown);
+		writeALine(file, "Fast Healing: " + fastHealing);
 		if (regeneration != null) {
-			writeALine(file, "Regeneration:" + regeneration.getX());
-			writeALine(file, "Bypass:" + regeneration.getY());
+			writeALine(file, "Regeneration: " + regeneration.getX());
+			writeALine(file, "Bypass: " + regeneration.getY());
 		}
 		else
-			writeALine(file, "Regeneration:0");
-		writeALine(file, "Fort:" + fort);
-		writeALine(file, "Ref:" + ref);
-		writeALine(file, "Will:" + will);
-		writeALine(file, "Number of conditional save modifiers:" + saveModifiers.length);
-		for (Pair<Integer, String> p : saveModifiers) {
-			writeALine(file, "Modifier:" + p.getX());
-			writeALine(file, "Condition/Type of above Modifier:" + p.getY());
+			writeALine(file, "Regeneration: 0");
+		writeALine(file, "Fort: " + fort);
+		writeALine(file, "Ref: " + ref);
+		writeALine(file, "Will: " + will);
+		writeALine(file, "Number of conditional save modifiers: " + saveModifiers.length);
+		for (Pair<Integer, String> p :  saveModifiers) {
+			writeALine(file, "Modifier: " + p.getX());
+			writeALine(file, "Condition/Type of above Modifier: " + p.getY());
 		}
-		writeALine(file, "Number of Defensive Abilities:" + defensiveAbilities.length);
-		for (String s : defensiveAbilities)
-			writeALine(file, "Defensive Ability:" + s);
+		writeALine(file, "Number of Defensive Abilities: " + defensiveAbilities.length);
+		for (String s :  defensiveAbilities)
+			writeALine(file, "Defensive Ability: " + s);
 		if (dr != null) {
-			writeALine(file, "DR:" + dr.getX());
-			writeALine(file, "Bypass:" + dr.getY());
+			writeALine(file, "DR: " + dr.getX());
+			writeALine(file, "Bypass: " + dr.getY());
 		}
 		else
-			writeALine(file, "DR:0");
-		writeALine(file, "Number of Immunities:" + immunities.length);
-		for (String s : immunities)
-			writeALine(file, "Immunity:" + s);
-		writeALine(file, "Number of Resistances:" + resistances.length);
-		for (Pair<String, Integer> p : resistances) {
-			writeALine(file, "Resistance Type:" + p.getX());
-			writeALine(file, "Resistance Amount:" + p.getY());
+			writeALine(file, "DR: 0");
+		writeALine(file, "Number of Immunities: " + immunities.length);
+		for (String s :  immunities)
+			writeALine(file, "Immunity: " + s);
+		writeALine(file, "Number of Resistances: " + resistances.length);
+		for (Pair<String, Integer> p :  resistances) {
+			writeALine(file, "Resistance Type: " + p.getX());
+			writeALine(file, "Resistance Amount: " + p.getY());
 		}
-		writeALine(file, "SR:" + sr);
-		writeALine(file, "Number of Weaknesses:" + weaknesses.length);
-		for (String s : weaknesses)
-			writeALine(file, "Weakness:" + s);
-		writeALine(file, "Speed:" + speed);
-		writeALine(file, "Number of other speeds (#B means base speed):" + speeds.length);
-		for (String s : speeds) 
-			writeALine(file, "Other Speed:" + s);
-		writeALine(file, "Melee:" + melee);
-		writeALine(file, "Ranged:" + ranged);
-		writeALine(file, "Space:" + space);
-		writeALine(file, "Reach:" + reach);
-		writeALine(file, "Number of Special Attacks:" + specialAttacks.length);
-		for (String s : specialAttacks)
-			writeALine(file, "Special Attack:" + s);
+		writeALine(file, "SR: " + sr);
+		writeALine(file, "Number of Weaknesses: " + weaknesses.length);
+		for (String s :  weaknesses)
+			writeALine(file, "Weakness: " + s);
+		writeALine(file, "Speed: " + speed);
+		writeALine(file, "Number of other speeds (#B means base speed): " + speeds.length);
+		for (String s :  speeds) 
+			writeALine(file, "Other Speed: " + s);
+		writeALine(file, "Melee: " + melee);
+		writeALine(file, "Ranged: " + ranged);
+		writeALine(file, "Space: " + space);
+		writeALine(file, "Reach: " + reach);
+		writeALine(file, "Number of Special Attacks: " + specialAttacks.length);
+		for (String s :  specialAttacks)
+			writeALine(file, "Special Attack: " + s);
 		//spellLikeAbilities <[use-spells], [cl, concentration]>
 		if (spellLikeAbilities.getX().length > 0) {
-			writeALine(file, "SLA Use Categories (1/day, etc.):" + spellLikeAbilities.getX().length);
-			writeALine(file, "SLA CL:" + spellLikeAbilities.getY()[0]);
-			writeALine(file, "SLA Concentration:" + spellLikeAbilities.getY()[1]);
-			for (String s : spellLikeAbilities.getX())
-				writeALine(file, "SLA Use Category and Spells:" + s);
+			writeALine(file, "SLA Use Categories (1/day, etc.): " + spellLikeAbilities.getX().length);
+			writeALine(file, "SLA CL: " + spellLikeAbilities.getY()[0]);
+			writeALine(file, "SLA Concentration: " + spellLikeAbilities.getY()[1]);
+			for (String s :  spellLikeAbilities.getX())
+				writeALine(file, "SLA Use Category and Spells: " + s);
 		}
 		else
-			writeALine(file, "SLA Use Categories (1/day, etc.):0");
+			writeALine(file, "SLA Use Categories (1/day, etc.): 0");
 		//OPT <[cl, concentration], [use-spells], [className, special, special ...]>
 		if (spellsKnown.getY().length > 0) {
-			writeALine(file, "Spells Known Levels:" + spellsKnown.getY().length);
-			writeALine(file, "Spells Known Class:" + spellsKnown.getZ()[0]);
-			writeALine(file, "Spells Known CL:" + spellsKnown.getX()[0]);
-			writeALine(file, "Spells Known Concentration:" + spellsKnown.getX()[1]);
-			writeALine(file, "Number of Bolded Sections:" + (spellsKnown.getZ().length - 1));
+			writeALine(file, "Spells Known Levels: " + spellsKnown.getY().length);
+			writeALine(file, "Spells Known Class: " + spellsKnown.getZ()[0]);
+			writeALine(file, "Spells Known CL: " + spellsKnown.getX()[0]);
+			writeALine(file, "Spells Known Concentration: " + spellsKnown.getX()[1]);
+			writeALine(file, "Number of Bolded Sections: " + (spellsKnown.getZ().length - 1));
 			for (int i = 1; i < spellsKnown.getZ().length; i++)
-				writeALine(file, "Bold Section:" + spellsKnown.getZ()[i]);
-			for (String s : spellsKnown.getY())
-				writeALine(file, "Spells Known and Use Level:" + s);
+				writeALine(file, "Bold Section: " + spellsKnown.getZ()[i]);
+			for (String s :  spellsKnown.getY())
+				writeALine(file, "Spells Known and Use Level: " + s);
 		}
 		else
-			writeALine(file, "Spells Known Levels:0");
+			writeALine(file, "Spells Known Levels: 0");
 		//OPT <[cl, concentration], [use-spells], [className, special, special ...]>
 		if (spellsPrepared.getY().length > 0) {
-			writeALine(file, "Spells Prepared Levels:" + spellsPrepared.getY().length);
-			writeALine(file, "Spells Prepared Class:" + spellsPrepared.getZ()[0]);
-			writeALine(file, "Spells Prepared CL:" + spellsPrepared.getX()[0]);
-			writeALine(file, "Spells Prepared Concentration:" + spellsPrepared.getX()[1]);
-			writeALine(file, "Number of Bolded Sections:" + (spellsPrepared.getZ().length - 1));
+			writeALine(file, "Spells Prepared Levels: " + spellsPrepared.getY().length);
+			writeALine(file, "Spells Prepared Class: " + spellsPrepared.getZ()[0]);
+			writeALine(file, "Spells Prepared CL: " + spellsPrepared.getX()[0]);
+			writeALine(file, "Spells Prepared Concentration: " + spellsPrepared.getX()[1]);
+			writeALine(file, "Number of Bolded Sections: " + (spellsPrepared.getZ().length - 1));
 			for (int i = 1; i < spellsPrepared.getZ().length; i++)
-				writeALine(file, "Bold Section:" + spellsPrepared.getZ()[i]);				
-			for (String s : spellsPrepared.getY())
-				writeALine(file, "Spells Prepared at Level:" + s);
-			}
-		else
-			writeALine(file, "Spells Prepared Levels:0");
-		writeALine(file, "Before Combat:" + beforeCombat);
-		writeALine(file, "During Combat:" + duringCombat);
-		writeALine(file, "Morale:" + morale);
-		writeALine(file, "Base Statistics:" + baseStatistics);
-		writeALine(file, "Str:" + str);
-		writeALine(file, "Dex:" + dex);
-		writeALine(file, "Con:" + con);
-		writeALine(file, "Int:" + intelligence);
-		writeALine(file, "Wis:" + wis);
-		writeALine(file, "Cha:" + cha);
-		writeALine(file, "BAB:" + bab);
-		writeALine(file, "CMB:" + cmb);
-		writeALine(file, "Number of Special CMBs:" + cmbs.length);
-		for (String s : cmbs)
-			writeALine(file, "Special CMB:" + s);
-		writeALine(file, "CMD:" + cmd);
-		writeALine(file, "Number of Special CMDs:" + cmds.length);
-		for (String s : cmds)
-			writeALine(file, "Special CMD:" + s);
-		writeALine(file, "Number of Feats:" + feats.length);
-		for (String s : feats)
-			writeALine(file, "Feat:" + s);
-		writeALine(file, "Number of Skills:" + skills.length);
-		for (String s : skills)
-			writeALine(file, "Skill:" + s);
-		writeALine(file, "Number of Racial Modifiers:" + racialModifiers.length);
-		for (String s : racialModifiers)
-			writeALine(file, "Racial Modifier:" + s);
-		writeALine(file, "Number of Languages:" + languages.length);
-		for (String s : languages)
-			writeALine(file, "Language:" + s);
-		writeALine(file, "Number of Special Languages:" + languagesSpecial.length);
-		for (String s : languagesSpecial)
-			writeALine(file, "Special Language:" + s);
-		writeALine(file, "Number of Special Qualities:" + sq.length);
-		for (String s : sq)
-			writeALine(file, "SQ:" + s);
-		writeALine(file, "Number of Combat Gear:" + combatGear.length);
-		for (String s : combatGear)
-			writeALine(file, "Combat Gear:" + s);
-		writeALine(file, "Number of Other Gear:" + otherGear.length);
-		for (String s : otherGear)
-			writeALine(file, "Other Gear:" + s);
-		writeALine(file, "Environment:" + environment);
-		writeALine(file, "Organization:" + organization);
-		writeALine(file, "Treasure:" + treasure);
-		writeALine(file, "Number of Special Abilities:" + specialAbilities.length);
-		//OPT <Ability Name <Ability Description, Ability Sub-Description>>
-		for (Pair<String, Pair<String, String[]>> p : specialAbilities) {
-			writeALine(file, "Ability Name:" + p.getX());
-			writeALine(file, "Ability Text:" + p.getY().getX());
-			writeALine(file, "Number of Sub-Descriptions:" + p.getY().getY().length);
-			for (String s : p.getY().getY())
-				writeALine(file, "Sub-Description:" + s);
+				writeALine(file, "Bold Section: " + spellsPrepared.getZ()[i]);				
+			for (String s :  spellsPrepared.getY())
+				writeALine(file, "Spells Prepared at Level: " + s);
 		}
-		writeALine(file, "Description:" + description);
+		else
+			writeALine(file, "Spells Prepared Levels: 0");
+		writeALine(file, "Before Combat: " + beforeCombat);
+		writeALine(file, "During Combat: " + duringCombat);
+		writeALine(file, "Morale: " + morale);
+		writeALine(file, "Base Statistics: " + baseStatistics);
+		writeALine(file, "Str: " + str);
+		writeALine(file, "Dex: " + dex);
+		writeALine(file, "Con: " + con);
+		writeALine(file, "Int: " + intelligence);
+		writeALine(file, "Wis: " + wis);
+		writeALine(file, "Cha: " + cha);
+		writeALine(file, "BAB: " + bab);
+		writeALine(file, "CMB: " + cmb);
+		writeALine(file, "Number of Special CMBs: " + cmbs.length);
+		for (String s :  cmbs)
+			writeALine(file, "Special CMB: " + s);
+		writeALine(file, "CMD: " + cmd);
+		writeALine(file, "Number of Special CMDs: " + cmds.length);
+		for (String s :  cmds)
+			writeALine(file, "Special CMD: " + s);
+		writeALine(file, "Number of Feats: " + feats.length);
+		for (String s :  feats)
+			writeALine(file, "Feat: " + s);
+		writeALine(file, "Number of Skills: " + skills.length);
+		for (String s :  skills)
+			writeALine(file, "Skill: " + s);
+		writeALine(file, "Number of Racial Modifiers: " + racialModifiers.length);
+		for (String s :  racialModifiers)
+			writeALine(file, "Racial Modifier: " + s);
+		writeALine(file, "Number of Languages: " + languages.length);
+		for (String s :  languages)
+			writeALine(file, "Language: " + s);
+		writeALine(file, "Number of Special Languages: " + languagesSpecial.length);
+		for (String s :  languagesSpecial)
+			writeALine(file, "Special Language: " + s);
+		writeALine(file, "Number of Special Qualities: " + sq.length);
+		for (String s :  sq)
+			writeALine(file, "SQ: " + s);
+		writeALine(file, "Number of Combat Gear: " + combatGear.length);
+		for (String s :  combatGear)
+			writeALine(file, "Combat Gear: " + s);
+		writeALine(file, "Number of Other Gear: " + otherGear.length);
+		for (String s :  otherGear)
+			writeALine(file, "Other Gear: " + s);
+		writeALine(file, "Environment: " + environment);
+		writeALine(file, "Organization: " + organization);
+		writeALine(file, "Treasure: " + treasure);
+		writeALine(file, "Number of Special Abilities: " + specialAbilities.length);
+		//OPT <Ability Name <Ability Description, Ability Sub-Description>>
+		for (Pair<String, Pair<String, String[]>> p :  specialAbilities) {
+			writeALine(file, "Ability Name: " + p.getX());
+			writeALine(file, "Ability Text: " + p.getY().getX());
+			writeALine(file, "Number of Sub-Descriptions: " + p.getY().getY().length);
+			for (String s :  p.getY().getY())
+				writeALine(file, "Sub-Description: " + s);
+		}
+		writeALine(file, "Description: " + description);
 		file.close();
 	}
+	//Obliterates comments
+	public void saveToFileCompressed() throws IOException {
+		BufferedWriter file = new BufferedWriter(new FileWriter(creatureFileLocation));
+		writeALine(file, ":" + path);
+		writeALine(file, ":" + name);
+		writeALine(file, ":" + basicName);
+		writeALine(file, ":" + shortDesc);
+		writeALine(file, ":" + titleName);
+		writeALine(file, ":" + cr);
+		writeALine(file, ":" + type);
+		writeALine(file, ":" + terrain);
+		writeALine(file, ":" + climate);
+		writeALine(file, ":" + xp);
+		writeALine(file, ":" + race);
+		writeALine(file, ":" + classes.length);
+		for (Pair<String, Integer> p : classes) {
+			writeALine(file, ":" + p.getX());
+			writeALine(file, ":" + p.getY());
+		}
+		writeALine(file, ":" + alignment);
+		writeALine(file, ":" + size);
+		writeALine(file, ":" + subtypes.length);
+		for (String s : subtypes)
+			writeALine(file, ":" + s);
+		writeALine(file, ":" + init);
+		writeALine(file, ":" + senses.length);
+		for (String s : senses)
+			writeALine(file, ":" + s);
+		writeALine(file, ":" + perception);
+		writeALine(file, ":" + auras.length);
+		for (String s : auras)
+			writeALine(file, ":" + s);
+		writeALine(file, ":" + ac);
+		writeALine(file, ":" + touch);
+		writeALine(file, ":"  + flatFooted);
+		writeALine(file, ":" + acModifiers.length);
+		for (Pair<Integer, String> p : acModifiers) {
+			writeALine(file, ":" + p.getX());
+			writeALine(file, ":" + p.getY());
+		}
+		writeALine(file, ":" + conditionalACModifiers.length);
+		for (Pair<Integer, String> p : conditionalACModifiers) {
+			writeALine(file, ":" + p.getX());
+			writeALine(file, ":" + p.getY());
+		}
+		writeALine(file, ":" + hp);
+		writeALine(file, ":" + hpBreakdown);
+		writeALine(file, ":" + fastHealing);
+		if (regeneration != null) {
+			writeALine(file, ":" + regeneration.getX());
+			writeALine(file, ":" + regeneration.getY());
+		}
+		else
+			writeALine(file, ":0");
+		writeALine(file, ":" + fort);
+		writeALine(file, ":" + ref);
+		writeALine(file, ":" + will);
+		writeALine(file, ":" + saveModifiers.length);
+		for (Pair<Integer, String> p : saveModifiers) {
+			writeALine(file, ":" + p.getX());
+			writeALine(file, ":" + p.getY());
+		}
+		writeALine(file, ":" + defensiveAbilities.length);
+		for (String s : defensiveAbilities)
+			writeALine(file, ":" + s);
+		if (dr != null) {
+			writeALine(file, ":" + dr.getX());
+			writeALine(file, ":" + dr.getY());
+		}
+		else
+			writeALine(file, ":0");
+		writeALine(file, ":" + immunities.length);
+		for (String s : immunities)
+			writeALine(file, ":" + s);
+		writeALine(file, ":" + resistances.length);
+		for (Pair<String, Integer> p : resistances) {
+			writeALine(file, ":" + p.getX());
+			writeALine(file, ":" + p.getY());
+		}
+		writeALine(file, ":" + sr);
+		writeALine(file, ":" + weaknesses.length);
+		for (String s : weaknesses)
+			writeALine(file, ":" + s);
+		writeALine(file, ":" + speed);
+		writeALine(file, ":" + speeds.length);
+		for (String s : speeds) 
+			writeALine(file, ":" + s);
+		writeALine(file, ":" + melee);
+		writeALine(file, ":" + ranged);
+		writeALine(file, ":" + space);
+		writeALine(file, ":" + reach);
+		writeALine(file, ":" + specialAttacks.length);
+		for (String s : specialAttacks)
+			writeALine(file, ":" + s);
+		//spellLikeAbilities <[use-spells], [cl, concentration]>
+		if (spellLikeAbilities.getX().length > 0) {
+			writeALine(file, ":" + spellLikeAbilities.getX().length);
+			writeALine(file, ":" + spellLikeAbilities.getY()[0]);
+			writeALine(file, ":" + spellLikeAbilities.getY()[1]);
+			for (String s : spellLikeAbilities.getX())
+				writeALine(file, ":" + s);
+		}
+		else
+			writeALine(file, ":0");
+		//OPT <[cl, concentration], [use-spells], [className, special, special ...]>
+		if (spellsKnown.getY().length > 0) {
+			writeALine(file, ":" + spellsKnown.getY().length);
+			writeALine(file, ":" + spellsKnown.getZ()[0]);
+			writeALine(file, ":" + spellsKnown.getX()[0]);
+			writeALine(file, ":" + spellsKnown.getX()[1]);
+			writeALine(file, ":" + (spellsKnown.getZ().length - 1));
+			for (int i = 1; i < spellsKnown.getZ().length; i++)
+				writeALine(file, ":" + spellsKnown.getZ()[i]);
+			for (String s : spellsKnown.getY())
+				writeALine(file, ":" + s);
+		}
+		else
+			writeALine(file, ":0");
+		//OPT <[cl, concentration], [use-spells], [className, special, special ...]>
+		if (spellsPrepared.getY().length > 0) {
+			writeALine(file, ":" + spellsPrepared.getY().length);
+			writeALine(file, ":" + spellsPrepared.getZ()[0]);
+			writeALine(file, ":" + spellsPrepared.getX()[0]);
+			writeALine(file, ":" + spellsPrepared.getX()[1]);
+			writeALine(file, ":" + (spellsPrepared.getZ().length - 1));
+			for (int i = 1; i < spellsPrepared.getZ().length; i++)
+				writeALine(file, ":" + spellsPrepared.getZ()[i]);				
+			for (String s : spellsPrepared.getY())
+				writeALine(file, ":" + s);
+		}
+		else
+			writeALine(file, ":0");
+		writeALine(file, ":" + beforeCombat);
+		writeALine(file, ":" + duringCombat);
+		writeALine(file, ":" + morale);
+		writeALine(file, ":" + baseStatistics);
+		writeALine(file, ":" + str);
+		writeALine(file, ":" + dex);
+		writeALine(file, ":" + con);
+		writeALine(file, ":" + intelligence);
+		writeALine(file, ":" + wis);
+		writeALine(file, ":" + cha);
+		writeALine(file, ":" + bab);
+		writeALine(file, ":" + cmb);
+		writeALine(file, ":" + cmbs.length);
+		for (String s : cmbs)
+			writeALine(file, ":" + s);
+		writeALine(file, ":" + cmd);
+		writeALine(file, ":" + cmds.length);
+		for (String s : cmds)
+			writeALine(file, ":" + s);
+		writeALine(file, ":" + feats.length);
+		for (String s : feats)
+			writeALine(file, ":" + s);
+		writeALine(file, ":" + skills.length);
+		for (String s : skills)
+			writeALine(file, ":" + s);
+		writeALine(file, ":" + racialModifiers.length);
+		for (String s : racialModifiers)
+			writeALine(file, ":" + s);
+		writeALine(file, ":" + languages.length);
+		for (String s : languages)
+			writeALine(file, ":" + s);
+		writeALine(file, ":" + languagesSpecial.length);
+		for (String s : languagesSpecial)
+			writeALine(file, ":" + s);
+		writeALine(file, ":" + sq.length);
+		for (String s : sq)
+			writeALine(file, ":" + s);
+		writeALine(file, ":" + combatGear.length);
+		for (String s : combatGear)
+			writeALine(file, ":" + s);
+		writeALine(file, ":" + otherGear.length);
+		for (String s : otherGear)
+			writeALine(file, ":" + s);
+		writeALine(file, ":" + environment);
+		writeALine(file, ":" + organization);
+		writeALine(file, ":" + treasure);
+		writeALine(file, ":" + specialAbilities.length);
+		//OPT <Ability Name <Ability Description, Ability Sub-Description>>
+		for (Pair<String, Pair<String, String[]>> p : specialAbilities) {
+			writeALine(file, ":" + p.getX());
+			writeALine(file, ":" + p.getY().getX());
+			writeALine(file, ":" + p.getY().getY().length);
+			for (String s : p.getY().getY())
+				writeALine(file, ":" + s);
+		}
+		writeALine(file, ":" + description);
+		file.close();
+	}
+	private int printHeader(PDPageContentStream contentStream, String text, int lineNumber) throws IOException {
+		float width = PDType1Font.TIMES_BOLD.getStringWidth(text) / 1000 * 9.5f;
+		float dashWidth = PDType1Font.TIMES_BOLD.getStringWidth("-") / 1000 * 9.5f;
+		while (width + dashWidth  < PDRectangle.LETTER.getWidth() / 2 - .9f * 72) {
+			width += dashWidth;
+			text += "-";
+		}
+		lineNumber = nextLine(contentStream, lineNumber);
+		printBold(contentStream, text);
+		return lineNumber;
+	}
 	private int printAParagraph(PDPageContentStream contentStream, String line, int lineNumber) throws IOException {
-		WrappingText text = new WrappingText(line, PDRectangle.LETTER.getWidth() / 2 - .9f * 72, 11);
+		WrappingText text = new WrappingText(line, PDRectangle.LETTER.getWidth() / 2 - .9f * 72, 9.5f);
 		for (String s : text.getParagraphLines()) {
 			lineNumber = nextLine(contentStream, lineNumber);
 			if (s.startsWith("#P"))
@@ -540,7 +739,7 @@ public class Creature {
 		return lineNumber;
 	}
 	private int printAnIndentedLine(PDPageContentStream contentStream, String line, int lineNumber) throws IOException {
-		WrappingText text = new WrappingText(line, PDRectangle.LETTER.getWidth() / 2 - .9f * 72, 11);
+		WrappingText text = new WrappingText(line, PDRectangle.LETTER.getWidth() / 2 - .9f * 72, 9.5f);
 		boolean first = true;
 		for (String s : text.getIndentedLines()) {
 			lineNumber = nextLine(contentStream, lineNumber);
@@ -554,7 +753,7 @@ public class Creature {
 		return lineNumber;
 	}
 	private int printALine(PDPageContentStream contentStream, String line, int lineNumber) throws IOException {
-		WrappingText text = new WrappingText(line, PDRectangle.LETTER.getWidth() / 2 - .9f * 72, 11);
+		WrappingText text = new WrappingText(line, PDRectangle.LETTER.getWidth() / 2 - .9f * 72, 9.5f);
 		boolean first = true;
 		for (String s : text.getFancyLines()) {
 			lineNumber = nextLine(contentStream, lineNumber);
@@ -625,21 +824,21 @@ public class Creature {
 	}
 	@SuppressWarnings("deprecation")
 	private void printSuper(PDPageContentStream contentStream, String s) throws IOException {
-		contentStream.setFont(PDType1Font.TIMES_ROMAN, 6);
+		contentStream.setFont(PDType1Font.TIMES_ROMAN, 4.5f);
 		contentStream.appendRawCommands("\n5 Ts\n");
 		contentStream.showText(s);
 		contentStream.appendRawCommands("\n0 Ts\n");
-		contentStream.setFont(PDType1Font.TIMES_ROMAN, 11);
+		contentStream.setFont(PDType1Font.TIMES_ROMAN, 9.5f);
 	}
 	private void printItalic(PDPageContentStream contentStream, String s) throws IOException {
-		contentStream.setFont(PDType1Font.TIMES_ITALIC, 11);
+		contentStream.setFont(PDType1Font.TIMES_ITALIC, 9.5f);
 		contentStream.showText(s);
-		contentStream.setFont(PDType1Font.TIMES_ROMAN, 11);
+		contentStream.setFont(PDType1Font.TIMES_ROMAN, 9.5f);
 	}
 	private void printBold(PDPageContentStream contentStream, String s) throws IOException {
-		contentStream.setFont(PDType1Font.TIMES_BOLD, 11);
+		contentStream.setFont(PDType1Font.TIMES_BOLD, 9.5f);
 		contentStream.showText(s);
-		contentStream.setFont(PDType1Font.TIMES_ROMAN, 11);
+		contentStream.setFont(PDType1Font.TIMES_ROMAN, 9.5f);
 	}
 	/**
 	 * Returns a place from a number as String
@@ -668,18 +867,18 @@ public class Creature {
 	 * @throws IOException
 	 */
 	private int nextLine(PDPageContentStream contentStream, int lineNumber) throws IOException {
-		if (lineNumber == 46 && shortDescLong) 
-			contentStream.newLineAtOffset(PDRectangle.LETTER.getWidth() / 2 - .9f * 72, 
-					PDType1Font.TIMES_ROMAN.getFontDescriptor().getFontBoundingBox().getHeight() / 1000 * 11 * 45);
-		else if (lineNumber == 48 && !shortDescLong) 
-			contentStream.newLineAtOffset(PDRectangle.LETTER.getWidth() / 2 - .9f * 72, 
-					PDType1Font.TIMES_ROMAN.getFontDescriptor().getFontBoundingBox().getHeight() / 1000 * 11 * 47);
+		if (lineNumber == 53 && shortDescLong) 
+			contentStream.newLineAtOffset(PDRectangle.LETTER.getWidth() / 2 - .9f * 66, 
+					PDType1Font.TIMES_ROMAN.getFontDescriptor().getFontBoundingBox().getHeight() / 1000 * 9.5f * 52);
+		else if (lineNumber == 55 && !shortDescLong) 
+			contentStream.newLineAtOffset(PDRectangle.LETTER.getWidth() / 2 - .9f * 66, 
+					PDType1Font.TIMES_ROMAN.getFontDescriptor().getFontBoundingBox().getHeight() / 1000 * 9.5f * 54);
 		//TODO Handle page turn
-		else if (lineNumber == 92 && shortDescLong) {
+		else if (lineNumber == 106 && shortDescLong) {
 			contentStream.newLineAtOffset(50, 0);
 			contentStream.newLine();
 		}
-		else if (lineNumber == 96 && !shortDescLong) {
+		else if (lineNumber == 110 && !shortDescLong) {
 			contentStream.newLineAtOffset(50 , 0);
 			contentStream.newLine();
 		}
@@ -711,7 +910,7 @@ public class Creature {
 			return null;
 		}
 	}
-	
+
 	public void printToPdf() {
 		try (PDDocument pdoc = new PDDocument();) {
 			PDPage page = new PDPage();
@@ -753,8 +952,7 @@ public class Creature {
 	}
 	private int writeSpecialAbilities(PDPageContentStream contentStream, int lineNumber) throws IOException {
 		if (specialAbilities.length > 0) {
-			lineNumber = nextLine(contentStream, lineNumber);
-			printBold(contentStream, "SPECIAL ABILITIES-------------------------------------");
+			lineNumber = printHeader(contentStream, "SPECIAL ABILITIES", lineNumber);
 			for (int i = 0; i < specialAbilities.length; i++) {
 				String text = embolden(specialAbilities[i].getX());
 				text += ' ' + specialAbilities[i].getY().getX();
@@ -768,8 +966,7 @@ public class Creature {
 	}
 	private int writeEcology(PDPageContentStream contentStream, int lineNumber) throws IOException {
 		if (!(environment.equals("") && organization.equals("") && treasure.equals(""))) {
-			lineNumber = nextLine(contentStream, lineNumber);
-			printBold(contentStream, "ECOLOGY--------------------------------------------------");
+			lineNumber = printHeader(contentStream, "ECOLOGY", lineNumber);
 			if (!environment.equals("")) 
 				lineNumber = printALine(contentStream, "#HEnvironment " + environment, lineNumber);
 			if (!organization.equals("")) 
@@ -780,8 +977,7 @@ public class Creature {
 		return lineNumber;
 	}
 	private int writeStatistics(PDPageContentStream contentStream, int lineNumber) throws IOException {
-		lineNumber = nextLine(contentStream, lineNumber);
-		printBold(contentStream, "STATISTICS------------------------------------------------");
+		lineNumber = printHeader(contentStream, "STATISTICS", lineNumber);
 		lineNumber = writeAbilityScores(contentStream, lineNumber);
 		lineNumber = writeBABCMBD(contentStream, lineNumber);
 		lineNumber = writeFeats(contentStream, lineNumber);
@@ -918,8 +1114,7 @@ public class Creature {
 	private int writeTactics(PDPageContentStream contentStream, int lineNumber) throws IOException {
 		if (beforeCombat.equals("") && duringCombat.equals("") && morale.equals("") && baseStatistics.equals(""))
 			return lineNumber;
-		lineNumber = nextLine(contentStream, lineNumber);
-		printBold(contentStream, "TACTICS----------------------------------------------------");
+		lineNumber = printHeader(contentStream, "TACTICS", lineNumber);
 		if (!beforeCombat.equals("")) 
 			lineNumber = printALine(contentStream, "#HBefore #HCombat " + beforeCombat, lineNumber);
 		if (!duringCombat.equals("")) 
@@ -931,8 +1126,7 @@ public class Creature {
 		return lineNumber;
 	}
 	private int writeOffense(PDPageContentStream contentStream, int lineNumber) throws IOException {
-		lineNumber = nextLine(contentStream, lineNumber);
-		printBold(contentStream, "OFFENSE----------------------------------------------------");
+		lineNumber = printHeader(contentStream, "OFFENSE", lineNumber);
 		lineNumber = writeSpeeds(contentStream, lineNumber);
 		if (!melee.equals("")) 
 			lineNumber = printALine(contentStream, "#HMelee " + melee, lineNumber);
@@ -951,7 +1145,7 @@ public class Creature {
 		if (spellsPrepared.getY().length > 0) {//OPT <[cl, concentration], [use-spells], [className, Bold, after, Bold ...]>
 			String text = "";
 			if (!spellsPrepared.getZ()[0].equals("none")) 
-				text += "#H" + spellsPrepared.getZ()[0] + " #HSpells #HPrepared ";
+				text += spellsPrepared.getZ()[0] + " #HSpells #HPrepared ";
 			else
 				text += "#HSpells #HPrepared ";
 			int conc = spellsPrepared.getX()[1];
@@ -975,7 +1169,7 @@ public class Creature {
 		if (spellsKnown.getY().length > 0) {
 			String text = "";
 			if (!spellsKnown.getZ()[0].equals("none")) 
-				text += "#H" + spellsKnown.getZ()[0] + " #HSpells #HKnown ";
+				text += spellsKnown.getZ()[0] + " #HSpells #HKnown ";
 			else
 				text += "#HSpells #HKnown ";
 			int conc = spellsKnown.getX()[1];
@@ -1035,8 +1229,7 @@ public class Creature {
 		return printALine(contentStream, text, lineNumber);
 	}
 	private int writeDefense(PDPageContentStream contentStream, int lineNumber) throws IOException {
-		lineNumber = nextLine(contentStream, lineNumber);
-		printBold(contentStream, "DEFENSE----------------------------------------------------");
+		lineNumber = printHeader(contentStream, "DEFENSE", lineNumber);
 		lineNumber = writeAC(contentStream, lineNumber);
 		lineNumber = writeHP(contentStream, lineNumber);
 		lineNumber = writeSaves(contentStream, lineNumber);
@@ -1143,7 +1336,7 @@ public class Creature {
 		return printALine(contentStream, text, lineNumber);
 	}
 	private int writeTop(PDPageContentStream contentStream) throws IOException {
-		contentStream.setLeading(PDType1Font.TIMES_ROMAN.getFontDescriptor().getFontBoundingBox().getHeight() / 1000 * 11);
+		contentStream.setLeading(PDType1Font.TIMES_ROMAN.getFontDescriptor().getFontBoundingBox().getHeight() / 1000 * 9.5f);
 		printBold(contentStream, "XP " + xp);
 		int lineNumber = 1;
 		lineNumber = writeNPC(contentStream, lineNumber);
@@ -1152,7 +1345,7 @@ public class Creature {
 		return writeAuras(contentStream, lineNumber);
 	}
 	private void writeHeader(PDPageContentStream contentStream) throws IOException {
-		float nameSize = 36, shortDescSize = 18, titleNameSize = 18, border = .9f * 72;
+		float nameSize = 36, shortDescSize = 18, titleNameSize = 18, border = .9f * 69;
 		PDFont italics = PDType1Font.TIMES_ITALIC, bold = PDType1Font.TIMES_BOLD, normal = PDType1Font.TIMES_ROMAN;
 		contentStream.newLineAtOffset(border, PDRectangle.LETTER.getHeight() - border - bold.getFontDescriptor().getCapHeight() / 1000 * nameSize);
 		contentStream.setFont(bold, nameSize);
@@ -1160,13 +1353,16 @@ public class Creature {
 			contentStream.showText(basicName.toUpperCase() +", " + name.toUpperCase());
 		else
 			contentStream.showText(name.toUpperCase());
-				contentStream.setLeading(italics.getFontDescriptor().getFontBoundingBox().getHeight() / 1000 * shortDescSize);
+		contentStream.setLeading(italics.getFontDescriptor().getFontBoundingBox().getHeight() / 1000 * shortDescSize);
 		contentStream.setFont(italics, shortDescSize);
 		WrappingText shortDesc = new WrappingText(this.shortDesc, italics, PDRectangle.LETTER.getWidth() - 2 * border, shortDescSize);
-		for (String s : shortDesc.getLines()) {
-			contentStream.newLine();
-			contentStream.showText(s);
-		}
+		if (shortDesc.getLines().size() > 2)
+			System.out.println("The short description for " + name + " is too long!");
+		else 
+			for (String s : shortDesc.getLines()) {
+				contentStream.newLine();
+				contentStream.showText(s);
+			}
 		if (shortDesc.getLines().size() > 1)
 			shortDescLong = true;
 		else
@@ -1178,7 +1374,7 @@ public class Creature {
 		contentStream.showText(titleName.toUpperCase());
 		contentStream.newLineAtOffset(335, 0);
 		contentStream.showText("CR " + cr);
-		contentStream.newLineAtOffset(-335, -bold.getFontDescriptor().getCapHeight() / 1000 * titleNameSize);
+		contentStream.newLineAtOffset(-335, -bold.getFontDescriptor().getFontBoundingBox().getHeight() / 1000 * titleNameSize);
 	}
 	private int writeNPC(PDPageContentStream contentStream, int lineNumber) throws IOException {
 		if (!race.equals("")) {
@@ -1251,9 +1447,9 @@ public class Creature {
 	 */
 	public static void printSet(String folderPath) throws IOException {
 		try (Stream<Path> paths = Files.walk(Paths.get(folderPath))) {
-		    paths
-		        .filter(Files::isRegularFile)
-		    	.forEach(s -> new Creature(s.toString()).printToPdf()); 
+			paths
+			.filter(Files::isRegularFile)
+			.forEach(s -> new Creature(s.toString()).printToPdf()); 
 		} 
 	}
 	/**
@@ -1267,8 +1463,17 @@ public class Creature {
 		printSet("src/CreatureFiles/");
 		for (String s : args)
 			printSet(s);
-		//Creature d = new Creature("src/CreatureFiles/Monty.creature");
-		//d.printToPdf();
-		//d.saveToFile();
+		Creature d = new Creature("src/CreatureFiles/StrangeAeonsPC's/DrErasmusKhan.creature");
+		d.printToPdf();
+		d.saveToFile();
+		Creature c = new Creature("src/CreatureFiles/StrangeAeonsPC's/VeruccLellinstein.creature");
+		c.printToPdf();
+		c.saveToFile();
+		Creature b = new Creature("src/CreatureFiles/StrangeAeonsPC's/UrorSiegfried.creature");
+		b.printToPdf();
+		b.saveToFile();
+		Creature m = new Creature("src/CreatureFiles/Monty.creature");
+		m.printToPdf();
+		m.saveToFile();
 	}
 }
