@@ -72,7 +72,7 @@ public class Creature {
 	private String space; //OPT
 	private int reach; //OPT
 	private String[] specialAttacks; //OPT
-	private Pair<String[], Integer[]> spellLikeAbilities; //OPT <[use-spells], [cl, concentration]>
+	private Trio<String[], Integer[], String> spellLikeAbilities; //OPT <[use-spells], [cl, concentration], Source>
 	private Trio<Integer[], String[], String[]> spellsKnown; //OPT <[cl, concentration], [use-spells], [className, special, special ...]>
 	private Trio<Integer[], String[], String[]> spellsPrepared; //OPT <[cl, concentration], [use-spells], [className, special, special ...]>
 
@@ -221,9 +221,10 @@ public class Creature {
 			specialAttacks = new String[Integer.parseInt(readALine(read))];
 			for (int i = 0; i < specialAttacks.length; i++)
 				specialAttacks[i] = readALine(read);
-			spellLikeAbilities = new Pair<String[], Integer[]>(new String[0], new Integer[0]);
+			spellLikeAbilities = new Trio<String[], Integer[], String>(new String[0], new Integer[0], "");
 			int temp = Integer.parseInt(readALine(read));
 			if (temp > 0) {
+				String source = readALine(read);
 				String[] slaTemp = new String[temp];
 				Integer[] slaIntTemp = new Integer[2];
 				slaIntTemp[0] = Integer.parseInt(readALine(read));
@@ -232,6 +233,7 @@ public class Creature {
 				for (int i = 0; i < slaTemp.length; i++)
 					slaTemp[i] = readALine(read);
 				spellLikeAbilities.setX(slaTemp);
+				spellLikeAbilities.setZ(source);
 			}
 			spellsKnown = new Trio<Integer[], String[], String[]>(new Integer[0], new String[0], new String[0]);
 			temp = Integer.parseInt(readALine(read));
@@ -433,6 +435,7 @@ public class Creature {
 		//spellLikeAbilities <[use-spells], [cl, concentration]>
 		if (spellLikeAbilities.getX().length > 0) {
 			writeALine(file, "SLA Use Categories (1/day, etc.): " + spellLikeAbilities.getX().length);
+			writeALine(file, "SLA Source: " + spellLikeAbilities.getZ());
 			writeALine(file, "SLA CL: " + spellLikeAbilities.getY()[0]);
 			writeALine(file, "SLA Concentration: " + spellLikeAbilities.getY()[1]);
 			for (String s :  spellLikeAbilities.getX())
@@ -623,6 +626,7 @@ public class Creature {
 		//spellLikeAbilities <[use-spells], [cl, concentration]>
 		if (spellLikeAbilities.getX().length > 0) {
 			writeALine(file, ":" + spellLikeAbilities.getX().length);
+			writeALine(file, ":" + spellLikeAbilities.getZ());
 			writeALine(file, ":" + spellLikeAbilities.getY()[0]);
 			writeALine(file, ":" + spellLikeAbilities.getY()[1]);
 			for (String s : spellLikeAbilities.getX())
@@ -999,8 +1003,8 @@ public class Creature {
 		}
 		if (otherGear.length > 0) {
 			if (combatGear.length > 0) 
-				text += "; ";
-			text += "#HOther #HGear ";
+				text += "; #HOther ";
+			text += "#HGear ";
 			for (int i = 0; i < otherGear.length; i++) {
 				text += otherGear[i];
 				if (i + 1 < otherGear.length) 
@@ -1145,7 +1149,7 @@ public class Creature {
 		if (spellsPrepared.getY().length > 0) {//OPT <[cl, concentration], [use-spells], [className, Bold, after, Bold ...]>
 			String text = "";
 			if (!spellsPrepared.getZ()[0].equals("none")) 
-				text += spellsPrepared.getZ()[0] + " #HSpells #HPrepared ";
+				text += "#H" + spellsPrepared.getZ()[0] + " #HSpells #HPrepared ";
 			else
 				text += "#HSpells #HPrepared ";
 			int conc = spellsPrepared.getX()[1];
@@ -1169,7 +1173,7 @@ public class Creature {
 		if (spellsKnown.getY().length > 0) {
 			String text = "";
 			if (!spellsKnown.getZ()[0].equals("none")) 
-				text += spellsKnown.getZ()[0] + " #HSpells #HKnown ";
+				text += "#H" + spellsKnown.getZ()[0] + " #HSpells #HKnown ";
 			else
 				text += "#HSpells #HKnown ";
 			int conc = spellsKnown.getX()[1];
@@ -1192,7 +1196,8 @@ public class Creature {
 	private int writeSLAs(PDPageContentStream contentStream, int lineNumber) throws IOException {
 		if (spellLikeAbilities.getX().length > 0) {
 			int conc = spellLikeAbilities.getY()[1];
-			String text = "#HSpell-Like #HAbilities " + "(CL " + getPlace(spellLikeAbilities.getY()[0]) +
+			String text = spellLikeAbilities.getZ().equals("none") ? "" : "#H" + spellLikeAbilities.getZ() + " ";
+			text += "#HSpell-Like #HAbilities " + "(CL " + getPlace(spellLikeAbilities.getY()[0]) +
 					"; concentration " + ((conc > -1) ? ("+" + conc) : (conc))  + ')';
 			lineNumber = printALine(contentStream, text, lineNumber);
 			for (int i = 0; i < spellLikeAbilities.getX().length; i++) {
@@ -1215,15 +1220,19 @@ public class Creature {
 		return lineNumber;
 	}
 	private int writeSpeeds(PDPageContentStream contentStream, int lineNumber) throws IOException {
-		String text = "#HSpeed " + speed + " ft.";
+		String text = "#HSpeed ";
+		if (speed >= 0)
+			text += speed + " ft.";
 		if (speeds.length > 0) {
 			for (int i = 0; i < speeds.length; i++) {
 				String p = speeds[i];
 				if (p.startsWith("#B"))
 					p = '(' + p.substring(2) + " base)";
-				else if (i < speeds.length - 1 || speeds.length == 1) 
+				else if (!(i == 0 && speed < 0))
 					text += ",";
-				text += " " + p;
+				if (speed >= 0 || i > 0)
+					text += " ";
+				text += p;
 			}
 		}
 		return printALine(contentStream, text, lineNumber);
@@ -1472,6 +1481,9 @@ public class Creature {
 		Creature b = new Creature("src/CreatureFiles/StrangeAeonsPC's/UrorSiegfried.creature");
 		b.printToPdf();
 		b.saveToFile();
+		Creature a = new Creature("src/CreatureFiles/StrangeAeonsPC's/LeonGrylls.creature");
+		a.printToPdf();
+		a.saveToFile();
 		Creature m = new Creature("src/CreatureFiles/Monty.creature");
 		m.printToPdf();
 		m.saveToFile();

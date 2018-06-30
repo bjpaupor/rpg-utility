@@ -68,7 +68,7 @@ Spells Prepared Levels: 0
 Before Combat: 
 During Combat: 
 Morale: 
-Base Statistics: When not raging, Ror's statistics are #HAC 15, touch 11, flat-footed 14; #Hhp 26; #HFort +6, #HWill +2; #HMelee greatsword +6 (2d6+6/19-20) or cold iron lucerne hammer +6 (1d12+6) or sap +6 (1d6+4 nonlethal); #HRanged sling +3 (1d4+4); #HStr 18, #HCon 14; #HCMB +6 (+8 sunder medium/heavy armor with lucerne hammer).
+Base Statistics: When not raging, Ror's statistics are #HAC 15, touch 11, flat-footed 14; #Hhp 26; #HFort +6, #HWill +2; #HMelee greatsword +6 (2d6+6/19-20) or cold iron lucerne hammer +6 (1d12+6) or sap +6 (1d6+4 nonlethal); #HRanged sling +3 (1d4+4); #HStr 18, #HCon 14; #HCMB +6 (+8 sunder medium/heavy armor with lucerne hammer). When not carrying a medium load, Ror's statistics are #HSpeed 40 ft.; #HSkills +4 Acrobatics.
 Str: 22
 Dex: 12
 Con: 18
@@ -84,7 +84,7 @@ Number of Special CMDs: 0
 Number of Feats: 1
 Feat: Extra Rage
 Number of Skills: 4
-Skill: +4 Acrobatics
+Skill: +2 Acrobatics
 Skill: +6 Intimidate
 Skill: +6 Perception
 Skill: +5 Survival

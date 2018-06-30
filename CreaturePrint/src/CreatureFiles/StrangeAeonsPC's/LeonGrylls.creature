@@ -1,0 +1,152 @@
+Where to place finished PDF: /home/brandon/Documents/StatBloccs/StrangeAeonsPC's/
+Name: Leon "Lion" Grylls
+Basic Name: 
+Short Description: A muscular human man with brown eyes and a poorly-maintained brown fade haircut, armed with a longbow and a greatsword
+Title Name: Lion Grylls
+CR: 2
+Type: HUMANOID
+Terrain: URBAN
+Climate: TEMPERATE
+XP: 600
+Race: Human
+Number of classes with levels (First is favored): 1
+Class: ranger
+Levels in above: 2
+Alignment: NG
+Size: Medium
+Number of Subtypes: 1
+Subtype: human
+Init: 3
+Number of senses: 0
+Perception: 6
+Number of auras: 0
+AC: 16
+touch: 13
+flat-footed: 13
+Number of AC Modifiers: 2
+Modifier: 3
+Type of above Modifier: armor
+Modifier: 3
+Type of above Modifier: Dex
+Number of Conditional AC Modifiers: 0
+HP: 24
+HP breakdown: 2d10+5
+Fast Healing: 0
+Regeneration: 0
+Fort: 5
+Ref: 6
+Will: 1
+Number of conditional save modifiers: 1
+Modifier: 2
+Condition/Type of above Modifier: vs. fear or emotion
+Number of Defensive Abilities: 0
+DR: 0
+Number of Immunities: 0
+Number of Resistances: 0
+SR: 0
+Number of Weaknesses: 0
+Speed: 20
+Number of other speeds (#B means base speed): 1
+Other Speed: #B30 ft.
+Melee: greatsword +4 (2d6+4/19-20) or mwk war razor +5 (1d4+2/19-20)
+Ranged: longbow +5 (1d8+1/x3)
+Space: 5
+Reach: 5
+Number of Special Attacks: 2
+Special Attack: favored enemy (aberrations +2)
+Special Attack: weapon training
+SLA Use Categories (1/day, etc.): 0
+Spells Known Levels: 0
+Spells Prepared Levels: 0
+Before Combat: 
+During Combat: 
+Morale: 
+Base Statistics: When not carrying a medium load, Lion's statistics are #HSpeed 30 ft.; #HSkills +5 Climb, +6 Disable Device, +7 Stealth.
+Str: 14
+Dex: 16
+Con: 14
+Int: 10
+Wis: 12
+Cha: 8
+BAB: 2
+CMB: 4
+Number of Special CMBs: 0
+CMD: 17
+Number of Special CMDs: 0
+Number of Feats: 3
+Feat: Point-blank Shot
+Feat: Precise Shot#UB#
+Feat: Rapid Shot#UB
+Number of Skills: 10
+Skill: +0 Appraise (+2 if small or highly detailed with magnifying glass)
+Skill: +3 Climb
+Skill: +5 Craft (bows)
+Skill: +4 Disable Device
+Skill: +0 Intimidate
+Skill: +4 Knowledge (dungeoneering)
+Skill: +5 Knowledge (local)
+Skill: +6 Perception
+Skill: +5 Stealth
+Skill: +6 Survival (+7 to follow tracks)
+Number of Racial Modifiers: 0
+Number of Languages: 2
+Language: Common
+Language: Skald
+Number of Special Languages: 0
+Number of Special Qualities: 3
+SQ: enduring stoicism
+SQ: track +1
+SQ: wild empathy +1
+Number of Combat Gear: 3
+Combat Gear: alchemist's fire
+Combat Gear: #Imagic #Ioil
+Combat Gear: #Isilversheen (2)
+Number of Other Gear: 37
+Other Gear: hide shirt
+Other Gear: greatsword
+Other Gear: masterwork war razor
+Other Gear: longbow with 38 arrows
+Other Gear: #Imagic #Icandle
+Other Gear: #Igreater #Italisman #Iof #Ibeneficial #Iwinds
+Other Gear: #Iincense #Iof #Iopen #Ithoughts
+Other Gear: alchemist's kindness (2)
+Other Gear: antitoxin (4)
+Other Gear: masterwork backpack
+Other Gear: belt pouch
+Other Gear: boots
+Other Gear: Sleepless Detective Agency calling card
+Other Gear: flint and steel
+Other Gear: grappling hook
+Other Gear: hooded lantern (filled)
+Other Gear: magnifying glass
+Other Gear: mirror
+Other Gear: opium (2 doses)
+Other Gear: pants
+Other Gear: rope (50 ft.)
+Other Gear: silent whistle
+Other Gear: smelling salts
+Other Gear: vials of sweet-smelling, thick blue syrup (2)
+Other Gear: thunderstones (2)
+Other Gear: tindertwigs (3)
+Other Gear: torch
+Other Gear: trail rations (2 days)
+Other Gear: waterskin
+Other Gear: bookends (50 gp)
+Other Gear: brain shaped box (50 gp)
+Other Gear: brass pyramid (50 gp)
+Other Gear: gold ring (150 gp)
+Other Gear: pearls (6; 15 gp each)
+Other Gear: Zandalus' coal drawings (100 gp)
+Other Gear: 116 gp
+Other Gear: 3 pp
+Environment: 
+Organization: 
+Treasure: 
+Number of Special Abilities: 2
+Ability Name: Enduring Stoicism
+Ability Text: You gain a +2 trait bonus on all saving throws against spells or effects with the fear or emotion descriptors. In addition, you gain a +1 trait bonus on Intimidate checks due to your intimidating presence, as people don’t know what to expect from you.
+Number of Sub-Descriptions: 0
+Ability Name: Weapon Training
+Ability Text: You gain a +1 trait bonus on damage rolls with the following weapons: bastard sword, battleaxe, greataxe, greatsword, handaxe, light hammer, longbow, longsword, shortbow, short sword, throwing axe, and warhammer.
+Number of Sub-Descriptions: 0
+Description: 
