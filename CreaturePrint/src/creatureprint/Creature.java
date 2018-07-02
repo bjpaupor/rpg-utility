@@ -73,6 +73,7 @@ public class Creature {
 	private int reach; //OPT
 	private String[] specialAttacks; //OPT
 	private Trio<String[], Integer[], String> spellLikeAbilities; //OPT <[use-spells], [cl, concentration], Source>
+	private Pair<Integer[], String> psychicMagic; //OPT <[cl, concentration], spells>
 	private Trio<Integer[], String[], String[]> spellsKnown; //OPT <[cl, concentration], [use-spells], [className, special, special ...]>
 	private Trio<Integer[], String[], String[]> spellsPrepared; //OPT <[cl, concentration], [use-spells], [className, special, special ...]>
 
@@ -221,8 +222,17 @@ public class Creature {
 			specialAttacks = new String[Integer.parseInt(readALine(read))];
 			for (int i = 0; i < specialAttacks.length; i++)
 				specialAttacks[i] = readALine(read);
-			spellLikeAbilities = new Trio<String[], Integer[], String>(new String[0], new Integer[0], "");
+			psychicMagic = new Pair<Integer[], String>(new Integer[0], "");
 			int temp = Integer.parseInt(readALine(read));
+			if (temp > 0) {
+				Integer[] PSYIntTemp = new Integer[2];
+				PSYIntTemp[0] = temp;
+				PSYIntTemp[1] = Integer.parseInt(readALine(read));
+				psychicMagic.setX(PSYIntTemp);
+				psychicMagic.setY(readALine(read));
+			}
+			spellLikeAbilities = new Trio<String[], Integer[], String>(new String[0], new Integer[0], "");
+			temp = Integer.parseInt(readALine(read));
 			if (temp > 0) {
 				String source = readALine(read);
 				String[] slaTemp = new String[temp];
@@ -433,6 +443,13 @@ public class Creature {
 		for (String s :  specialAttacks)
 			writeALine(file, "Special Attack: " + s);
 		//spellLikeAbilities <[use-spells], [cl, concentration]>
+		if (psychicMagic.getX().length > 0) {
+			writeALine(file, "Psychic Magic CL: " + psychicMagic.getX()[0]);
+			writeALine(file, "Psychic Magic Concentration: " + psychicMagic.getX()[1]);
+			writeALine(file, "Psychic Magic Spells: " + psychicMagic.getY());
+		}
+		else
+			writeALine(file, "Psychic Magic CL: " + 0);
 		if (spellLikeAbilities.getX().length > 0) {
 			writeALine(file, "SLA Use Categories (1/day, etc.): " + spellLikeAbilities.getX().length);
 			writeALine(file, "SLA Source: " + spellLikeAbilities.getZ());
@@ -624,6 +641,13 @@ public class Creature {
 		for (String s : specialAttacks)
 			writeALine(file, ":" + s);
 		//spellLikeAbilities <[use-spells], [cl, concentration]>
+		if (psychicMagic.getX().length > 0) {
+			writeALine(file, ":" + psychicMagic.getX()[0]);
+			writeALine(file, ":" + psychicMagic.getX()[1]);
+			writeALine(file, ":" + psychicMagic.getY());
+		}
+		else
+			writeALine(file, ":" + 0);
 		if (spellLikeAbilities.getX().length > 0) {
 			writeALine(file, ":" + spellLikeAbilities.getX().length);
 			writeALine(file, ":" + spellLikeAbilities.getZ());
@@ -1140,6 +1164,7 @@ public class Creature {
 			lineNumber = printALine(contentStream, "#HSpace " + space + " ft.; " + 
 					"#HReach " + reach + " ft.", lineNumber);
 		lineNumber = writeSpecialAttacks(contentStream, lineNumber);
+		lineNumber = writePsychicMagic(contentStream, lineNumber);
 		lineNumber = writeSLAs(contentStream, lineNumber);
 		lineNumber = writeSpellsKnown(contentStream, lineNumber);
 		lineNumber = writeSpellsPrepared(contentStream, lineNumber);
@@ -1190,6 +1215,16 @@ public class Creature {
 			}
 			if (!text.equals(""))
 				lineNumber = printAnIndentedLine(contentStream, text, lineNumber);
+		}
+		return lineNumber;
+	}
+	private int writePsychicMagic(PDPageContentStream contentStream, int lineNumber) throws IOException {
+		if (psychicMagic.getX().length > 0) {
+			int conc = psychicMagic.getX()[1];
+			String text = "#HPsychic #HMagic " + "(CL " + getPlace(psychicMagic.getX()[0]) +
+					"; concentration " + ((conc > -1) ? ("+" + conc) : (conc))  + ')';
+			lineNumber = printALine(contentStream, text, lineNumber);
+			lineNumber = printAnIndentedLine(contentStream, psychicMagic.getY(), lineNumber);
 		}
 		return lineNumber;
 	}
