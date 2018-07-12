@@ -1,13 +1,13 @@
-Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/AdventurePaths/StrangeAeons/
-Name : Dire
-Basic Name (Dinosaur):Rat
-Short description: This filthy rat is the size of a small dog. It has a coat of coarse fur, a long and scabby tail, and two glittering eyes.
-Title Name : Dire Rat
-CR: 1/3
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/AdventurePaths/RiseOfTheRunelords/Player'sGuide/
+Name : Donkey Rat
+Basic Name (Dinosaur):
+Short description: Donkey rats are brown or snowy white rodents the size of small dogs, with long legs and short, furry tails.  
+Title Name : Donkey Rat
+CR: 1/4
 Type: Animal
-Terrain: Urban
+Terrain: Forest_Jungle
 Climate: Temperate
-XP:135
+XP:100
 Race: 
 Number of classes with levels in (First is Favored): 0
 Alignment:N
@@ -42,16 +42,14 @@ Immunities : 0
 Resistances: 0
 SR: 0
 Num of Weaknesses: 0
-Speed: 40
-Other Speeds(#B means base speed if reduced normally): 2
-Other Speed: climb 20 ft.
+Speed: 30
+Other Speeds(#B means base speed if reduced normally): 1
 Other Speed: swim 20 ft.
-Melee: bite +1 (1d4 plus disease)
+Melee: bite -1 (1d3-2)
 Ranged: 
 Space: 5
 Reach: 5
-Num of Special Attacks: 1
-Special Attack: disease
+Num of Special Attacks: 0
 Psychic Magic CL: 0
 SLA Use Categories (1/day, 3/week, etc.): 0
 Spells Known Levels: 0
@@ -60,37 +58,32 @@ Before Combat:
 During Combat:
 Morale: 
 Base Statistics:
-Str:10
+Str:6
 Dex:17
 Con:13
 Int:2
 Wis:13
 Cha:4
 BAB:0
-CMB:-1
+CMB:-3
 Num of Special CMBs:0
-CMD:12
+CMD:10
 Num of Special CMDs:1
-Special CMD: 16 vs. trip
+Special CMD: 14 vs. trip
 Num of Feats: 1
 Feat: Skill Focus (Perception)
-Num of Skills: 4
-Skill: Climb +11
+Num of Skills: 3
 Skill: Perception: +4
 Skill: Stealth +11
-Skill: Swim +11
-Num of Racial Mods:1
-Racial Mod: uses Dex to modify Climb and Swim
+Skill: Swim +6
+Num of Racial Mods:0
 Num of Lanugagues: 0
 Num of Special Languages: 0
 Num of Special Qualities: 0
 Num of Combat Gear: 0
 Num of Other Gear: 0
-Environment: any urban
-Organization: solitary or pack (2–20)
+Environment: temperate coast or forest
+Organization: solitary, pair, or nest (3–12)
 Treasure: none
-Num of Special Abilities: 1
-Special Ability: Disease (Ex)
-Description: #IFilth #IFever#: Bite–injury; #Isave Fort DC 11; #Ionset 1d3 days; #Ifrequency 1/day; #Ieffect 1d3 Dex damage and 1d3 Con damage; #Icure 2 consecutive saves. The save DC is Constitution-based.
-Number of Sub-descriptions: 0
-Description: Dire rats grow up to 2 feet long and weigh up to 25 pounds. They are common menaces in dungeons and city sewers alike.
+Num of Special Abilities: 0
+Description: Snowy white rodents the size of small dogs (in some places known as capybaras or giant guinea pigs), the donkey rats native to Varisia’s coast are popular pets (and meals) throughout the southern lands.

@@ -761,8 +761,13 @@ public class Creature {
 			lineNumber = nextLine(contentStream, lineNumber);
 			if (s.startsWith("#P"))
 				showWithEffects(contentStream, "    ");
-			for (String ss : s.split("(?<=\\s)")) 
-				showWithEffects(contentStream, ss);
+			if (s.startsWith("#T")) {
+				lineNumber = nextLine(contentStream, lineNumber);
+				printTitle(contentStream, s.substring(2, s.length() - 2));
+			}
+			else 
+				for (String ss : s.split("(?<=\\s)")) 
+					showWithEffects(contentStream, ss);
 		}
 		return lineNumber;
 	}
@@ -866,6 +871,13 @@ public class Creature {
 	private void printBold(PDPageContentStream contentStream, String s) throws IOException {
 		contentStream.setFont(PDType1Font.TIMES_BOLD, 9.5f);
 		contentStream.showText(s);
+		contentStream.setFont(PDType1Font.TIMES_ROMAN, 9.5f);
+	}
+	private void printTitle(PDPageContentStream contentStream, String s) throws IOException {
+		contentStream.setFont(PDType1Font.TIMES_BOLD, 12f);
+		contentStream.newLineAtOffset(0, 2);
+		contentStream.showText(s);
+		contentStream.newLineAtOffset(0, -2);
 		contentStream.setFont(PDType1Font.TIMES_ROMAN, 9.5f);
 	}
 	/**

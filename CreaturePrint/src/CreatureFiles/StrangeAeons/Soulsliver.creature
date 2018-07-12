@@ -1,0 +1,124 @@
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/AdventurePaths/StrangeAeons/
+Name : Soulsliver
+Basic Name (Dinosaur):
+Short description: This humanoid creature has long, sharp teeth, and its pallid flesh is stretched tightly over its starved frame.
+Title Name : Soulsliver
+CR: 2
+Type: Outsider
+Terrain: Plain
+Climate: Extraplanar
+XP:600
+Race: 
+Number of classes with levels in (First is Favored): 0
+Alignment:NE
+Size: Medium
+Number of subtypes:2
+Subtype: extraplanar
+Subtype: shapechanger
+Init:7
+Number of senses (#I means to make italic, for spells):2
+Sense: darkvision 60 ft.
+Sense: low-light vision
+Perception:+7
+Number of auras (#I means to make italic, for spells):0
+AC:15
+touch:14
+flat-footed:11
+Number of AC modifiers:3
+Modifier:3
+Type of above Modifier: Dex
+Modifier:1
+Type of above Modifier: dodge
+Modifier: 1
+Type of above Modifier: natural
+Number of Conditional AC modifiers:0
+HP:19
+HP breakdown:3d10+3
+Fast Healing:1
+Regeneration:0
+fort:4
+ref:6
+will:2
+Number of Conditional Save modifiers:0
+Number of Defensive Abilities: 0
+DR: 0
+Immunities : 0
+Resistances: 2
+Resistance Type: acid
+Resistance: 5
+Resistance Type: fire
+Resistance: 5
+SR: 0
+Num of Weaknesses: 1
+Weakness: vulnerable to sonic
+Speed: 40
+Other Speeds(#B means base speed if reduced normally): 0
+Melee: 2 slams +5 (1d4+2)
+Ranged: 
+Space: 5
+Reach: 5
+Num of Special Attacks:1
+Special Attack: death throes
+Psychic Magic CL: 0
+SLA Use Categories (1/day, 3/week, etc.): 2
+SLa Source: none
+SLa CL: 3
+SLa Concentration: 4
+SLA Use Category and Spells: 3/day—#Image #Ihand#, #Iopen/close#, #Isilent #Iimage
+SLA Use Category and Spells: 1/day—#Imirror #Iimage
+Spells Known Levels: 0
+Spells Prepared Levels: 0
+Before Combat:
+During Combat:
+Morale: 
+Base Statistics:
+Str:14
+Dex:17
+Con:12
+Int:11
+Wis:12
+Cha:13
+BAB:3
+CMB:5
+Num of Special CMBs:0
+CMD:19
+Num of Special CMDs:0
+Num of Feats: 2
+Feat: Dodge
+Feat: Improved Initiative
+Num of Skills: 6
+Skill: Acrobatics +9 (+13 when jumping)
+Skill: Bluff +7
+Skill: Disguise +7 (+11 when using change shape)
+Skill: Perception +7
+Skill: Sense Motive +7
+Skill: Stealth +9
+Num of Racial Mods:2
+Racial Modifier: +4 Acrobatics when jumping
+Racial Modifier: +4 Disguise when using change shape
+Num of Lanugagues: 2
+Language: Aklo
+Language: Common
+Num of Special Languages: 0
+Num of Special Qualities: 5
+SQ: change shape (any humanoid, #Ialter #Iself#)
+SQ: compression
+SQ: mirror travel
+SQ: perfect copy
+SQ: sound mimicry (voices)
+Num of Combat Gear: 0
+Num of Other Gear: 0
+Environment: any land (extraplanar)
+Organization: solitary or gang (2–5)
+Treasure: incidental
+Num of Special Abilities: 3
+Special Ability: Death Throes (Su)
+Description: When a soulsliver is killed, its body explodes into jagged glass shards that deal 2d6 points of piercing and slashing damage to creatures within a 20-foot-radius burst (Reflex DC 12 half). The save DC is Constitution-based.
+Number of Sub-descriptions: 0
+Special Ability: Mirror Travel (Su)
+Description: At will as a standard action, a soulsliver can crawl into any mirror as if it were a door or window, instantly transporting itself to another mirror within 500 feet as if using #Idimension #Idoor (caster level 7th). It can remain within that mirror indefinitely, or on its next turn crawl out or use this ability again. Its compression ability allows it to enter or exit Diminutive or larger mirrors. It can only exit a mirror if it is using change shape to take a specific creature’s form. 
+Number of Sub-descriptions: 0
+Special Ability: Perfect Copy (Su)
+Description: When a soulsliver uses change shape, it can assume the appearance of a specific individual. However, it is always the mirror image of the person it copies, which might give away that something is wrong.
+Number of Sub-descriptions: 0
+Description:A soulsliver is an extradimensional shapechanger that lurks in the half-dimensions behind mirrors. It watches creatures on the Material Plane through reflective surfaces, assumes their likeness, then crawls through the mirror to kill and feast upon its prey. Whether they are bizarre offshoots of the doppelganger race or originate from some aberrant magic used to create a demiplane, soulslivers are responsible for many unsolved murders, and their mirror travel makes them hard to catch. #PA soulsliver causes trouble for a short while in its assumed form, then retreats through the mirror to its home plane. Its native plane is an aspect of the Plane of Shadow, with reversed and grossly distorted creatures and scenery from the Material Plane.

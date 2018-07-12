@@ -1,39 +1,41 @@
 Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/Modules/Hollow'sLastHope/
-Name : Dunlied
+Name : Firefoot Fennec
 Basic Name (Dinosaur):
-Short description: A particularly stout breed of small-antlered deer, often trained by foresters as mounts. Also known as a Brush Colt.
-Title Name : Dunlied
-CR: 1
+Short description: Small foxes with large ears and wispy patches of flame-colored fur around their paws
+Title Name : Firefoot Fennec
+CR: 1/3
 Type: Animal
-Terrain: Plain
+Terrain: Urban
 Climate: Temperate
-XP: 400
+XP: 135
 Race: 
 Number of classes with levels in (First is Favored): 0
 Alignment:N
-Size:Large
+Size:Small
 Number of subtypes:0
-Init:2
+Init:1
 Number of senses (#I means to make italic, for spells):2
 Sense: low-light vision
 Sense: scent
-Perception:+6
+Perception:+8
 Number of auras (#I means to make italic, for spells):0
-AC:11
-touch:11
-flat-footed:9
-Number of AC modifiers:2
-Modifier:2
+AC:13
+touch:12
+flat-footed:12
+Number of AC modifiers:3
+Modifier:1
 Type of above Modifier: Dex
-Modifier:-1
+Modifier:1
+Type of above Modifier: natural
+Modifier:1
 Type of above Modifier: size
 Number of Conditional AC modifiers:0
-HP:15
-HP breakdown:2d8+6
+HP:6
+HP breakdown:1d8+2
 Fast Healing:0
 Regeneration:0
-fort:6
-ref:5
+fort:4
+ref:3
 will:1
 Number of Conditional Save modifiers:0
 Number of Defensive Abilities: 0
@@ -42,11 +44,11 @@ Immunities : 0
 Resistances: 0
 SR: 0
 Num of Weaknesses: 0
-Speed: 50
+Speed: 40
 Other Speeds(#B means base speed if reduced normally): 0
-Melee: 2 hooves –2 (1d4+1)
+Melee: bite +2 (1d4+1)
 Ranged: 
-Space: 10
+Space: 5
 Reach: 5
 Num of Special Attacks: 0
 Psychic Magic CL: 0
@@ -57,35 +59,34 @@ Before Combat:
 During Combat: 
 Morale: 
 Base Statistics:
-Str:16
-Dex:14
-Con:17
+Str:13
+Dex:13
+Con:15
 Int:2
-Wis:13
-Cha:7
-BAB:1
-CMB:5
+Wis:12
+Cha:6
+BAB:0
+CMB:0
 Num of Special CMBs:0
-CMD:17
+CMD:11
 Num of Special CMDs:1
-Special CMD : 21 vs. trip
-Num of Feats: 2
-Feat: Endurance
-Feat: Run#UB
-Num of Skills: 1
-Skill: Perception +6
-Num of Racial Mods: 0
+Special CMD : 15 vs. trip
+Num of Feats: 1
+Feat: Skill Focus (Perception)
+Num of Skills: 3
+Skill: Acrobatics +1 (+9 jumping)
+Skill: Perception +8
+Skill: Survival +1 (+5 scent tracking)
+Num of Racial Mods: 2
+Racial Mod: +4 Acrobatics when jumping
+Racial Mod: +4 Survival when tracking by scent
 Num of Lanugagues: 0
 Num of Special Languages: 0
-Num of Special Qualities: 1
-SQ : docile
+Num of Special Qualities: 0
 Num of Combat Gear: 0
 Num of Other Gear: 0
-Environment: temperate plains
-Organization: solitary, pair, or herd (3–30)
+Environment: any
+Organization: solitary, pair, or pack (3–12)
 Treasure: none
-Num of Special Abilities: 1
-Ability Name: Docile (Ex)
-Abliity Text: Unless specifically trained for combat, a dunlied’s hooves are treated as secondary attacks.
-Number of Sub-descriptions: 0
+Num of Special Abilities:0
 Description :

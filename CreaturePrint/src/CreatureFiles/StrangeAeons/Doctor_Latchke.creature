@@ -1,4 +1,4 @@
-Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/StrangeAeons/
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/AdventurePaths/StrangeAeons/
 Name : "Doctor" Latchke
 Basic Name (Dinosaur):
 Short description: Another figure, unsettlingly thin and wearing a blood-smeared doctor’s coat, circles the table casually
@@ -19,16 +19,18 @@ Number of senses (#I means to make italic, for spells):1
 Sense:darkvision 60ft.
 Perception:+9
 Number of auras (#I means to make italic, for spells):0
-AC:16
+AC:19
 touch:12
-flat-footed:14
-Number of AC modifiers:3
+flat-footed:17
+Number of AC modifiers:4
 Modifier:1
 Type of above Modifier: Dex
 Modifier:1
 Type of above Modifier: dodge
 Modifier:4
 Type of above Modifier: natural
+Modifier:3
+Type of above Modifier: shield
 Number of Conditional AC modifiers:0
 HP:26
 HP breakdown:4d10+4
@@ -85,7 +87,7 @@ Skill: Diplomacy +4
 Skill: Disguise +9 (+29 while using change shape ability)
 Skill: Perception +9
 Skill: Sense Motive +6
-Skill: Stealth +5
+Skill: Stealth +4
 Num of Racial Mods: 2
 Racial Mod: +4 Bluff
 Racial Mod: +4 Disguise
@@ -96,14 +98,12 @@ Num of Special Qualities: 3
 SQ: change shape (#Ialter #Iself#)
 SQ: perfect copy
 SQ: mimicry
-Num of Combat Gear: 2
-Combat Gear: #Iwand #Iof #Iray #Iof #Ienfeeblement (20 charges)
-Combat Gear: #Iscroll #Iof #Isummon #Iswarm#
-Num of Other Gear: 4
-Other Gear: #Iwand #Iof #Ighost #Isound (35 charges)
-Other Gear: ivory scroll case (60 gp)
-Other Gear: carnelian (50 gp)
+Num of Combat Gear: 1
+Combat Gear: #Iscroll #Iof #Ihold #Iperson#
+Num of Other Gear: 3
+Other Gear: #I+1 #Iheavy #Iwooden #Ishield#
 Other Gear: 34 gp
+Other Gear: 60 sp
 Environment: 
 Organization: 
 Treasure: 

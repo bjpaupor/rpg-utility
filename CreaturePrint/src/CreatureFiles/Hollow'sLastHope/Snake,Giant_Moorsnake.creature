@@ -1,0 +1,97 @@
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/Modules/Hollow'sLastHope/
+Name : Moorsnake
+Basic Name (Dinosaur):Snake
+Short description: This large snake has a thick, muscular body and dull gray scales decorated with dirty brown stripes.
+Title Name : Giant Moorsnake
+CR: 2
+Type: Animal
+Terrain: Swamp
+Climate: Tropical
+XP:600
+Race: 
+Number of classes with levels in (First is Favored): 0
+Alignment:N
+Size:Medium
+Number of subtypes:0
+Init:3
+Number of senses (#I means to make italic, for spells):1
+Sense: scent
+Perception:+12
+Number of auras (#I means to make italic, for spells):0
+AC:15
+touch:13
+flat-footed:12
+Number of AC modifiers:2
+Modifier:3
+Type of above Modifier: Dex
+Modifier:2
+Type of above Modifier: natural
+Number of Conditional AC modifiers:0
+HP:19
+HP breakdown:3d8+6
+Fast Healing:0
+Regeneration:0
+fort:4
+ref:6
+will:2
+Number of Conditional Save modifiers:0
+Number of Defensive Abilities: 0
+DR: 0
+Immunities : 0
+Resistances: 0
+SR: 0
+Num of Weaknesses: 0
+Speed: 20
+Other Speeds(#B means base speed if reduced normally): 2
+Other Speed: climb 20 ft.
+Other Speed: swim 20 ft.
+Melee: bite +5 (1d4+4 plus grab)
+Ranged: 
+Space: 5
+Reach: 5
+Num of Special Attacks: 1
+Special Attack: constrict (1d4+4)
+Psychic Magic CL: 0
+SLA Use Categories (1/day, 3/week, etc.): 0
+Spells Known Levels: 0
+Spells Prepared Levels: 0
+Before Combat:
+During Combat:
+Morale: 
+Base Statistics:
+Str:17
+Dex:17
+Con:12
+Int:1
+Wis:12
+Cha:2
+BAB:2
+CMB:5
+Num of Special CMBs:1
+Special CMB: +9 grapple
+CMD:18
+Num of Special CMDs:1
+Special CMD: can't be tripped
+Num of Feats: 2
+Feat: Skill Focus (Perception)
+Feat: Toughness
+Num of Skills: 5
+Skill: Acrobatics +15
+Skill: Climb +11
+Skill: Perception: +12
+Skill: Stealth +11
+Skill: Swim +11
+Num of Racial Mods:3
+Racial Mod: +4 Perception
+Racial Mod: +4 Stealth
+Racial Mod: +8 Acrobatics
+Num of Lanugagues: 0
+Num of Special Languages: 0
+Num of Special Qualities: 0
+Num of Combat Gear: 0
+Num of Other Gear: 0
+Environment: warm forests, swamps, and fresh water
+Organization: solitary or nest (2–6)
+Treasure: none
+Num of Special Abilities: 0
+Description: Gray and brown patterned aquatic snakes, skilled at hiding amid debris and floating foliage at the edges of rivers and lakes.

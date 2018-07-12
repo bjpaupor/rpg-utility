@@ -1,4 +1,4 @@
-Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/StrangeAeons/
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/AdventurePaths/StrangeAeons/
 Name : "Doctor" Ilesi Scaen
 Basic Name (Dinosaur):
 Short description: Another figure, unsettlingly thin and wearing a blood-smeared doctor’s coat, circles the table casually
@@ -19,10 +19,12 @@ Number of senses (#I means to make italic, for spells):1
 Sense:darkvision 60ft.
 Perception:+9
 Number of auras (#I means to make italic, for spells):0
-AC:16
+AC:19
 touch:12
-flat-footed:14
-Number of AC modifiers:3
+flat-footed:17
+Number of AC modifiers:4
+Modifier: 3
+Type of above Modifier: armor
 Modifier:1
 Type of above Modifier: Dex
 Modifier:1
@@ -96,17 +98,12 @@ Num of Special Qualities: 3
 SQ: change shape (#Ialter #Iself#)
 SQ: perfect copy
 SQ: mimicry
-Num of Combat Gear: 2
-Combat Gear: #Iwand #Iof #Iray #Iof #Ifrost (18 charges)
-Combat Gear: #Iscroll #Iof #Iinvisibility#
-Num of Other Gear: 7
-Other Gear: #Iwand #Iof #Ipurify #Ifood #Iand #Idrink (10 charges)
-Other Gear: jade scroll case (100 gp)
-Other Gear: malachite (11 gp)
-Other Gear: rock crystal quartz (9 gp)
-Other Gear: 34 gp
-Other Gear: 38 sp
-Other Gear: 140 cp
+Num of Combat Gear: 1
+Combat Gear: #Iscroll #Iof #summon #Imonster #III#
+Num of Other Gear: 3
+Other Gear: #I+1 #Ileather#
+Other Gear: 21 gp
+Other Gear: 60 sp
 Environment: 
 Organization: 
 Treasure: 
