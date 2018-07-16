@@ -3,12 +3,12 @@ Name : Gurtlekep
 Basic Name (Dinosaur):
 Short description: 
 Title Name : Gurtlekep
-CR: 2
+CR: 1
 Type: Humanoid
 Terrain: Urban
 Climate: Temperate
-XP: 600
-Race: Kobold
+XP: 400
+Race: Male kobold
 Number of classes with levels in (First is Favored): 1
 Class:rogue
 Levels in class above:2
@@ -19,7 +19,7 @@ Subtype:reptilian
 Init:7
 Number of senses (#I means to make italic, for spells):1
 Sense:darkvision 60ft.
-Perception:+6
+Perception:+8
 Number of auras (#I means to make italic, for spells):0
 AC:17
 touch:14
@@ -34,8 +34,8 @@ Type of above Modifier: natural
 Modifier:1
 Type of above Modifier: size
 Number of Conditional AC modifiers:0
-HP:9
-HP breakdown:2d6
+HP:11
+HP breakdown:2d8+2
 Fast Healing:0
 Regeneration:0
 fort:0
@@ -52,7 +52,7 @@ Num of Weaknesses: 1
 Weakness : light sensitivity
 Speed: 30
 Other Speeds(#B means base speed if reduced normally): 0
-Melee: mwk shortsword +3 (1d4/19-20)
+Melee: mwk shortsword +6 (1d4/19-20)
 Ranged: dagger +5 (1d3/19-20)
 Space: 5
 Reach: 5
@@ -77,26 +77,30 @@ CMB:0
 Num of Special CMBs:0
 CMD:13
 Num of Special CMDs:0
-Num of Feats: 1
+Num of Feats: 2
 Feat: Improved Initiative
-Num of Skills: 7
+Feat: Weapon Finesse#UB
+Num of Skills: 8
 Skill: Acrobatics +8
 Skill: Climb +5
-Skill: Craft(trapmaking) +5
-Skill: Disable Device +5
+Skill: Craft(trapmaking) +7
+Skill: Disable Device +8
+Skill: Perception +8
+Skill: Profession(miner) +8
 Skill: Stealth +12
-Skill: Perception +6
-Skill: Survival +1
-Num of Racial Mods: 2
+Skill: Survival +6
+Num of Racial Mods: 3
 Racial Mod: +2 Craft(trapmaking)
+Racial Mod: +2 Perception
 Racial Mod: +2 Profession(miner)
 Num of Lanugagues: 1
 Language: Draconic
 Num of Special Languages: 0
-Num of Special Qualities: 1
+Num of Special Qualities: 2
+SQ: rogue talents (finesse rogue)
 SQ: trapfinding
 Num of Combat Gear: 1
-Combat Gear: #IPotion #Iof #Icure #Ilight #Iwounds
+Combat Gear: #IPotion #Iof #Icure #Ilight #Iwounds#
 Num of Other Gear: 4
 Other Gear: daggers (4)
 Other Gear: mwk shortsword

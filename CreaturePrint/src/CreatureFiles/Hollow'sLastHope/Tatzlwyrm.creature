@@ -1,7 +1,7 @@
 Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/Modules/Hollow'sLastHope/
 Name : Tatzlwyrm
 Basic Name (Dinosaur):
-Short description: This serpentine creature has the head of a ferocious dragon and two relatively small forearms that end in tiny claws.
+Short description: This slithering creature has the head of a dragon and a pair of clawed arms. A sickly green mist wafts from its open maw.
 Title Name : Tatzlwyrm
 CR: 2
 Type: Dragon
@@ -17,7 +17,7 @@ Init:2
 Number of senses (#I means to make italic, for spells):2
 Sense:darkvision 60ft.
 Sense: low-light vision
-Perception:+8
+Perception:+6
 Number of auras (#I means to make italic, for spells):0
 AC:15
 touch:12
@@ -33,8 +33,8 @@ HP breakdown:3d12+3
 Fast Healing:0
 Regeneration:0
 fort:4
-ref:5
-will:5
+ref:7
+will:3
 Number of Conditional Save modifiers:0
 Number of Defensive Abilities: 0
 DR: 0
@@ -47,14 +47,14 @@ Num of Weaknesses: 0
 Speed: 30
 Other Speeds(#B means base speed if reduced normally): 1
 Other Speed : climb 30 ft.
-Melee: bite +5 (1d8+3 plus grab)
+Melee: bite +5 (1d6+3 plus grab)
 Ranged: 
 Space: 5
 Reach: 5
 Num of Special Attacks: 3
 Special Attack : poison gasp
 Special Attack : pounce
-Special Attack : rake (2 claws +5, 1d4+2)
+Special Attack : rake (2 claws +5, 1d2+2)
 Psychic Magic CL: 0
 SLA Use Categories (1/day, 3/week, etc.): 0
 Spells Known Levels: 0
@@ -67,8 +67,8 @@ Str:14
 Dex:15
 Con:12
 Int:5
-Wis:14
-Cha:11
+Wis:11
+Cha:10
 BAB:3
 CMB:5
 Num of Special CMBs:1
@@ -77,28 +77,25 @@ CMD:17
 Num of Special CMDs:1
 Special CMD : can't be tripped
 Num of Feats: 2
-Feat: Nimble Moves
-Feat: Stealthy
-Num of Skills: 5
-Skill: Climb +14
-Skill: Escape Artist +5
-Skill: Intimidate +4
-Skill: Perception +8
-Skill: Stealth +10 (+16 in dense vegetation)
+Feat: Alertness
+Feat: Lightning Reflexes
+Num of Skills: 3
+Skill: Climb +16
+Skill: Perception +6
+Skill: Stealth +8 (+14 in dense vegetation)
 Num of Racial Mods: 1
 Racial Mod: +6 Stealth in dense vegetation 
-Num of Lanugagues: 1
-Language: Draconic
+Num of Lanugagues: 0
 Num of Special Languages: 0
 Num of Special Qualities: 0
 Num of Combat Gear: 0
 Num of Other Gear: 0
-Environment: any forests
+Environment: any forest
 Organization: solitary or nest (2–5)
 Treasure: standard
 Num of Special Abilities: 1
 Ability Name: Poison Gasp (Ex)
-Abliity Text: A tatzlwyrm’s breath contains a poisonous vapor. While grappling, instead of making a bite or rake attack, a tatzlwyrm can breathe poison into its victim’s face. A tatzlwyrm must begin its turn grappling to use this ability—it can’t begin a grapple and use its poison gasp in the same turn.
+Abliity Text: A tatzlwyrm’s breath is poisonous, but not very powerful. While grappling, instead of making a bite or rake attack, a tatzlwyrm can breathe its poison into its victim’s face (The poison's damage is equal to the Tatzlwyrm's Constitution modifier.) A tatzlywyrm must begin its turn grappling to use this ability—it can’t begin a grapple and use its poison gasp in the same turn.
 Num of Sub-Descriptions: 1
-Sub Description : #ITatzlwyrm #Ipoison#: Breath—inhaled; #Isave Fort DC 12; #Ifrequency 1/round for 2 rounds; #Ieffect 1d2 Str damage; #Icure 1 save. The save DC is Constitution-based.
-Description: Tatzlwyrms are thought to be primeval relatives of true dragons, having branched off the line millennia ago and evolved in a way that sets them notably apart. Undersized compared to their larger cousins, tatzlwyrms are nonetheless ferocious in their own right. And while tatzlwyrms are hardly impressive specimens when put beside their notorious relatives, most other reptiles can’t compare to them mentally. They understand Draconic, though other languages are beyond most tatzlwyrms’ limited comprehension. Nevertheless, tatzlwyrms are deeply cunning, building complex lairs and rudimentary traps. #PTatzlwyrms are quite rare, and only a few particularly curious and lucky adventurers can claim to have seen a living specimen. Reports do agree on some basic features, however. About the size of a full-grown human, tatzlwyrms have only two limbs and no wings, and possess a weak poisonous breath similar to the breath weapons of their true dragon relatives. An adult tatzlwyrm is 6 to 8 feet long, including its winding, organless tail, and it weighs between 400 and 500 pounds. A tatzlwyrm’s scales give the creature limited camouflage, ranging through various shades of green, brown, and gray. #PLike true dragons, tatzlwyrms are strict carnivores. They spend most of their time hiding, waiting to attack any prey that ventures too near. They consume their food slowly in the dark security and seclusion of their lairs. Tatzlwyrms have a remarkable knack for ambush and camouflage.
+Sub Description : #ITatzlwyrm #Ipoison#: Breath—contact; #Isave Fort DC 12; #Ifrequency once; #Ieffect 1 Con damage; #Icure 1 save. The save DC is Constitution-based.
+Description: A whelp race of dragonkind, tatzlwyrms lurk amid the deepest wilds of the natural world. Although they lack many of the qualities of true dragons—most notably wings and powerful breath weapons—their instinctual cunning and innate ferocity is not diminished by their size. Feral yet patient hunters, tatzlwyrms spend most of their time lying in wait for prey, uncaring of whether it takes the form of deer, wolves, or men. #PPossessing the same hoarding compulsion as their better-known draconic cousins, tatzlywryms collect the remains of their hunts, the eldest accumulating morbid troves of bones and debris. Incidentally, heavily gnawed equipment and forgotten treasures often lie littered among these grim hoards, even although the dragonkin have no use for such wealth. #PInnately stealthy and uncomfortable in open areas, tatzlwyrms are rarely seen, and in many regions are thought to be little more than local legends. As such, folkloric rumors persist of their weird abilities and common haunts, tales only verified when the foolish or unsuspecting intrude upon these aloof creatures’ far-flung lairs. It’s not uncommon for the residents of isolated communities to attribute the disappearance of hunters or travelers to “The tatzlwyrms getting’ em.” #PSeveral breeds of tatzlwyrms exist. The most-commonly encountered—although still quite rare—variety lurks amid the tangled hearts of ancient forests, while more elusive wyrms purportedly dwell within mountain crags, treacherous shoals, and deep underground. Although seemingly not intelligent enough to discern the historic importance of such sites, tatzlwyrms are oddly attracted to natural places of great age and primeval strength. What connection these strange dragons might have to these locations, however, remains a mystery.

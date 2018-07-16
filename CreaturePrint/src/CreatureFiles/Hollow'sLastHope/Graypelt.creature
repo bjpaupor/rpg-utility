@@ -1,0 +1,99 @@
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/Modules/Hollow'sLastHope/
+Name : Graypelt
+Basic Name (Dinosaur): 
+Short description: This unusually large wolf has an evil, almost intelligent light shining in its deep red eyes.
+Title Name : Graypelt
+CR: 3
+Type: Magical_Beast
+Terrain: Forest_Jungle
+Climate: Temperate
+XP: 800
+Race: Male worg
+Number of classes with levels in (First is Favored): 1
+Class: warrior
+Levels in above: 2
+Alignment:CE
+Size:Medium
+Number of subtypes:0
+Init:3
+Number of senses (#I means to make italic, for spells):3
+Sense: darkvision 60 ft.
+Sense: low-light vision
+Sense: scent
+Perception:+0
+Number of auras (#I means to make italic, for spells):0
+AC:15
+touch:13
+flat-footed:12
+Number of AC modifiers:2
+Modifier:3
+Type of above Modifier: Dex
+Modifier: 2
+Type of above Modifier: natural
+Number of Conditional AC modifiers:0
+HP:47
+HP breakdown:4d10+2d10+14
+Fast Healing:0
+Regeneration:0
+fort: 7
+ref: 7
+will: 5
+Number of Conditional Save modifiers:0
+Number of Defensive Abilities: 0
+DR: 0
+Immunities : 0
+Resistances: 0
+SR: 0
+Num of Weaknesses: 0
+Speed: 50
+Other Speeds(#B means base speed if reduced normally): 0
+Melee: bite +8 (1d6+3 plus trip)
+Ranged: 
+Space: 5
+Reach: 5
+Num of Special Attacks: 0
+Psychic Magic CL: 0
+SLA Use Categories (1/day, 3/week, etc.): 0
+Spells Known Levels: 0
+Spells Prepared Levels: 0
+Before Combat: If the PCs are helping Graypelt rid the monastery of monsters, they must make Sense Motive checks, opposed by the worg’s Bluff, to act in the surprise round when he attacks them.
+During Combat: Graypelt singles out the weak in any combat situation, targeting spellcasters first. He uses Power Attack when attacking such foes. He does not attack prone foes unless he has no other choice or they try to stand.
+Morale: This is Graypelt’s home and he fights to the death to protect it.
+Base Statistics:
+Str: 15
+Dex: 17
+Con: 15
+Int: 8
+Wis: 12
+Cha: 10
+BAB: 6
+CMB: 8
+Num of Special CMBs:0
+CMD:21
+Num of Special CMDs:1
+Special CMD : 25 vs. trip
+Num of Feats: 3
+Feat: Iron Will
+Feat: Power Attack
+Feat: Run
+Num of Skills: 5
+Skill : Bluff +3
+Skill : Intimidate +4
+Skill : Perception +7
+Skill : Stealth +9
+Skill : Survival +3
+Num of Racial Mods: 3
+Racial Mod: +2 Perception
+Racial Mod: +2 Stealth
+Racial Mod : +2 Survival
+Num of Lanugagues: 1
+Language: Common
+Num of Special Languages: 0
+Num of Special Qualities: 0
+Num of Combat Gear: 0
+Num of Other Gear: 0
+Environment: 
+Organization: 
+Treasure: 
+Num of Special Abilities:0
+Description : 

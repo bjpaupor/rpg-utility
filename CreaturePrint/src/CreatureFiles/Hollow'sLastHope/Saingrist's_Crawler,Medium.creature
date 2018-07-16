@@ -1,8 +1,8 @@
-Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/AdventurePaths/StrangeAeons/
-Name : Giant
-Basic Name (Dinosaur):Centipede
-Short description: This lengthy, segmented horror writhes and twists, pulsing its venomous mandibles in search of prey.
-Title Name : Giant Centipede
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/Modules/Hollow'sLastHope/
+Name : Saingrist's Crawler
+Basic Name (Dinosaur):
+Short description: A breed of angry red and black centipede capable of growing to monstrous size. Their bites are said to burn like fire.
+Title Name : Saingrist's Crawler (Medium)
 CR: 1/2
 Type: Vermin
 Terrain: Underground
@@ -92,4 +92,4 @@ Num of Special Abilities: 1
 Special Ability: Poison (Ex)
 Description: Bite–injury; #Isave Fort DC 13; #Ifrequency 1/round for 6 rounds; #Ieffect 1d3 Dex damage; #Icure 1 save. The save DC is Constitution-based and includes a +2 racial bonus.
 Number of Sub-descriptions: 0
-Description: Giant centipedes attack nearly any living creatures with their poisonous jaws. These creatures adapt to many environments and feed voraciously on the local fauna, including humanoids. The coloration of giant centipedes mirrors that of normal centipedes and spans the spectrum, ranging from dull hues to bright reds and fiery oranges. #POther species of giant centipedes exist as well, some smaller but most quite a bit larger. You can adjust the stats given here by changing Hit Dice and size (changing Strength, Dexterity, and Constitution as appropriate) to represent a wide range of giant centipede species. The following table lists the most common variants.
+Description: 

@@ -1,0 +1,87 @@
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/Modules/Hollow'sLastHope/
+Name : Razorcrow
+Basic Name (Dinosaur):
+Short description: Over-large rooks with distinctive, jagged beaks and unkempt, oily black feathers
+Title Name : Razorcrow
+CR: 1/3
+Type: Animal
+Terrain: Urban
+Climate: Temperate
+XP: 135
+Race: 
+Number of classes with levels in (First is Favored): 0
+Alignment:N
+Size:Tiny
+Number of subtypes:0
+Init:3
+Number of senses (#I means to make italic, for spells):1
+Sense: low-light vision
+Perception:+14
+Number of auras (#I means to make italic, for spells):0
+AC:15
+touch:15
+flat-footed:12
+Number of AC modifiers:2
+Modifier:3
+Type of above Modifier: Dex
+Modifier:2
+Type of above Modifier: size
+Number of Conditional AC modifiers:0
+HP:4
+HP breakdown:1d8
+Fast Healing:0
+Regeneration:0
+fort:2
+ref:5
+will:2
+Number of Conditional Save modifiers:0
+Number of Defensive Abilities: 0
+DR: 0
+Immunities : 0
+Resistances: 0
+SR: 0
+Num of Weaknesses: 0
+Speed: 10
+Other Speeds(#B means base speed if reduced normally): 1
+Other Speed: fly 60 ft. (average)
+Melee: 2 talons +5 (1d4-2)
+Ranged: 
+Space: 2-1/2
+Reach: 0
+Num of Special Attacks: 0
+Psychic Magic CL: 0
+SLA Use Categories (1/day, 3/week, etc.): 0
+Spells Known Levels: 0
+Spells Prepared Levels: 0
+Before Combat: 
+During Combat: 
+Morale: 
+Base Statistics:
+Str:6
+Dex:17
+Con:11
+Int:2
+Wis:14
+Cha:7
+BAB:0
+CMB:1
+Num of Special CMBs:0
+CMD:9
+Num of Special CMDs:0
+Num of Feats: 1
+Feat: Weapon Finesse
+Num of Skills: 2
+Skill: Fly +7
+Skill: Perception +14
+Num of Racial Mods: 1
+Racial Mod: +8 Perception
+Num of Lanugagues: 0
+Num of Special Languages: 0
+Num of Special Qualities: 0
+Num of Combat Gear: 0
+Num of Other Gear: 0
+Environment: temperate forests
+Organization: solitary or pair
+Treasure: none
+Num of Special Abilities:0
+Description :

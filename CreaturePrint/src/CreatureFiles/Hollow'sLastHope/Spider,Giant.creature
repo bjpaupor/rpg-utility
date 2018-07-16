@@ -1,0 +1,98 @@
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/Modules/Hollow'sLastHope/
+Name : Spider
+Basic Name (Dinosaur):Giant
+Short description: A spider the size of a man crawls silently from the depths of its funnel-shaped web.
+Title Name : Giant Spider
+CR: 1
+Type: Vermin
+Terrain: Forest_Jungle
+Climate: Temperate
+XP:400
+Race: 
+Number of classes with levels in (First is Favored): 0
+Alignment:N
+Size:Medium
+Number of subtypes:0
+Init:3
+Number of senses (#I means to make italic, for spells):2
+Sense: darkvision 60 ft.
+Sense: tremorsense 60 ft.
+Perception:+4
+Number of auras (#I means to make italic, for spells):0
+AC:14
+touch:13
+flat-footed:11
+Number of AC modifiers:2
+Modifier:3
+Type of above Modifier: Dex
+Modifier:1
+Type of above Modifier: natural
+Number of Conditional AC modifiers:0
+HP:16
+HP breakdown:3d8+3
+Fast Healing:0
+Regeneration:0
+fort:4
+ref:4
+will:1
+Number of Conditional Save modifiers:0
+Number of Defensive Abilities: 0
+DR: 0
+Immunities : 1
+Immunity: mind-affecting effects
+Resistances: 0
+SR: 0
+Num of Weaknesses: 0
+Speed: 30
+Other Speeds(#B means base speed if reduced normally): 1
+Other Speed: climb 30 ft. 
+Melee: bite +2 (1d6 plus poison)
+Ranged: 
+Space: 5
+Reach: 5
+Num of Special Attacks: 2
+Special Attack: poison
+Special Attack: web (+5 ranged, DC 12, hp 2)
+Psychic Magic CL: 0
+SLA Use Categories (1/day, 3/week, etc.): 0
+Spells Known Levels: 0
+Spells Prepared Levels: 0
+Before Combat:
+During Combat:
+Morale: 
+Base Statistics:
+Str:11
+Dex:17
+Con:12
+Int:-25000
+Wis:10
+Cha:2
+BAB:2
+CMB:2
+Num of Special CMBs:0
+CMD:15
+Num of Special CMDs:1
+Special CMD: 27 vs. trip
+Num of Feats: 0
+Num of Skills: 3
+Skill: Climb +16
+Skill: Perception: +4 (+8 in webs)
+Skill: Stealth +7 (+11 in webs)
+Num of Racial Mods:3
+Racial Mod: +4 Perception (+8 in webs)
+Racial Mod: +4 Stealth (+8 in webs)
+Racial Mod: +8 Climb
+Num of Lanugagues: 0
+Num of Special Languages: 0
+Num of Special Qualities: 0
+Num of Combat Gear: 0
+Num of Other Gear: 0
+Environment: any
+Organization: solitary, pair, or colony (3–8)
+Treasure: incidental
+Num of Special Abilities: 1
+Special Ability: Poison (Ex)
+Description: Bite–injury; #Isave Fort DC 14; #Ifrequency 1/round for 4 rounds; #Ieffect 1d2 Str damage; #Icure 1 save. The save DC is Constitution-based and includes a +2 racial bonus.
+Number of Sub-descriptions: 0
+Description: The statistics above are for a web-spinning spider. Hunting spiders lose the web ability but gain a +8 racial modif ier on Acrobatics checks.
+

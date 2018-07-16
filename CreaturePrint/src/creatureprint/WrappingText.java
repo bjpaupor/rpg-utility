@@ -37,7 +37,7 @@ public class WrappingText {
      */
     public List<String> getParagraphLines() throws IOException {
         List<String> result = new ArrayList<String>();
-        String[] split = text.split("(?<=[-\\s])");
+        String[] split = text.split("(?<=[-—\\s])");
         int[] possibleWrapPoints = new int[split.length];
         possibleWrapPoints[0] = split[0].length();
         for ( int i = 1 ; i < split.length ; i++ ) {
@@ -99,8 +99,7 @@ public class WrappingText {
         			else if (text.charAt(text.indexOf("#", end) + 1) == 'T') {
         				result.add(text.substring(start,end));
         				start = end;
-        				if (text.indexOf("#", text.indexOf("#", end)) < i &&
-        						text.indexOf("#", text.indexOf("#", end)) > -1) {
+        				if (text.indexOf("#", text.indexOf("#", end) + 1) < i) {
         					result.add(text.substring(start,i));
                 			start = i;
                 			width = 0;

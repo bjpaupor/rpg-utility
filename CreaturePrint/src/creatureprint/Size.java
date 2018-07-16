@@ -1,7 +1,7 @@
 package creatureprint;
 
 public enum Size {
-	FINE, DIMINUITIVE, TINY, SMALL, MEDIUM, LARGE, HUGE, GARGANTUAN, COLOSSAL;
+	FINE, DIMINUTIVE, TINY, SMALL, MEDIUM, LARGE, HUGE, GARGANTUAN, COLOSSAL;
 	@Override
 	public String toString() {
 		String result = this.name().toLowerCase();

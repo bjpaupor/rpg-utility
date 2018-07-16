@@ -1514,7 +1514,7 @@ public class Creature {
 	 * @throws IOException
 	 */
 	public static void main(String[] args) throws IOException {
-		//printSet("src/CreatureFiles/Hollow'sLastHope/");
+		printSet("src/CreatureFiles/Hollow'sLastHope/");
 		printSet("src/CreatureFiles/Bestiary1/");
 		printSet("src/CreatureFiles/");
 		for (String s : args)

@@ -1,38 +1,40 @@
-Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/AdventurePaths/StrangeAeons/
-Name : Giant
-Basic Name (Dinosaur):Centipede
-Short description: This lengthy, segmented horror writhes and twists, pulsing its venomous mandibles in search of prey.
-Title Name : Giant Centipede
-CR: 1/2
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/Modules/Hollow'sLastHope/
+Name : Saingrist's Crawler
+Basic Name (Dinosaur):
+Short description: A breed of angry red and black centipede capable of growing to monstrous size. Their bites are said to burn like fire.
+Title Name : Saingrist's Crawler (Large)
+CR: 1
 Type: Vermin
 Terrain: Underground
 Climate: Temperate
-XP:200
+XP:400
 Race: 
 Number of classes with levels in (First is Favored): 0
 Alignment:N
-Size:Medium
+Size:Large
 Number of subtypes:0
-Init:2
+Init:1
 Number of senses (#I means to make italic, for spells):1
 Sense: darkvision 60 ft.
 Perception:+4
 Number of auras (#I means to make italic, for spells):0
 AC:14
-touch:12
-flat-footed:12
-Number of AC modifiers:2
-Modifier:2
+touch:10
+flat-footed:13
+Number of AC modifiers:3
+Modifier:1
 Type of above Modifier: Dex
-Modifier:2
+Modifier:4
 Type of above Modifier: natural
+Modifier:-1
+Type of above Modifier: size
 Number of Conditional AC modifiers:0
-HP:5
-HP breakdown:1d8+1
+HP:15
+HP breakdown:2d8+6
 Fast Healing:0
 Regeneration:0
-fort:3
-ref:2
+fort:6
+ref:1
 will:0
 Number of Conditional Save modifiers:0
 Number of Defensive Abilities: 0
@@ -45,10 +47,10 @@ Num of Weaknesses: 0
 Speed: 40
 Other Speeds(#B means base speed if reduced normally): 1
 Other Speed: climb 40 ft. 
-Melee: bite +2 (1d6-1 plus poison)
+Melee: bite +3 (1d8+4 plus poison)
 Ranged: 
-Space: 5
-Reach: 5
+Space: 10
+Reach: 10
 Num of Special Attacks: 1
 Special Attack: poison
 Psychic Magic CL: 0
@@ -59,24 +61,24 @@ Before Combat:
 During Combat:
 Morale: 
 Base Statistics:
-Str:9
-Dex:15
-Con:12
+Str:17
+Dex:13
+Con:16
 Int:-25000
 Wis:10
 Cha:2
-BAB:0
-CMB:-1
+BAB:1
+CMB:5
 Num of Special CMBs:0
-CMD:11
+CMD:16
 Num of Special CMDs:1
 Special CMD: can't be tripped
 Num of Feats: 1
 Feat: Weapon Finesse#UB
 Num of Skills: 3
-Skill: Climb +7
+Skill: Climb +11
 Skill: Perception: +4
-Skill: Stealth +10
+Skill: Stealth +5
 Num of Racial Mods:2
 Racial Mod: +4 Perception
 Racial Mod: +8 Stealth
@@ -90,6 +92,6 @@ Organization: solitary, pair, or colony (3–6)
 Treasure: none
 Num of Special Abilities: 1
 Special Ability: Poison (Ex)
-Description: Bite–injury; #Isave Fort DC 13; #Ifrequency 1/round for 6 rounds; #Ieffect 1d3 Dex damage; #Icure 1 save. The save DC is Constitution-based and includes a +2 racial bonus.
+Description: Bite–injury; #Isave Fort DC 16; #Ifrequency 1/round for 6 rounds; #Ieffect 1d3 Dex damage; #Icure 1 save. The save DC is Constitution-based and includes a +2 racial bonus.
 Number of Sub-descriptions: 0
-Description: Giant centipedes attack nearly any living creatures with their poisonous jaws. These creatures adapt to many environments and feed voraciously on the local fauna, including humanoids. The coloration of giant centipedes mirrors that of normal centipedes and spans the spectrum, ranging from dull hues to bright reds and fiery oranges. #POther species of giant centipedes exist as well, some smaller but most quite a bit larger. You can adjust the stats given here by changing Hit Dice and size (changing Strength, Dexterity, and Constitution as appropriate) to represent a wide range of giant centipede species. The following table lists the most common variants.
+Description: 
