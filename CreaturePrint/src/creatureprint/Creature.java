@@ -117,6 +117,16 @@ public class Creature {
 	//Description
 	private String description;
 
+	//PDF Stuff - some of this should be customizable one day
+	private PDDocument pdoc;
+	private PDPage page;
+	private PDPageContentStream contentStream;
+	private int lineNumber;
+	private float nameSize = 36, shortDescSize = 18, titleNameSize = 18, border = .9f * 69, 
+			normalText = 9.5f, tinyText = 4.5f, largeText = 12;
+	private PDFont italics = PDType1Font.TIMES_ITALIC, bold = PDType1Font.TIMES_BOLD, normal = PDType1Font.TIMES_ROMAN;
+	private boolean firstPage = true;
+	
 	@SuppressWarnings("unchecked")
 	public Creature(String fileName) {
 		if (!fileName.endsWith(".creature")) {
@@ -338,7 +348,8 @@ public class Creature {
 				specialAbilities[i] = new Pair<String, Pair<String, String[]>>(bold, description);
 			}
 			description = readALine(read);
-		} catch (IOException ex) {
+		} catch (Exception ex) {
+			System.out.println(name);
 			ex.printStackTrace();
 			return;
 		}
@@ -744,61 +755,57 @@ public class Creature {
 		writeALine(file, ":" + description);
 		file.close();
 	}
-	private int printHeader(PDPageContentStream contentStream, String text, int lineNumber) throws IOException {
-		float width = PDType1Font.TIMES_BOLD.getStringWidth(text) / 1000 * 9.5f;
-		float dashWidth = PDType1Font.TIMES_BOLD.getStringWidth("-") / 1000 * 9.5f;
+	private void printHeader(String text) throws IOException {
+		float width = bold.getStringWidth(text) / 1000 * normalText;
+		float dashWidth = bold.getStringWidth("-") / 1000 * normalText;
 		while (width + dashWidth  < PDRectangle.LETTER.getWidth() / 2 - .9f * 72) {
 			width += dashWidth;
 			text += "-";
 		}
-		lineNumber = nextLine(contentStream, lineNumber);
-		printBold(contentStream, text);
-		return lineNumber;
+		nextLine();
+		printBold(text);
 	}
-	private int printAParagraph(PDPageContentStream contentStream, String line, int lineNumber) throws IOException {
-		WrappingText text = new WrappingText(line, PDRectangle.LETTER.getWidth() / 2 - .9f * 72, 9.5f);
+	private void printAParagraph(String line) throws IOException {
+		WrappingText text = new WrappingText(line, PDRectangle.LETTER.getWidth() / 2 - .9f * 72, normalText);
 		for (String s : text.getParagraphLines()) {
-			lineNumber = nextLine(contentStream, lineNumber);
+			nextLine();
 			if (s.startsWith("#P"))
-				showWithEffects(contentStream, "    ");
+				showWithEffects("    ");
 			if (s.startsWith("#T")) {
-				lineNumber = nextLine(contentStream, lineNumber);
-				printTitle(contentStream, s.substring(2, s.length() - 2));
+				nextLine();
+				printTitle(s.substring(2, s.length() - 2));
 			}
 			else 
 				for (String ss : s.split("(?<=\\s)")) 
-					showWithEffects(contentStream, ss);
+					showWithEffects(ss);
 		}
-		return lineNumber;
 	}
-	private int printAnIndentedLine(PDPageContentStream contentStream, String line, int lineNumber) throws IOException {
-		WrappingText text = new WrappingText(line, PDRectangle.LETTER.getWidth() / 2 - .9f * 72, 9.5f);
+	private void printAnIndentedLine(String line) throws IOException {
+		WrappingText text = new WrappingText(line, PDRectangle.LETTER.getWidth() / 2 - .9f * 72, normalText);
 		boolean first = true;
 		for (String s : text.getIndentedLines()) {
-			lineNumber = nextLine(contentStream, lineNumber);
-			showWithEffects(contentStream, "    ");
+			nextLine();
+			showWithEffects("    ");
 			if (!first)
-				showWithEffects(contentStream, "    ");
+				showWithEffects("    ");
 			first = false;
 			for (String ss : s.split("(?<=\\s)")) 
-				showWithEffects(contentStream, ss);
+				showWithEffects(ss);
 		}
-		return lineNumber;
 	}
-	private int printALine(PDPageContentStream contentStream, String line, int lineNumber) throws IOException {
-		WrappingText text = new WrappingText(line, PDRectangle.LETTER.getWidth() / 2 - .9f * 72, 9.5f);
+	private void printALine(String line) throws IOException {
+		WrappingText text = new WrappingText(line, PDRectangle.LETTER.getWidth() / 2 - .9f * 72, normalText);
 		boolean first = true;
 		for (String s : text.getFancyLines()) {
-			lineNumber = nextLine(contentStream, lineNumber);
+			nextLine();
 			if (!first)
-				showWithEffects(contentStream, "    ");
+				showWithEffects("    ");
 			first = false;
 			for (String ss : s.split("(?<=\\s)")) 
-				showWithEffects(contentStream, ss);
+				showWithEffects(ss);
 		}
-		return lineNumber;
 	}
-	private void showWithEffects(PDPageContentStream contentStream, String line) throws IOException {
+	private void showWithEffects(String line) throws IOException {
 		int current = 0;
 		while (current < line.length()) {
 			int next = line.indexOf("#I", current);
@@ -837,13 +844,13 @@ public class Creature {
 				end = line.length();
 			switch (effect) {
 			case 0:
-				printItalic(contentStream, line.substring(next + 2, end));
+				printItalic(line.substring(next + 2, end));
 				break;
 			case 1:
-				printBold(contentStream, line.substring(next + 2, end));
+				printBold(line.substring(next + 2, end));
 				break;
 			case 2:
-				printSuper(contentStream, line.substring(next + 2, end));
+				printSuper(line.substring(next + 2, end));
 				break;
 			case 3:
 				contentStream.showText(line.substring(next + 1, end));
@@ -856,29 +863,29 @@ public class Creature {
 		}
 	}
 	@SuppressWarnings("deprecation")
-	private void printSuper(PDPageContentStream contentStream, String s) throws IOException {
-		contentStream.setFont(PDType1Font.TIMES_ROMAN, 4.5f);
+	private void printSuper(String s) throws IOException {
+		contentStream.setFont(normal, tinyText);
 		contentStream.appendRawCommands("\n5 Ts\n");
 		contentStream.showText(s);
 		contentStream.appendRawCommands("\n0 Ts\n");
-		contentStream.setFont(PDType1Font.TIMES_ROMAN, 9.5f);
+		contentStream.setFont(normal, normalText);
 	}
-	private void printItalic(PDPageContentStream contentStream, String s) throws IOException {
-		contentStream.setFont(PDType1Font.TIMES_ITALIC, 9.5f);
+	private void printItalic(String s) throws IOException {
+		contentStream.setFont(italics, normalText);
 		contentStream.showText(s);
-		contentStream.setFont(PDType1Font.TIMES_ROMAN, 9.5f);
+		contentStream.setFont(normal, normalText);
 	}
-	private void printBold(PDPageContentStream contentStream, String s) throws IOException {
-		contentStream.setFont(PDType1Font.TIMES_BOLD, 9.5f);
+	private void printBold(String s) throws IOException {
+		contentStream.setFont(bold, normalText);
 		contentStream.showText(s);
-		contentStream.setFont(PDType1Font.TIMES_ROMAN, 9.5f);
+		contentStream.setFont(normal, normalText);
 	}
-	private void printTitle(PDPageContentStream contentStream, String s) throws IOException {
-		contentStream.setFont(PDType1Font.TIMES_BOLD, 12f);
+	private void printTitle(String s) throws IOException {
+		contentStream.setFont(bold, largeText);
 		contentStream.newLineAtOffset(0, 2);
 		contentStream.showText(s);
 		contentStream.newLineAtOffset(0, -2);
-		contentStream.setFont(PDType1Font.TIMES_ROMAN, 9.5f);
+		contentStream.setFont(normal, normalText);
 	}
 	/**
 	 * Returns a place from a number as String
@@ -906,25 +913,38 @@ public class Creature {
 	 * @param lineNumber -after the header
 	 * @throws IOException
 	 */
-	private int nextLine(PDPageContentStream contentStream, int lineNumber) throws IOException {
-		if (lineNumber == 53 && shortDescLong) 
+	private void nextLine() throws IOException {
+		if (lineNumber == 53 && shortDescLong && firstPage) 
 			contentStream.newLineAtOffset(PDRectangle.LETTER.getWidth() / 2 - .9f * 66, 
-					PDType1Font.TIMES_ROMAN.getFontDescriptor().getFontBoundingBox().getHeight() / 1000 * 9.5f * 52);
-		else if (lineNumber == 55 && !shortDescLong) 
+					normal.getFontDescriptor().getFontBoundingBox().getHeight() / 1000 * normalText * 52);
+		else if (lineNumber == 55 && !shortDescLong && firstPage) 
 			contentStream.newLineAtOffset(PDRectangle.LETTER.getWidth() / 2 - .9f * 66, 
-					PDType1Font.TIMES_ROMAN.getFontDescriptor().getFontBoundingBox().getHeight() / 1000 * 9.5f * 54);
-		//TODO Handle page turn
-		else if (lineNumber == 106 && shortDescLong) {
-			contentStream.newLineAtOffset(50, 0);
-			contentStream.newLine();
-		}
-		else if (lineNumber == 110 && !shortDescLong) {
-			contentStream.newLineAtOffset(50 , 0);
-			contentStream.newLine();
-		}
+					normal.getFontDescriptor().getFontBoundingBox().getHeight() / 1000 * normalText * 54);
+		else if (lineNumber == 63 && !firstPage)
+			contentStream.newLineAtOffset(PDRectangle.LETTER.getWidth() / 2 - .9f * 66, 
+					normal.getFontDescriptor().getFontBoundingBox().getHeight() / 1000 * normalText * 62);
+		else if (lineNumber == 106 && shortDescLong && firstPage)
+			nextPage();
+		else if (lineNumber == 110 && !shortDescLong && firstPage) 
+			nextPage();
+		else if (lineNumber == 126 && !firstPage) 
+			nextPage();
 		else
 			contentStream.newLine();
-		return ++lineNumber;
+		++lineNumber;
+	}
+	private void nextPage() throws IOException {
+		firstPage = false;
+		contentStream.close();
+		pdoc.addPage(page);
+		page = new PDPage();
+		contentStream = new PDPageContentStream(pdoc, page);
+		contentStream.beginText();
+		contentStream.setFont(normal, normalText);
+		contentStream.newLineAtOffset(border, PDRectangle.LETTER.getHeight() - border - 
+				normal.getFontDescriptor().getCapHeight() / 1000 * normalText);
+		contentStream.setLeading(normal.getFontDescriptor().getFontBoundingBox().getHeight() / 1000 * normalText);
+		lineNumber = 0;
 	}
 	/**
 	 * Reads a single line from a file after a ':' char
@@ -953,23 +973,24 @@ public class Creature {
 
 	public void printToPdf() {
 		try (PDDocument pdoc = new PDDocument();) {
-			PDPage page = new PDPage();
-			PDPageContentStream contentStream = new PDPageContentStream(pdoc, page);
+			this.pdoc = pdoc;
+			page = new PDPage();
+			contentStream = new PDPageContentStream(pdoc, page);
+			drawPictures(pdoc);
 			contentStream.beginText();
-			writeHeader(contentStream);
-			int lineNumber = writeTop(contentStream);
-			lineNumber = writeDefense(contentStream, lineNumber);
-			lineNumber = writeOffense(contentStream, lineNumber);
-			lineNumber = writeTactics(contentStream, lineNumber);
-			lineNumber = writeStatistics(contentStream, lineNumber);
-			lineNumber = writeEcology(contentStream, lineNumber);
-			lineNumber = writeSpecialAbilities(contentStream, lineNumber);
+			writeHeader();
+			writeTop();
+			writeDefense();
+			writeOffense();
+			writeTactics();
+			writeStatistics();
+			writeEcology();
+			writeSpecialAbilities();
 			if (!description.equals("")) {
-				lineNumber = nextLine(contentStream, lineNumber); 
-				lineNumber = printAParagraph(contentStream, description, lineNumber);
+				nextLine(); 
+				printAParagraph(description);
 			}
 			contentStream.endText();
-			drawPictures(contentStream, pdoc);
 			contentStream.close();
 			pdoc.addPage(page);
 			if (!Files.exists(Paths.get(path)))
@@ -990,44 +1011,40 @@ public class Creature {
 			result += "#H" + ss;
 		return result.trim();
 	}
-	private int writeSpecialAbilities(PDPageContentStream contentStream, int lineNumber) throws IOException {
+	private void writeSpecialAbilities() throws IOException {
 		if (specialAbilities.length > 0) {
-			lineNumber = printHeader(contentStream, "SPECIAL ABILITIES", lineNumber);
+			printHeader("SPECIAL ABILITIES");
 			for (int i = 0; i < specialAbilities.length; i++) {
 				String text = embolden(specialAbilities[i].getX());
 				text += ' ' + specialAbilities[i].getY().getX();
-				lineNumber = printALine(contentStream, text, lineNumber);
+				printALine(text);
 				for (int j = 0; j < specialAbilities[i].getY().getY().length; j++) 
-					lineNumber = printAnIndentedLine(contentStream, 
-							specialAbilities[i].getY().getY()[j], lineNumber);
+					printAnIndentedLine(specialAbilities[i].getY().getY()[j]);
 			}
 		}
-		return lineNumber;
 	}
-	private int writeEcology(PDPageContentStream contentStream, int lineNumber) throws IOException {
+	private void writeEcology() throws IOException {
 		if (!(environment.equals("") && organization.equals("") && treasure.equals(""))) {
-			lineNumber = printHeader(contentStream, "ECOLOGY", lineNumber);
+			printHeader("ECOLOGY");
 			if (!environment.equals("")) 
-				lineNumber = printALine(contentStream, "#HEnvironment " + environment, lineNumber);
+				printALine("#HEnvironment " + environment);
 			if (!organization.equals("")) 
-				lineNumber = printALine(contentStream, "#HOrganization " + organization, lineNumber);
+				printALine("#HOrganization " + organization);
 			if (!treasure.equals("")) 
-				lineNumber = printALine(contentStream, "#HTreasure " + treasure, lineNumber);
+				printALine("#HTreasure " + treasure);
 		}
-		return lineNumber;
 	}
-	private int writeStatistics(PDPageContentStream contentStream, int lineNumber) throws IOException {
-		lineNumber = printHeader(contentStream, "STATISTICS", lineNumber);
-		lineNumber = writeAbilityScores(contentStream, lineNumber);
-		lineNumber = writeBABCMBD(contentStream, lineNumber);
-		lineNumber = writeFeats(contentStream, lineNumber);
-		lineNumber = writeSkills(contentStream, lineNumber);
-		lineNumber = writeLanguages(contentStream, lineNumber);
-		lineNumber = writeSQs(contentStream, lineNumber);
-		lineNumber = writeGear(contentStream, lineNumber);
-		return lineNumber;
+	private void writeStatistics() throws IOException {
+		printHeader("STATISTICS");
+		writeAbilityScores();
+		writeBABCMBD();
+		writeFeats();
+		writeSkills();
+		writeLanguages();
+		writeSQs();
+		writeGear();
 	}
-	private int writeGear(PDPageContentStream contentStream, int lineNumber) throws IOException {
+	private void writeGear() throws IOException {
 		String text = "";
 		if (combatGear.length > 0) {
 			text += "#HCombat #HGear ";
@@ -1048,10 +1065,9 @@ public class Creature {
 			}
 		}
 		if (!text.equals(""))
-			lineNumber = printALine(contentStream, text, lineNumber);
-		return lineNumber;
+			printALine(text);
 	}
-	private int writeSQs(PDPageContentStream contentStream, int lineNumber) throws IOException {
+	private void writeSQs() throws IOException {
 		if (sq.length > 0) {
 			String text = "#HSQ ";
 			for (int i = 0; i < sq.length; i++) {
@@ -1059,11 +1075,10 @@ public class Creature {
 				if (i + 1 < sq.length) 
 					text += ", ";
 			}
-			lineNumber = printALine(contentStream, text, lineNumber);
+			printALine(text);
 		}
-		return lineNumber;
 	}
-	private int writeLanguages(PDPageContentStream contentStream, int lineNumber) throws IOException {
+	private void  writeLanguages() throws IOException {
 		if (languages.length > 0) {
 			String text = "#HLanguages ";
 			for (int i = 0; i < languages.length; i++) {
@@ -1079,11 +1094,10 @@ public class Creature {
 						text += ", ";
 				}
 			}
-			lineNumber = printALine(contentStream, text, lineNumber);
+			printALine(text);
 		}
-		return lineNumber;
 	}
-	private int writeSkills(PDPageContentStream contentStream, int lineNumber) throws IOException {
+	private void writeSkills() throws IOException {
 		if (skills.length > 0) {
 			String text = "#HSkills ";
 			for (int i = 0; i < skills.length; i++) {
@@ -1099,11 +1113,10 @@ public class Creature {
 						text += ", ";
 				}
 			}
-			lineNumber = printALine(contentStream, text, lineNumber);
+			printALine(text);
 		}
-		return lineNumber;
 	}
-	private int writeFeats(PDPageContentStream contentStream, int lineNumber) throws IOException {
+	private void writeFeats() throws IOException {
 		if (feats.length > 0) {
 			String text = "#HFeats ";
 			for (int i = 0; i < feats.length; i++) {
@@ -1111,11 +1124,10 @@ public class Creature {
 				if (i + 1 < feats.length) 
 					text += ", ";
 			}
-			lineNumber = printALine(contentStream, text, lineNumber);
+			printALine(text);
 		}
-		return lineNumber;
 	}
-	private int writeBABCMBD(PDPageContentStream contentStream, int lineNumber) throws IOException {
+	private void writeBABCMBD() throws IOException {
 		String text = "#HBase #HAtk " + "+" + bab + "; " + "#HCMB ";
 		if (cmb == EMDASH)
 			text += "—";
@@ -1140,49 +1152,46 @@ public class Creature {
 			}
 			text += ")";
 		}
-		return printALine(contentStream, text, lineNumber);
+		printALine(text);
 	}
-	private int writeAbilityScores(PDPageContentStream contentStream, int lineNumber) throws IOException {
+	private void writeAbilityScores() throws IOException {
 		String line = "#HStr " + (str == EMDASH ? "—" : str);
 		line += ", #HDex " + (dex == EMDASH ? "—" : dex);
 		line += ", #HCon " + (con == EMDASH ? "—" : con); 
 		line += ", #HInt " + (intelligence == EMDASH ? "—" : intelligence);
 		line += ", #HWis " + (wis == EMDASH ? "—" : wis);
 		line += ", #HCha " + (cha == EMDASH ? "—" : cha); 
-		return printALine(contentStream, line, lineNumber);
+		printALine(line);
 	}
-	private int writeTactics(PDPageContentStream contentStream, int lineNumber) throws IOException {
+	private void writeTactics() throws IOException {
 		if (beforeCombat.equals("") && duringCombat.equals("") && morale.equals("") && baseStatistics.equals(""))
-			return lineNumber;
-		lineNumber = printHeader(contentStream, "TACTICS", lineNumber);
+			return;
+		printHeader("TACTICS");
 		if (!beforeCombat.equals("")) 
-			lineNumber = printALine(contentStream, "#HBefore #HCombat " + beforeCombat, lineNumber);
+			printALine("#HBefore #HCombat " + beforeCombat);
 		if (!duringCombat.equals("")) 
-			lineNumber = printALine(contentStream, "#HDuring #HCombat " + duringCombat, lineNumber);
+			printALine("#HDuring #HCombat " + duringCombat);
 		if (!morale.equals("")) 
-			lineNumber = printALine(contentStream, "#HMorale " + morale, lineNumber);
+			printALine("#HMorale " + morale);
 		if (!baseStatistics.equals("")) 
-			lineNumber = printALine(contentStream, "#HBase #HStatistics " + baseStatistics, lineNumber);
-		return lineNumber;
+			printALine("#HBase #HStatistics " + baseStatistics);
 	}
-	private int writeOffense(PDPageContentStream contentStream, int lineNumber) throws IOException {
-		lineNumber = printHeader(contentStream, "OFFENSE", lineNumber);
-		lineNumber = writeSpeeds(contentStream, lineNumber);
+	private void writeOffense() throws IOException {
+		printHeader("OFFENSE");
+		writeSpeeds();
 		if (!melee.equals("")) 
-			lineNumber = printALine(contentStream, "#HMelee " + melee, lineNumber);
+			printALine("#HMelee " + melee);
 		if (!ranged.equals("")) 
-			lineNumber = printALine(contentStream, "#HRanged " + ranged, lineNumber);
+			printALine("#HRanged " + ranged);
 		if (!(space.equals("5") && reach == 5))
-			lineNumber = printALine(contentStream, "#HSpace " + space + " ft.; " + 
-					"#HReach " + reach + " ft.", lineNumber);
-		lineNumber = writeSpecialAttacks(contentStream, lineNumber);
-		lineNumber = writePsychicMagic(contentStream, lineNumber);
-		lineNumber = writeSLAs(contentStream, lineNumber);
-		lineNumber = writeSpellsKnown(contentStream, lineNumber);
-		lineNumber = writeSpellsPrepared(contentStream, lineNumber);
-		return lineNumber;
+			printALine("#HSpace " + space + " ft.; " + "#HReach " + reach + " ft.");
+		writeSpecialAttacks();
+		writePsychicMagic();
+		writeSLAs();
+		writeSpellsKnown();
+		writeSpellsPrepared();
 	}
-	private int writeSpellsPrepared(PDPageContentStream contentStream, int lineNumber) throws IOException {
+	private void writeSpellsPrepared() throws IOException {
 		if (spellsPrepared.getY().length > 0) {//OPT <[cl, concentration], [use-spells], [className, Bold, after, Bold ...]>
 			String text = "";
 			if (!spellsPrepared.getZ()[0].equals("none")) 
@@ -1192,9 +1201,9 @@ public class Creature {
 			int conc = spellsPrepared.getX()[1];
 			text += "(CL " + getPlace(spellsPrepared.getX()[0]) + "; concentration " + 
 					((conc > -1) ? ("+" + conc) : (conc))  + ')';
-			lineNumber = printALine(contentStream, text, lineNumber);
+			printALine(text);
 			for (int i = 0; i < spellsPrepared.getY().length; i++) 
-				lineNumber = printAnIndentedLine(contentStream, spellsPrepared.getY()[i], lineNumber);
+				printAnIndentedLine(spellsPrepared.getY()[i]);
 			text = "";
 			for (int i = 1; i < spellsPrepared.getZ().length; i++) {
 				text += "#H" + spellsPrepared.getZ()[i];
@@ -1202,11 +1211,10 @@ public class Creature {
 					text += "; ";
 			}
 			if (!text.equals(""))
-				lineNumber = printAnIndentedLine(contentStream, text, lineNumber);
+				printAnIndentedLine(text);
 		}
-		return lineNumber;
 	}
-	private int writeSpellsKnown(PDPageContentStream contentStream, int lineNumber) throws IOException {
+	private void writeSpellsKnown() throws IOException {
 		if (spellsKnown.getY().length > 0) {
 			String text = "";
 			if (!spellsKnown.getZ()[0].equals("none")) 
@@ -1216,9 +1224,9 @@ public class Creature {
 			int conc = spellsKnown.getX()[1];
 			text += "(CL " + getPlace(spellsKnown.getX()[0]) + "; concentration " + 
 					((conc > -1) ? ("+" + conc) : (conc))  + ')';
-			lineNumber = printALine(contentStream, text, lineNumber);
+			printALine(text);
 			for (int i = 0; i < spellsKnown.getY().length; i++) 
-				lineNumber = printAnIndentedLine(contentStream, spellsKnown.getY()[i], lineNumber);
+				printAnIndentedLine(spellsKnown.getY()[i]);
 			text = "";
 			for (int i = 1; i < spellsKnown.getZ().length; i++) {
 				text += "#H" + spellsKnown.getZ()[i];
@@ -1226,35 +1234,32 @@ public class Creature {
 					text += "; ";
 			}
 			if (!text.equals(""))
-				lineNumber = printAnIndentedLine(contentStream, text, lineNumber);
+				printAnIndentedLine(text);
 		}
-		return lineNumber;
 	}
-	private int writePsychicMagic(PDPageContentStream contentStream, int lineNumber) throws IOException {
+	private void writePsychicMagic() throws IOException {
 		if (psychicMagic.getX().length > 0) {
 			int conc = psychicMagic.getX()[1];
 			String text = "#HPsychic #HMagic " + "(CL " + getPlace(psychicMagic.getX()[0]) +
 					"; concentration " + ((conc > -1) ? ("+" + conc) : (conc))  + ')';
-			lineNumber = printALine(contentStream, text, lineNumber);
-			lineNumber = printAnIndentedLine(contentStream, psychicMagic.getY(), lineNumber);
+			printALine(text);
+			printAnIndentedLine(psychicMagic.getY());
 		}
-		return lineNumber;
 	}
-	private int writeSLAs(PDPageContentStream contentStream, int lineNumber) throws IOException {
+	private void writeSLAs() throws IOException {
 		if (spellLikeAbilities.getX().length > 0) {
 			int conc = spellLikeAbilities.getY()[1];
 			String text = spellLikeAbilities.getZ().equals("none") ? "" : "#H" + spellLikeAbilities.getZ() + " ";
 			text += "#HSpell-Like #HAbilities " + "(CL " + getPlace(spellLikeAbilities.getY()[0]) +
 					"; concentration " + ((conc > -1) ? ("+" + conc) : (conc))  + ')';
-			lineNumber = printALine(contentStream, text, lineNumber);
+			printALine(text);
 			for (int i = 0; i < spellLikeAbilities.getX().length; i++) {
 				text = spellLikeAbilities.getX()[i];
-				lineNumber = printAnIndentedLine(contentStream, text, lineNumber);
+				printAnIndentedLine(text);
 			}
 		}
-		return lineNumber;
 	}
-	private int writeSpecialAttacks(PDPageContentStream contentStream, int lineNumber) throws IOException {
+	private void writeSpecialAttacks() throws IOException {
 		if (specialAttacks.length > 0) {
 			String text = "#HSpecial #HAttacks ";
 			for (int i = 0; i < specialAttacks.length; i++) {
@@ -1262,11 +1267,10 @@ public class Creature {
 				if (i + 1 < specialAttacks.length) 
 					text += "; ";
 			}
-			lineNumber = printALine(contentStream, text, lineNumber);
+			printALine(text);
 		}
-		return lineNumber;
 	}
-	private int writeSpeeds(PDPageContentStream contentStream, int lineNumber) throws IOException {
+	private void writeSpeeds() throws IOException {
 		String text = "#HSpeed ";
 		if (speed >= 0)
 			text += speed + " ft.";
@@ -1282,17 +1286,16 @@ public class Creature {
 				text += p;
 			}
 		}
-		return printALine(contentStream, text, lineNumber);
+		printALine(text);
 	}
-	private int writeDefense(PDPageContentStream contentStream, int lineNumber) throws IOException {
-		lineNumber = printHeader(contentStream, "DEFENSE", lineNumber);
-		lineNumber = writeAC(contentStream, lineNumber);
-		lineNumber = writeHP(contentStream, lineNumber);
-		lineNumber = writeSaves(contentStream, lineNumber);
-		lineNumber = writeDefensiveAbilities(contentStream, lineNumber);
-		return lineNumber;
+	private void writeDefense() throws IOException {
+		printHeader("DEFENSE");
+		writeAC();
+		writeHP();
+		writeSaves();
+		writeDefensiveAbilities();
 	}
-	private int writeDefensiveAbilities(PDPageContentStream contentStream, int lineNumber) throws IOException {
+	private void writeDefensiveAbilities() throws IOException {
 		String text = "";
 		if (defensiveAbilities.length > 0) {
 			text += "#HDefensive #HAbilities ";
@@ -1343,10 +1346,9 @@ public class Creature {
 			}
 		}
 		if (!text.equals(""))
-			lineNumber = printALine(contentStream, text, lineNumber);
-		return lineNumber;
+			printALine(text);
 	}
-	private int writeSaves(PDPageContentStream contentStream, int lineNumber) throws IOException {
+	private void writeSaves() throws IOException {
 		String text = "#HFort " + (fort > -1 ? "+" : "") + fort + ", " + "#HRef " +
 				(ref > -1 ? "+" : "") + ref + ", " + "#HWill " + (will > -1 ? "+" : "") + will;
 		if (saveModifiers.length > 0) {
@@ -1358,17 +1360,17 @@ public class Creature {
 					text += ", ";
 			}
 		}
-		return printALine(contentStream, text, lineNumber);
+		printALine(text);
 	}
-	private int writeHP(PDPageContentStream contentStream, int lineNumber) throws IOException {
+	private void writeHP() throws IOException {
 		String text = "#Hhp " + hp + " (" + hpBreakdown + ")";
 		if (fastHealing > 0) 
 			text += "; fast healing " + fastHealing;
 		if (regeneration != null) 
 			text += "; " + "regeneration " + regeneration.getX() + " " + "(" + regeneration.getY() + ")";
-		return printALine(contentStream, text, lineNumber);
+		printALine(text);
 	}
-	private int writeAC(PDPageContentStream contentStream, int lineNumber) throws IOException {
+	private void writeAC() throws IOException {
 		String text = "#HAC " + ac + ", touch " + touch + ", flat-footed " + flatFooted;
 		if (acModifiers.length > 0) {
 			text += " (";
@@ -1389,20 +1391,18 @@ public class Creature {
 			}
 			text += ")";
 		}
-		return printALine(contentStream, text, lineNumber);
+		printALine(text);
 	}
-	private int writeTop(PDPageContentStream contentStream) throws IOException {
-		contentStream.setLeading(PDType1Font.TIMES_ROMAN.getFontDescriptor().getFontBoundingBox().getHeight() / 1000 * 9.5f);
-		printBold(contentStream, "XP " + xp);
-		int lineNumber = 1;
-		lineNumber = writeNPC(contentStream, lineNumber);
-		lineNumber = writeType(contentStream, lineNumber);
-		lineNumber = writeSenses(contentStream, lineNumber);
-		return writeAuras(contentStream, lineNumber);
+	private void writeTop() throws IOException {
+		contentStream.setLeading(normal.getFontDescriptor().getFontBoundingBox().getHeight() / 1000 * normalText);
+		printBold("XP " + xp);
+		lineNumber = 1;
+		writeNPC();
+		writeType();
+		writeSenses();
+		writeAuras();
 	}
-	private void writeHeader(PDPageContentStream contentStream) throws IOException {
-		float nameSize = 36, shortDescSize = 18, titleNameSize = 18, border = .9f * 69;
-		PDFont italics = PDType1Font.TIMES_ITALIC, bold = PDType1Font.TIMES_BOLD, normal = PDType1Font.TIMES_ROMAN;
+	private void writeHeader() throws IOException {
 		contentStream.newLineAtOffset(border, PDRectangle.LETTER.getHeight() - border - bold.getFontDescriptor().getCapHeight() / 1000 * nameSize);
 		contentStream.setFont(bold, nameSize);
 		if (!basicName.equals(""))
@@ -1432,7 +1432,7 @@ public class Creature {
 		contentStream.showText("CR " + cr);
 		contentStream.newLineAtOffset(-335, -bold.getFontDescriptor().getFontBoundingBox().getHeight() / 1000 * titleNameSize);
 	}
-	private int writeNPC(PDPageContentStream contentStream, int lineNumber) throws IOException {
+	private void writeNPC() throws IOException {
 		if (!race.equals("")) {
 			String text = race + " ";
 			for (int i = 0; i < classes.length; i++) {
@@ -1441,11 +1441,10 @@ public class Creature {
 				Pair<String, Integer> p = classes[i];
 				text += p.getX() + " " + p.getY();
 			}
-			lineNumber = printALine(contentStream, text, lineNumber);
+			printALine(text);
 		}
-		return lineNumber;
 	}
-	private int writeType(PDPageContentStream contentStream, int lineNumber) throws IOException {
+	private void writeType() throws IOException {
 		String text = alignment.name() + " " + size.toString() + " " + type.name().toLowerCase().replace('_', ' ');
 		if (subtypes.length > 0) {
 			text += " (";
@@ -1456,9 +1455,9 @@ public class Creature {
 			}
 			text += ")";
 		}
-		return printALine(contentStream, text, lineNumber);
+		printALine(text);
 	}
-	private int writeSenses(PDPageContentStream contentStream, int lineNumber) throws IOException {
+	private void writeSenses() throws IOException {
 		String text = "#HInit ";
 		text += (init > -1 ? "+" : "" )+ init + "; ";
 		if (senses.length > 0) {
@@ -1471,9 +1470,9 @@ public class Creature {
 			text += "; ";
 		}
 		text += "Perception " + (perception > -1 ? "+" : "" ) + perception;
-		return printALine(contentStream, text, lineNumber);
+		printALine(text);
 	}
-	private int writeAuras(PDPageContentStream contentStream, int lineNumber) throws IOException {
+	private void writeAuras() throws IOException {
 		if (auras.length > 0) {
 			String text = "#HAura ";
 			for (int i = 0; i < auras.length; i++) {
@@ -1481,11 +1480,10 @@ public class Creature {
 					text += ", ";
 				text += auras[i];
 			}
-			lineNumber = printALine(contentStream, text, lineNumber);
+			printALine(text);
 		}
-		return lineNumber;
 	}
-	private void drawPictures(PDPageContentStream contentStream, PDDocument pdoc) {
+	private void drawPictures(PDDocument pdoc) {
 		try {
 			contentStream.drawImage(PDImageXObject.createFromFile(type.getPic() , pdoc), 454, shortDescLong ? 630 : 650);
 			contentStream.drawImage(PDImageXObject.createFromFile(terrain.getPic() , pdoc), 486, shortDescLong ? 630 : 650);

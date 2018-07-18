@@ -1,0 +1,100 @@
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/AdventurePaths/RiseOfTheRunelords/BurntOfferings/
+Name : Sinspawn
+Basic Name (Dinosaur):
+Short description: A horribly deformed humanoid, hairless and emaciated, lurches out of the shadows.
+Title Name : Sinspawn
+CR: 2
+Type: Aberration
+Terrain: Ruins_Dungeon
+Climate: Temperate
+XP: 600
+Race: 
+Number of classes with levels in (First is Favored): 0
+Alignment:NE
+Size:Medium
+Number of subtypes:0
+Init:5
+Number of senses (#I means to make italic, for spells):2
+Sense: darkvision 60 ft.
+Sense: scent sin
+Perception:+8
+Number of auras (#I means to make italic, for spells):0
+AC:14
+touch:11
+flat-footed:13
+Number of AC modifiers:2
+Modifier:1
+Type of above Modifier: Dex
+Modifier:3
+Type of above Modifier: natural
+Number of Conditional AC modifiers:0
+HP:19
+HP breakdown:3d8+6
+Fast Healing:1
+Regeneration:0
+fort:3
+ref:2
+will:4
+Number of Conditional Save modifiers:0
+Number of Defensive Abilities: 0
+DR: 0
+Immunities : 1
+Immunity: mind-affecting effects
+Resistances: 0
+SR: 11
+Num of Weaknesses: 0
+Speed: 30
+Other Speeds(#B means base speed if reduced normally): 0
+Melee: 2 claws +3 (1d4+1), bite +3 (1d6 plus wrathful bite)
+Ranged: 
+Space: 5
+Reach: 5
+Num of Special Attacks: 0
+Psychic Magic CL: 0
+SLA Use Categories (1/day, 3/week, etc.): 0
+Spells Known Levels: 0
+Spells Prepared Levels: 0
+Before Combat: 
+During Combat: A sinspawn that faces a single foe generally attempts to capture its enemy alive, making untrained Heal checks to stop bleeding if necessary, so the victim can be returned to the nearest runewell before he is murdered. Against multiple foes, the sinspawn focuses its attacks on the weakest-looking foes first.
+Morale: Sinspawn fight to the death.
+Base Statistics:
+Str:13
+Dex:12
+Con:14
+Int:10
+Wis:13
+Cha:12
+BAB:2
+CMB:3
+Num of Special CMBs:0
+CMD:14
+Num of Special CMDs:0
+Num of Feats: 2
+Feat: Improved Initiative
+Feat: Improved Natural Armor
+Num of Skills: 4
+Skill: Escape Artist +7
+Skill: Perception +7
+Skill: Stealth +11
+Skill: Survival +7 
+Num of Racial Mods: 1
+Racial Mod: +4 Stealth
+Num of Lanugagues: 0
+Num of Special Languages: 0
+Num of Special Qualities: 0
+Num of Combat Gear: 0
+Num of Other Gear: 0
+Environment: any (near #Irunewells #Iof #Iwrath#)
+Organization: solitary, pair, or cult (3–9)
+Treasure: standard
+Num of Special Abilities:3
+Special Ability Name : Martial Proficiency (Ex)
+Description: A sinspawn is proficient in all simple and all martial weapons, and in all forms of armor and shields except tower shields.
+Number of Sub categories : 0
+Special Ability Name :Scent Sin (Su)
+Description: A sinspawn has the scent ability, but only against extraordinarily wrathful creatures. This includes any creature under the effects of a barbarian rage or similar effect, a creature with the evil subtype, a creature under the effects of the sinspawn’s wrathful bite, or a creature (GM’s discretion) that is excessively wrathful.
+Number of Sub categories : 0
+Special Ability Name : Wrathful Bite (Su)
+Description:A creature bitten by a sinspawn must make a DC 12 Will save or become overwhelmed by feelings of wrath, anger, and rage. These emotions are so powerful that the affected creature finds it hard to do anything but rage impotently. For 1d6 minutes after succumbing to a sinspawn’s wrathful bite, the victim is effectively sickened, and takes a –2 penalty on all attack rolls, weapon damage rolls, saving throws, skill checks, and ability checks. A victim suffering from this effect who is bitten again by a sinspawn must make a DC 12 Will save or the wrath increases, leaving him staggered and thus able to take only a single move action or standard action each round (but not both, nor can he take full-round actions). Further bites increase the duration of the effect, but not the magnitude. 
+Number of Sub categories : 0
+Description : Its unnaturally long arms end in three-fingered talons, and its legs bend like those of a dog. A writhing network of bulging veins form dark blue patterns across its pallid skin. But worst of all is its face—its nose is little more than a pair of slits, and its eyes are bulging and red. The lower jaw splits in half at the chin into two wretched arms that end in tiny three-fingered hands to either side an open gullet with a lolling tongue. #PSinspawn are a mockery of the flesh, the shape of humanity warped and twisted by an all-encompassing wrath, transforming their familiar shape into one of horror and ruin. Sinspawn were originally created by Runelord Alaznist, who used life-shaping magic she and her fellow runelords stole from the alien aboleths to fashion shock troops she could use in her endless confrontations with her numerous enemies (primarily the Runelord Karzoug). She invested in these monsters not only anger and the capacity to murder, but a twisted sense of free will to encourage the desire to gain in power and strength—not just to please their mistress, but to please themselves. This final stroke of twisted brilliance made all the difference, and what could have manifested as little more than a new form of intelligent construct became an entirely new form of aberrant life. #TEcology# Sinspawn are magically created from profane pools of quickened soul-energy fueled by the departed spirits of creatures filled with wrath in life. The primal ooze that results must manifest in a specially prepared container known as a #Irunewell#, otherwise the harvested ectoplasm quickly evaporates and is lost. When a wrathful creature dies near a functional #Irunewell#, the device duplicates its wrath, allowing the soul to go on to its final reward but retaining an imprint of its anger. Normally, a #Irunewell can only harvest wrathful souls that die within a radius of no more than a mile, but with the use of a magical scrying device called a #Isoul #Ilens#, one can harvest souls from the world over provided they have been marked with the Sihedron Rune (the seven-pointed star symbolizing the seven schools of Thasilonian magic) and have been properly prepared with certain rituals just prior to their death. #PIt takes four souls to provide enough raw wrath for a sinspawn to emerge, fully grown, from a #Irunewell#. Once created, a sinspawn is its own creature; no vestige but anger remains from the original souls. It has no capacity to procreate, but those sinspawn intelligent enough to understand the nature of their creation often seek out victims to capture alive and return to a #Irunewell#. Their, the sinspawn uses its wrathful bite and quickly murders it prey, the dead creature’s rage-infected soul fueling the creation of more monstrosities. #PThe average sinspawn stands nearly 5 feet tall, and weighs about 100 pounds. Although they can live as long as humans, most succumb to violent ends long before their time. A sinspawn normally feeds on flesh (preferring it still living as it’s consumed), but as long as a sinspawn is within a mile of a functioning #Prunewell#, the magic can sustain the creature without food or water indefinitely. #THabitat & Society# In ancient Bakrakahn, Alaznist kept entire villages of sinspawn at her beck and call. The bickering creatures, left to their own devices, required near-constant policing from more powerful agents to prevent them from murdering each other. This typically consisted of periodic offerings of slaves into the walled compounds, to give the sinspawn victims to enact their rage upon. After the fall of Thassilon, the few surviving sinspawn perished after only a few decades. With Karzoug’s awakening, and the sympathetic activation of long-dormant #Irunewells#, these creatures may well return to life—the recrudescence of sinspawn under Sandpoint in “Burnt Offerings” showcasing how most such events would pan out. #TTreasure# Sinspawn have little interest in gold or jewelry but take a particularly keen liking to armor and weapons, be they standard, masterwork, bejeweled, or magical in nature. #TAdvanced Sinspawn# While sinspawn often advance as fighters, rangers, or rogues, their favored class is barbarian. Spellcasting sinspawn are uncommon, and often serve not as leaders but as valued advisers and ranged support in sinspawn conflicts. They make excellent sorcerers and clerics (typically worshiping violent deities like Rovagug or Lamashtu), but lack the patience to become wizards. Sinspawn druids and bards are unheard of. #PA sinspawn’s spell resistance increases by +1 for each class level it gains. Its ability score modifiers are Strength +2, Dexterity +2, Constitution +4, Wisdom +2, Charisma +2. #TVariant Sinspawn# As Runelord Alaznist created the first sinspawn near the end of the Thassilonian rule, the other runelords had little time to build upon her discoveries. Yet this does not mean that sinspawn associated with the other six sins cannot exist. While sinspawn tied to the other sins have nearly identical statistics to those presented here (their bite attack inflicting different urges but having the same game effects), they are quite different in appearance, have slightly different ability score modifiers, and have different favored classes.#P#HEnvyspawn: These sinspawn are short and thin, rarely taller than four or five feet in height. They generally have fewer vein markings on their skin than other sinspawn. Their ability score modifiers are Strength +4, Dexterity +2, Constitution +4, Wisdom +2, and their favored class is ranger. #P#HGluttonspawn: Gluttonous sinspawn are grossly overweight, yet retain their kins’ energy and speed. Their ability score modifiers are Strength +2, Constitution +6, Wisdom +2, Charisma +2, and their favored class is fighter. #P#HGreedspawn: The sinspawn of greed are the tallest of their kind, generally seven feet in height and with a glittering gold coloration to their veins. Their ability score modifiers are Strength +2, Dexterity +4, Constitution +4, Charisma +2, and their favored class is rogue. #P#HLustspawn: Despite their monstrous faces and talons, lustspawn have perfectly formed male or female bodies capable of sexual intercourse (but not of actual procreation). Their ability score modifiers are Strength +2, Dexterity +2, Constitution +2, Charisma +6, and their favored class is sorcerer. #P#HPridespawn: These sinspawn are particularly emaciated, with larger eyes than most of their kin and often with full heads of hair. Their ability score modifiers are Strength +2, Dexterity +2, Constitution +4, Intelligence +4, and their favored class is wizard. #P#HSlothspawn: Thick rolls of excess skin hang from the frames of sloth sinspawn, and their legs are atrophied to nearly half the normal length (yet they unnervingly retain the speed of their kin). Their ability score modifiers are Strength +2, Constitution +4, Wisdom +4, Charisma +2, and their favored class is cleric.
