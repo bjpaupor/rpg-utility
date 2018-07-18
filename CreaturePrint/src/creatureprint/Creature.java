@@ -1419,10 +1419,6 @@ public class Creature {
 				contentStream.newLine();
 				contentStream.showText(s);
 			}
-		if (shortDesc.getLines().size() > 1)
-			shortDescLong = true;
-		else
-			shortDescLong = false;
 		contentStream.setLeading(2 * normal.getFontDescriptor().getCapHeight() / 1000 * titleNameSize - 
 				italics.getFontDescriptor().getDescent() / 1000 * shortDescSize);
 		contentStream.newLine();
@@ -1485,6 +1481,9 @@ public class Creature {
 	}
 	private void drawPictures(PDDocument pdoc) {
 		try {
+			WrappingText shortDesc = new WrappingText(this.shortDesc, italics, PDRectangle.LETTER.getWidth() - 2 * border, shortDescSize);
+			if (shortDesc.getLines().size() > 1)
+				shortDescLong = true;
 			contentStream.drawImage(PDImageXObject.createFromFile(type.getPic() , pdoc), 454, shortDescLong ? 630 : 650);
 			contentStream.drawImage(PDImageXObject.createFromFile(terrain.getPic() , pdoc), 486, shortDescLong ? 630 : 650);
 			contentStream.drawImage(PDImageXObject.createFromFile(climate.getPic() , pdoc), 518, shortDescLong ? 630 : 650);
