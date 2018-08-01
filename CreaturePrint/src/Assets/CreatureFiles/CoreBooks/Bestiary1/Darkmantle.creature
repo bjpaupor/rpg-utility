@@ -1,4 +1,4 @@
-Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/Modules/Hollow'sLastHope/
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/CoreBooks/Bestiary1/
 Name : Darkmantle
 Basic Name (Dinosaur): 
 Short description: As this creature falls from the cavern roof, it opens like a hideous octopus, its thin, hook-lined tentacles connected by a fleshy web.
@@ -64,9 +64,9 @@ SLA Concentration: 5
 SLA Use Category and Spells: 1/day—#Idarkness
 Spells Known Sources: 0
 Spells Prepared Sources: 0
-Before Combat: On the round before the darkmantles drop down to attack, each one casts darkness on a small stone it is holding in one of its tentacles. They wait until the entire group is inside the chamber before dropping down to strike.
-During Combat: Each darkmantle targets a different foe, attempting to grapple and constrict as quickly as possible.
-Morale: The darkmantles are in their lair and fight to the death.
+Before Combat: 
+During Combat: 
+Morale: 
 Base Statistics:
 Str: 11
 Dex: 15

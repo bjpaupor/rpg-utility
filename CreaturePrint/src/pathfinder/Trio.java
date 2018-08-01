@@ -1,4 +1,4 @@
-package creatureprint;
+package pathfinder;
 
 public class Trio<X, Y, Z> {
 	private X x;

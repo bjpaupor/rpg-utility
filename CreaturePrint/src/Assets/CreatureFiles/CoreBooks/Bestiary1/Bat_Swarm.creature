@@ -1,4 +1,4 @@
-Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/Modules/Hollow'sLastHope/
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/CoreBooks/Bestiary1/
 Name : Bat Swarm
 Basic Name (Dinosaur):
 Short description: Hundreds of high-pitched squeaks fill the air as a mass of small, carnivorous bats surges forth, all of them hungry for blood.
@@ -58,8 +58,8 @@ SLA Sources: 0
 Spells Known Sources: 0
 Spells Prepared Sources: 0
 Before Combat: 
-During Combat: The bat swarm spreads itself out to occupy the space of as many PCs as possible each round.
-Morale: The bat swarm flees from the monastery if reduced to fewer than 5 hit points. It returns the next dawn to roost in the rafters once more.
+During Combat: 
+Morale: 
 Base Statistics:
 Str:3
 Dex:15

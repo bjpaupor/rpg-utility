@@ -1,4 +1,4 @@
-package creatureprint;
+package pathfinder;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -381,4 +381,7 @@ public class WrappingText {
         result.add(text.substring(start));
         return result;
     }
+    public static void main(String[] args) {
+		
+	}
 }

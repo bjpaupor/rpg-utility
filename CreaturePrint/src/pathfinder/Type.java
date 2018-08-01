@@ -1,4 +1,4 @@
-package creatureprint;
+package pathfinder;
 
 public enum Type {
 	ABERRATION {

@@ -1,4 +1,4 @@
-package creatureprint;
+package pathfinder;
 
 public class Pair<X, Y> {
 	private X x;
