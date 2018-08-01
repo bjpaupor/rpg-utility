@@ -72,10 +72,10 @@ public class Creature {
 	private String space; //OPT
 	private int reach; //OPT
 	private String[] specialAttacks; //OPT
-	private Trio<String[], Integer[], String> spellLikeAbilities; //OPT <[use-spells], [cl, concentration], Source>
 	private Pair<Integer[], String> psychicMagic; //OPT <[cl, concentration], spells>
-	private Trio<Integer[], String[], String[]> spellsKnown; //OPT <[cl, concentration], [use-spells], [className, special, special ...]>
-	private Trio<Integer[], String[], String[]> spellsPrepared; //OPT <[cl, concentration], [use-spells], [className, special, special ...]>
+	private Trio<String[], Integer[], String>[] spellLikeAbilities; //OPT <[use-spells], [cl, concentration], Source>
+	private Trio<Integer[], String[], String[]>[] spellsKnown; //OPT <[cl, concentration], [use-spells], [className, special, special ...]>
+	private Trio<Integer[], String[], String[]>[] spellsPrepared; //OPT <[cl, concentration], [use-spells], [className, special, special ...]>
 
 	//Tactics
 	private String beforeCombat; //OPT
@@ -122,7 +122,7 @@ public class Creature {
 	private PDPage page;
 	private PDPageContentStream contentStream;
 	private int lineNumber;
-	private float nameSize = 36, shortDescSize = 18, titleNameSize = 18, border = .9f * 69, 
+	private float nameSize = 35, shortDescSize = 18, titleNameSize = 18, border = .9f * 69, 
 			normalText = 9.5f, tinyText = 4.5f, largeText = 12;
 	private PDFont italics = PDType1Font.TIMES_ITALIC, bold = PDType1Font.TIMES_BOLD, normal = PDType1Font.TIMES_ROMAN;
 	private boolean firstPage = true;
@@ -130,7 +130,7 @@ public class Creature {
 	@SuppressWarnings("unchecked")
 	public Creature(String fileName) {
 		if (!fileName.endsWith(".creature")) {
-			System.out.println("Incorrect file type, file must be .creature\n");
+			System.out.println("-> Incorrect file type, file must be .creature\n");
 			return;
 		}
 		try (BufferedReader read = new BufferedReader(new FileReader(fileName))){
@@ -233,63 +233,65 @@ public class Creature {
 			for (int i = 0; i < specialAttacks.length; i++)
 				specialAttacks[i] = readALine(read);
 			psychicMagic = new Pair<Integer[], String>(new Integer[0], "");
-			int temp = Integer.parseInt(readALine(read));
-			if (temp > 0) {
-				Integer[] PSYIntTemp = new Integer[2];
-				PSYIntTemp[0] = temp;
-				PSYIntTemp[1] = Integer.parseInt(readALine(read));
-				psychicMagic.setX(PSYIntTemp);
-				psychicMagic.setY(readALine(read));
+			{ 
+				int temp = Integer.parseInt(readALine(read));
+				if (temp > 0) {
+					Integer[] PSYIntTemp = new Integer[2];
+					PSYIntTemp[0] = temp;
+					PSYIntTemp[1] = Integer.parseInt(readALine(read));
+					psychicMagic.setX(PSYIntTemp);
+					psychicMagic.setY(readALine(read));
+				}
 			}
-			spellLikeAbilities = new Trio<String[], Integer[], String>(new String[0], new Integer[0], "");
-			temp = Integer.parseInt(readALine(read));
-			if (temp > 0) {
+			spellLikeAbilities = new Trio[Integer.parseInt(readALine(read))];
+			for (int i = 0; i < spellLikeAbilities.length; i++) {
+				spellLikeAbilities[i] = new Trio<String[], Integer[], String>(new String[0], new Integer[0], "");
+				String[] slaTemp = new String[Integer.parseInt(readALine(read))];
 				String source = readALine(read);
-				String[] slaTemp = new String[temp];
 				Integer[] slaIntTemp = new Integer[2];
 				slaIntTemp[0] = Integer.parseInt(readALine(read));
 				slaIntTemp[1] = Integer.parseInt(readALine(read));
-				spellLikeAbilities.setY(slaIntTemp);
-				for (int i = 0; i < slaTemp.length; i++)
-					slaTemp[i] = readALine(read);
-				spellLikeAbilities.setX(slaTemp);
-				spellLikeAbilities.setZ(source);
+				spellLikeAbilities[i].setY(slaIntTemp);
+				for (int j = 0; j < slaTemp.length; j++)
+					slaTemp[j] = readALine(read);
+				spellLikeAbilities[i].setX(slaTemp);
+				spellLikeAbilities[i].setZ(source);
 			}
-			spellsKnown = new Trio<Integer[], String[], String[]>(new Integer[0], new String[0], new String[0]);
-			temp = Integer.parseInt(readALine(read));
-			if (temp > 0) {
-				String[] spellsKnownTemp = new String[temp];
+			spellsKnown = new Trio[Integer.parseInt(readALine(read))];
+			for (int i = 0; i < spellsKnown.length; i++) {
+				spellsKnown[i] = new Trio<Integer[], String[], String[]>(new Integer[0], new String[0], new String[0]);
+				String[] spellsKnownTemp = new String[Integer.parseInt(readALine(read))];
 				Integer[] spellsKnownInt = new Integer[2];
 				String name = readALine(read);
 				spellsKnownInt[0] = Integer.parseInt(readALine(read));
 				spellsKnownInt[1] = Integer.parseInt(readALine(read));
-				spellsKnown.setX(spellsKnownInt);
+				spellsKnown[i].setX(spellsKnownInt);
 				String[] spellsKnownSpecial = new String[Integer.parseInt(readALine(read)) + 1];
 				spellsKnownSpecial[0] = name;
-				for (int i = 1; i < spellsKnownSpecial.length; i++) 
-					spellsKnownSpecial[i] = readALine(read);
-				for (int i = 0; i < spellsKnownTemp.length; i++)
-					spellsKnownTemp[i] = readALine(read);
-				spellsKnown.setY(spellsKnownTemp);
-				spellsKnown.setZ(spellsKnownSpecial);
+				for (int j = 1; j < spellsKnownSpecial.length; j++) 
+					spellsKnownSpecial[j] = readALine(read);
+				for (int j = 0; j < spellsKnownTemp.length; j++)
+					spellsKnownTemp[j] = readALine(read);
+				spellsKnown[i].setY(spellsKnownTemp);
+				spellsKnown[i].setZ(spellsKnownSpecial);
 			}
-			spellsPrepared = new Trio<Integer[], String[], String[]>(new Integer[0], new String[0], new String[0]);
-			temp = Integer.parseInt(readALine(read));
-			if (temp > 0) {
-				String[] spellsPreparedTemp = new String[temp];
+			spellsPrepared = new Trio[Integer.parseInt(readALine(read))];
+			for (int i = 0; i < spellsPrepared.length; i++) {
+				spellsPrepared[i] = new Trio<Integer[], String[], String[]>(new Integer[0], new String[0], new String[0]);
+				String[] spellsPreparedTemp = new String[Integer.parseInt(readALine(read))];
 				Integer[] spellsPreparedInt = new Integer[2];
 				String name = readALine(read);
 				spellsPreparedInt[0] = Integer.parseInt(readALine(read));
 				spellsPreparedInt[1] = Integer.parseInt(readALine(read));
-				spellsPrepared.setX(spellsPreparedInt);
+				spellsPrepared[i].setX(spellsPreparedInt);
 				String[] spellsPreparedSpecial = new String[Integer.parseInt(readALine(read)) + 1];
 				spellsPreparedSpecial[0] = name;
-				for (int i = 1; i < spellsPreparedSpecial.length; i++) 
-					spellsPreparedSpecial[i] = readALine(read);
-				for (int i = 0; i < spellsPreparedTemp.length; i++)
-					spellsPreparedTemp[i] = readALine(read);
-				spellsPrepared.setY(spellsPreparedTemp);
-				spellsPrepared.setZ(spellsPreparedSpecial);
+				for (int j = 1; j < spellsPreparedSpecial.length; j++) 
+					spellsPreparedSpecial[j] = readALine(read);
+				for (int j = 0; j < spellsPreparedTemp.length; j++)
+					spellsPreparedTemp[j] = readALine(read);
+				spellsPrepared[i].setY(spellsPreparedTemp);
+				spellsPrepared[i].setZ(spellsPreparedSpecial);
 			}
 			beforeCombat = readALine(read);
 			duringCombat = readALine(read);
@@ -349,7 +351,7 @@ public class Creature {
 			}
 			description = readALine(read);
 		} catch (Exception ex) {
-			System.out.println(name);
+			System.out.println("->" + name + ": Failed to interpret creature file!");
 			ex.printStackTrace();
 			return;
 		}
@@ -453,7 +455,6 @@ public class Creature {
 		writeALine(file, "Number of Special Attacks: " + specialAttacks.length);
 		for (String s :  specialAttacks)
 			writeALine(file, "Special Attack: " + s);
-		//spellLikeAbilities <[use-spells], [cl, concentration]>
 		if (psychicMagic.getX().length > 0) {
 			writeALine(file, "Psychic Magic CL: " + psychicMagic.getX()[0]);
 			writeALine(file, "Psychic Magic Concentration: " + psychicMagic.getX()[1]);
@@ -461,44 +462,42 @@ public class Creature {
 		}
 		else
 			writeALine(file, "Psychic Magic CL: " + 0);
-		if (spellLikeAbilities.getX().length > 0) {
-			writeALine(file, "SLA Use Categories (1/day, etc.): " + spellLikeAbilities.getX().length);
-			writeALine(file, "SLA Source: " + spellLikeAbilities.getZ());
-			writeALine(file, "SLA CL: " + spellLikeAbilities.getY()[0]);
-			writeALine(file, "SLA Concentration: " + spellLikeAbilities.getY()[1]);
-			for (String s :  spellLikeAbilities.getX())
+		//spellLikeAbilities <[use-spells], [cl, concentration]>
+		writeALine(file, "SLA Sources: " + spellLikeAbilities.length);
+		for (int i = 0; i < spellLikeAbilities.length; i++) {
+			writeALine(file, "SLA Use Categories (1/day, etc.): " + spellLikeAbilities[i].getX().length);
+			writeALine(file, "SLA Source: " + spellLikeAbilities[i].getZ());
+			writeALine(file, "SLA CL: " + spellLikeAbilities[i].getY()[0]);
+			writeALine(file, "SLA Concentration: " + spellLikeAbilities[i].getY()[1]);
+			for (String s :  spellLikeAbilities[i].getX())
 				writeALine(file, "SLA Use Category and Spells: " + s);
 		}
-		else
-			writeALine(file, "SLA Use Categories (1/day, etc.): 0");
 		//OPT <[cl, concentration], [use-spells], [className, special, special ...]>
-		if (spellsKnown.getY().length > 0) {
-			writeALine(file, "Spells Known Levels: " + spellsKnown.getY().length);
-			writeALine(file, "Spells Known Class: " + spellsKnown.getZ()[0]);
-			writeALine(file, "Spells Known CL: " + spellsKnown.getX()[0]);
-			writeALine(file, "Spells Known Concentration: " + spellsKnown.getX()[1]);
-			writeALine(file, "Number of Bolded Sections: " + (spellsKnown.getZ().length - 1));
-			for (int i = 1; i < spellsKnown.getZ().length; i++)
-				writeALine(file, "Bold Section: " + spellsKnown.getZ()[i]);
-			for (String s :  spellsKnown.getY())
+		writeALine(file, "Spells Known Levels: " + spellsKnown.length);
+		for (int i = 0; i < spellsKnown.length; i++) {
+			writeALine(file, "Spells Known Levels: " + spellsKnown[i].getY().length);
+			writeALine(file, "Spells Known Class: " + spellsKnown[i].getZ()[0]);
+			writeALine(file, "Spells Known CL: " + spellsKnown[i].getX()[0]);
+			writeALine(file, "Spells Known Concentration: " + spellsKnown[i].getX()[1]);
+			writeALine(file, "Number of Bolded Sections: " + (spellsKnown[i].getZ().length - 1));
+			for (int j = 1; j < spellsKnown[i].getZ().length; j++)
+				writeALine(file, "Bold Section: " + spellsKnown[i].getZ()[j]);
+			for (String s :  spellsKnown[i].getY())
 				writeALine(file, "Spells Known and Use Level: " + s);
 		}
-		else
-			writeALine(file, "Spells Known Levels: 0");
 		//OPT <[cl, concentration], [use-spells], [className, special, special ...]>
-		if (spellsPrepared.getY().length > 0) {
-			writeALine(file, "Spells Prepared Levels: " + spellsPrepared.getY().length);
-			writeALine(file, "Spells Prepared Class: " + spellsPrepared.getZ()[0]);
-			writeALine(file, "Spells Prepared CL: " + spellsPrepared.getX()[0]);
-			writeALine(file, "Spells Prepared Concentration: " + spellsPrepared.getX()[1]);
-			writeALine(file, "Number of Bolded Sections: " + (spellsPrepared.getZ().length - 1));
-			for (int i = 1; i < spellsPrepared.getZ().length; i++)
-				writeALine(file, "Bold Section: " + spellsPrepared.getZ()[i]);				
-			for (String s :  spellsPrepared.getY())
+		writeALine(file, "Spells Prepared Levels: " + spellsPrepared.length);
+		for (int i = 0; i < spellsPrepared.length; i++) {
+			writeALine(file, "Spells Prepared Levels: " + spellsPrepared[i].getY().length);
+			writeALine(file, "Spells Prepared Class: " + spellsPrepared[i].getZ()[0]);
+			writeALine(file, "Spells Prepared CL: " + spellsPrepared[i].getX()[0]);
+			writeALine(file, "Spells Prepared Concentration: " + spellsPrepared[i].getX()[1]);
+			writeALine(file, "Number of Bolded Sections: " + (spellsPrepared[i].getZ().length - 1));
+			for (int j = 1; j < spellsPrepared[i].getZ().length; j++)
+				writeALine(file, "Bold Section: " + spellsPrepared[i].getZ()[j]);				
+			for (String s :  spellsPrepared[i].getY())
 				writeALine(file, "Spells Prepared at Level: " + s);
 		}
-		else
-			writeALine(file, "Spells Prepared Levels: 0");
 		writeALine(file, "Before Combat: " + beforeCombat);
 		writeALine(file, "During Combat: " + duringCombat);
 		writeALine(file, "Morale: " + morale);
@@ -651,7 +650,6 @@ public class Creature {
 		writeALine(file, ":" + specialAttacks.length);
 		for (String s : specialAttacks)
 			writeALine(file, ":" + s);
-		//spellLikeAbilities <[use-spells], [cl, concentration]>
 		if (psychicMagic.getX().length > 0) {
 			writeALine(file, ":" + psychicMagic.getX()[0]);
 			writeALine(file, ":" + psychicMagic.getX()[1]);
@@ -659,44 +657,42 @@ public class Creature {
 		}
 		else
 			writeALine(file, ":" + 0);
-		if (spellLikeAbilities.getX().length > 0) {
-			writeALine(file, ":" + spellLikeAbilities.getX().length);
-			writeALine(file, ":" + spellLikeAbilities.getZ());
-			writeALine(file, ":" + spellLikeAbilities.getY()[0]);
-			writeALine(file, ":" + spellLikeAbilities.getY()[1]);
-			for (String s : spellLikeAbilities.getX())
+		//spellLikeAbilities <[use-spells], [cl, concentration]>
+		writeALine(file, ":" + spellLikeAbilities.length);
+		for (int i = 0; i < spellLikeAbilities.length; i++) {
+			writeALine(file, ":" + spellLikeAbilities[i].getX().length);
+			writeALine(file, ":" + spellLikeAbilities[i].getZ());
+			writeALine(file, ":" + spellLikeAbilities[i].getY()[0]);
+			writeALine(file, ":" + spellLikeAbilities[i].getY()[1]);
+			for (String s :  spellLikeAbilities[i].getX())
 				writeALine(file, ":" + s);
 		}
-		else
-			writeALine(file, ":0");
 		//OPT <[cl, concentration], [use-spells], [className, special, special ...]>
-		if (spellsKnown.getY().length > 0) {
-			writeALine(file, ":" + spellsKnown.getY().length);
-			writeALine(file, ":" + spellsKnown.getZ()[0]);
-			writeALine(file, ":" + spellsKnown.getX()[0]);
-			writeALine(file, ":" + spellsKnown.getX()[1]);
-			writeALine(file, ":" + (spellsKnown.getZ().length - 1));
-			for (int i = 1; i < spellsKnown.getZ().length; i++)
-				writeALine(file, ":" + spellsKnown.getZ()[i]);
-			for (String s : spellsKnown.getY())
+		writeALine(file, ":" + spellsKnown.length);
+		for (int i = 0; i < spellsKnown.length; i++) {
+			writeALine(file, ":" + spellsKnown[i].getY().length);
+			writeALine(file, ":" + spellsKnown[i].getZ()[0]);
+			writeALine(file, ":" + spellsKnown[i].getX()[0]);
+			writeALine(file, ":" + spellsKnown[i].getX()[1]);
+			writeALine(file, ":" + (spellsKnown[i].getZ().length - 1));
+			for (int j = 1; j < spellsKnown[i].getZ().length; j++)
+				writeALine(file, ":" + spellsKnown[i].getZ()[j]);
+			for (String s :  spellsKnown[i].getY())
 				writeALine(file, ":" + s);
 		}
-		else
-			writeALine(file, ":0");
 		//OPT <[cl, concentration], [use-spells], [className, special, special ...]>
-		if (spellsPrepared.getY().length > 0) {
-			writeALine(file, ":" + spellsPrepared.getY().length);
-			writeALine(file, ":" + spellsPrepared.getZ()[0]);
-			writeALine(file, ":" + spellsPrepared.getX()[0]);
-			writeALine(file, ":" + spellsPrepared.getX()[1]);
-			writeALine(file, ":" + (spellsPrepared.getZ().length - 1));
-			for (int i = 1; i < spellsPrepared.getZ().length; i++)
-				writeALine(file, ":" + spellsPrepared.getZ()[i]);				
-			for (String s : spellsPrepared.getY())
+		writeALine(file, ":" + spellsPrepared.length);
+		for (int i = 0; i < spellsPrepared.length; i++) {
+			writeALine(file, ":" + spellsPrepared[i].getY().length);
+			writeALine(file, ":" + spellsPrepared[i].getZ()[0]);
+			writeALine(file, ":" + spellsPrepared[i].getX()[0]);
+			writeALine(file, ":" + spellsPrepared[i].getX()[1]);
+			writeALine(file, ":" + (spellsPrepared[i].getZ().length - 1));
+			for (int j = 1; j < spellsPrepared[i].getZ().length; j++)
+				writeALine(file, ":" + spellsPrepared[i].getZ()[j]);				
+			for (String s :  spellsPrepared[i].getY())
 				writeALine(file, ":" + s);
 		}
-		else
-			writeALine(file, ":0");
 		writeALine(file, ":" + beforeCombat);
 		writeALine(file, ":" + duringCombat);
 		writeALine(file, ":" + morale);
@@ -774,6 +770,10 @@ public class Creature {
 			if (s.startsWith("#T")) {
 				nextLine();
 				printTitle(s.substring(2, s.length() - 2));
+			}
+			else if (s.startsWith("#C")) {
+				nextLine();
+				printTable(s.substring(2, s.length()));
 			}
 			else 
 				for (String ss : s.split("(?<=\\s)")) 
@@ -887,6 +887,130 @@ public class Creature {
 		contentStream.newLineAtOffset(0, -2);
 		contentStream.setFont(normal, normalText);
 	}
+	private void printCentered(String s) throws IOException {
+		WrappingText line = new WrappingText(s, PDRectangle.LETTER.getWidth() / 2 - .9f * 72,
+				normalText);
+		contentStream.newLineAtOffset(-line.getLineWidth() / 2, 0);
+		showWithEffects(s);
+		contentStream.newLineAtOffset(line.getLineWidth() / 2, 0);
+	}
+	private void printCenteredBold(String s) throws IOException {
+		WrappingText line = new WrappingText(s, bold, PDRectangle.LETTER.getWidth() / 2 - .9f * 72,
+				normalText);
+		contentStream.newLineAtOffset(-line.getLineWidth() / 2, 0);
+		printBold(s);
+		contentStream.newLineAtOffset(line.getLineWidth() / 2, 0);
+	}
+	private void printTable(String s) throws IOException {
+		int columns = Integer.parseInt(s.substring(0, s.indexOf("x")));
+		int rows = Integer.parseInt(s.substring(s.indexOf("x") + 1, s.indexOf("#")));
+		WrappingText[][] entries = new WrappingText[columns][rows + 1];
+		float[] widths = new float[columns];
+		int[] heights = new int[rows + 1];
+		float[] spaces = new float[columns];
+		int index = s.indexOf("#") + 2;
+		float spaceWidth = normal.getSpaceWidth() / 1000 * normalText;
+		float lineHeight = normal.getFontDescriptor().getFontBoundingBox().getHeight() / 1000 * normalText;
+		//get Entries
+		for (int i = 0; i < rows + 1; i++)
+			for (int j = 0; j < columns; j++) {
+				if (s.indexOf("#E", index) != -1) {
+					String ss = s.substring(index, s.indexOf("#E", index));
+					index = s.indexOf("#E", index) + 3;
+					entries[j][i] = new WrappingText(ss, i == 0 ? bold : normal,
+							PDRectangle.LETTER.getWidth() / 2 - .9f * 72, normalText);
+					int rowSize = entries[j][i].getStraightLines().size();
+					if (heights[i] < rowSize)
+						heights[i] = rowSize;
+					if (widths[j] < entries[j][i].getLineWidth() + spaceWidth) {
+						widths[j] = entries[j][i].getLineWidth() + spaceWidth;
+						if (j > 0)
+							spaces[j - 1] = entries[j][i].getLineWidth() / 2;
+					}
+				}
+			}
+		float totalWidth = 0;
+		//find if Widths are ok
+		for (float f : spaces)
+			totalWidth += f;
+		for (float f : widths)
+			totalWidth += f;
+		float adj = 1.5f;
+		//fix widths if not ok
+		while (totalWidth > PDRectangle.LETTER.getWidth() / 2 - .9f * 72) {
+			int biggestIndex = 0;
+			for (int i = 1; i < widths.length; i++)
+				if (widths[i] > widths[biggestIndex]) 
+					biggestIndex = i;
+			spaces[biggestIndex] = 0;
+			widths[biggestIndex] = 0;
+			for (int i = 0; i < rows + 1; i++) {
+				entries[biggestIndex][i] = new WrappingText(entries[biggestIndex][i].getText(),
+						i == 0 ? bold : normal, entries[biggestIndex][i].getTotalLineWidth() / adj, normalText);
+				int rowSize = entries[biggestIndex][i].getStraightLines().size();
+				if (heights[i] < rowSize)
+					heights[i] = rowSize;
+				if (widths[biggestIndex] < entries[biggestIndex][i].getLineWidth() + spaceWidth) {
+					widths[biggestIndex] = entries[biggestIndex][i].getLineWidth() + spaceWidth;
+					if (biggestIndex > 0)
+						spaces[biggestIndex - 1] = entries[biggestIndex][i].getLineWidth() / 2;
+				}
+			}
+			totalWidth = 0;
+			for (float f : spaces)
+				totalWidth += f;
+			for (float f : widths)
+				totalWidth += f;
+		}
+		int k = 0;
+		//fill out empty space
+		while (totalWidth < PDRectangle.LETTER.getWidth() / 2 - .9f * 72 - spaceWidth) {
+			totalWidth += spaceWidth;
+			spaces[k++] += spaceWidth;
+			if (k >= spaces.length)
+				k = 0;
+		}
+		//don't start table with header on bottom
+		if (nextLineTurns())
+			nextLine();
+		k = 0;
+		//print the entries
+		for (int i = 0; i < rows + 1; i++) {
+			for (int j = 0; j < columns; j++) {
+				if (i == 0) {
+					if (j == 0)
+						for (String ss : entries[j][i].getStraightLines()) {
+							if (k++ != 0)
+								contentStream.newLine();
+							printBold(ss);
+						}
+					else 
+						for (String ss : entries[j][i].getStraightLines()) {
+							if (k++ != 0)
+								contentStream.newLine();
+							printCenteredBold(ss);
+						}
+				}
+				else if (j == 0)
+					for (String ss : entries[j][i].getStraightLines()) {
+						if (k++ != 0)
+							contentStream.newLine();
+						showWithEffects(ss);
+					}
+				else 
+					for (String ss : entries[j][i].getStraightLines()) {
+						if (k++ != 0)
+							contentStream.newLine();
+						printCentered(ss);
+					}
+				contentStream.newLineAtOffset(widths[j] + spaces[j], (k - 1) * lineHeight);
+				k = 0;
+			}
+			contentStream.newLineAtOffset(-totalWidth, 0);
+			for (int j = 0; j < heights[i]; j++)
+				nextLine();
+		}			
+	}
 	/**
 	 * Returns a place from a number as String
 	 *  1st from 1
@@ -933,6 +1057,26 @@ public class Creature {
 			contentStream.newLine();
 		++lineNumber;
 	}
+	/**
+	 * Returns if the next line doesn't just go down
+	 * @return if the next line doesn't just go down
+	 */
+	private boolean nextLineTurns() {
+		boolean result = false;
+		if (lineNumber == 53 && shortDescLong && firstPage) 
+			result = true;
+		else if (lineNumber == 55 && !shortDescLong && firstPage) 
+			result = true;
+		else if (lineNumber == 63 && !firstPage)
+			result = true;
+		else if (lineNumber == 106 && shortDescLong && firstPage)
+			result = true;
+		else if (lineNumber == 110 && !shortDescLong && firstPage) 
+			result = true;
+		else if (lineNumber == 126 && !firstPage) 
+			result = true;
+		return result;
+	}
 	private void nextPage() throws IOException {
 		firstPage = false;
 		contentStream.close();
@@ -963,10 +1107,10 @@ public class Creature {
 			}
 			return line.substring(line.indexOf(58) + 1).trim();
 		} catch (IOException e) {
-			System.out.println("Unable to read Line, returning null");
+			System.out.println("->" + name + ": Unable to read Line, returning null");
 			return null;
 		} catch (NullPointerException e) {
-			System.out.println("Reached EOF, returning null");
+			System.out.println("->" + name + ": Reached EOF, returning null");
 			return null;
 		}
 	}
@@ -1192,22 +1336,22 @@ public class Creature {
 		writeSpellsPrepared();
 	}
 	private void writeSpellsPrepared() throws IOException {
-		if (spellsPrepared.getY().length > 0) {//OPT <[cl, concentration], [use-spells], [className, Bold, after, Bold ...]>
+		for (int i = 0; i < spellsPrepared.length; i++) {
 			String text = "";
-			if (!spellsPrepared.getZ()[0].equals("none")) 
-				text += "#H" + spellsPrepared.getZ()[0] + " #HSpells #HPrepared ";
+			if (!spellsPrepared[i].getZ()[0].equals("none")) 
+				text += "#H" + spellsPrepared[i].getZ()[0] + " #HSpells #HPrepared ";
 			else
 				text += "#HSpells #HPrepared ";
-			int conc = spellsPrepared.getX()[1];
-			text += "(CL " + getPlace(spellsPrepared.getX()[0]) + "; concentration " + 
+			int conc = spellsPrepared[i].getX()[1];
+			text += "(CL " + getPlace(spellsPrepared[i].getX()[0]) + "; concentration " + 
 					((conc > -1) ? ("+" + conc) : (conc))  + ')';
 			printALine(text);
-			for (int i = 0; i < spellsPrepared.getY().length; i++) 
-				printAnIndentedLine(spellsPrepared.getY()[i]);
+			for (int j = 0; j < spellsPrepared[i].getY().length; j++) 
+				printAnIndentedLine(spellsPrepared[i].getY()[j]);
 			text = "";
-			for (int i = 1; i < spellsPrepared.getZ().length; i++) {
-				text += "#H" + spellsPrepared.getZ()[i];
-				if (i + 1 < spellsPrepared.getZ().length) 
+			for (int j = 1; j < spellsPrepared[i].getZ().length; j++) {
+				text += "#H" + spellsPrepared[i].getZ()[j];
+				if (j + 1 < spellsPrepared[i].getZ().length) 
 					text += "; ";
 			}
 			if (!text.equals(""))
@@ -1215,26 +1359,39 @@ public class Creature {
 		}
 	}
 	private void writeSpellsKnown() throws IOException {
-		if (spellsKnown.getY().length > 0) {
+		for (int i = 0; i < spellsKnown.length; i++) {
 			String text = "";
-			if (!spellsKnown.getZ()[0].equals("none")) 
-				text += "#H" + spellsKnown.getZ()[0] + " #HSpells #HKnown ";
+			if (!spellsKnown[i].getZ()[0].equals("none")) 
+				text += "#H" + spellsKnown[i].getZ()[0] + " #HSpells #HKnown ";
 			else
 				text += "#HSpells #HKnown ";
-			int conc = spellsKnown.getX()[1];
-			text += "(CL " + getPlace(spellsKnown.getX()[0]) + "; concentration " + 
+			int conc = spellsKnown[i].getX()[1];
+			text += "(CL " + getPlace(spellsKnown[i].getX()[0]) + "; concentration " + 
 					((conc > -1) ? ("+" + conc) : (conc))  + ')';
 			printALine(text);
-			for (int i = 0; i < spellsKnown.getY().length; i++) 
-				printAnIndentedLine(spellsKnown.getY()[i]);
+			for (int j = 0; j < spellsKnown[i].getY().length; j++) 
+				printAnIndentedLine(spellsKnown[i].getY()[j]);
 			text = "";
-			for (int i = 1; i < spellsKnown.getZ().length; i++) {
-				text += "#H" + spellsKnown.getZ()[i];
-				if (i + 1 < spellsKnown.getZ().length)
+			for (int j = 1; j < spellsKnown[i].getZ().length; j++) {
+				text += "#H" + spellsKnown[i].getZ()[j];
+				if (j + 1 < spellsKnown[i].getZ().length)
 					text += "; ";
 			}
 			if (!text.equals(""))
 				printAnIndentedLine(text);
+		}
+	}
+	private void writeSLAs() throws IOException {
+		for (int i = 0; i < spellLikeAbilities.length; i++) {
+			int conc = spellLikeAbilities[i].getY()[1];
+			String text = spellLikeAbilities[i].getZ().equals("none") ? "" : "#H" + spellLikeAbilities[i].getZ() + " ";
+			text += "#HSpell-Like #HAbilities " + "(CL " + getPlace(spellLikeAbilities[i].getY()[0]) +
+					"; concentration " + ((conc > -1) ? ("+" + conc) : (conc))  + ')';
+			printALine(text);
+			for (int j = 0; j < spellLikeAbilities[i].getX().length; j++) {
+				text = spellLikeAbilities[i].getX()[j];
+				printAnIndentedLine(text);
+			}
 		}
 	}
 	private void writePsychicMagic() throws IOException {
@@ -1244,19 +1401,6 @@ public class Creature {
 					"; concentration " + ((conc > -1) ? ("+" + conc) : (conc))  + ')';
 			printALine(text);
 			printAnIndentedLine(psychicMagic.getY());
-		}
-	}
-	private void writeSLAs() throws IOException {
-		if (spellLikeAbilities.getX().length > 0) {
-			int conc = spellLikeAbilities.getY()[1];
-			String text = spellLikeAbilities.getZ().equals("none") ? "" : "#H" + spellLikeAbilities.getZ() + " ";
-			text += "#HSpell-Like #HAbilities " + "(CL " + getPlace(spellLikeAbilities.getY()[0]) +
-					"; concentration " + ((conc > -1) ? ("+" + conc) : (conc))  + ')';
-			printALine(text);
-			for (int i = 0; i < spellLikeAbilities.getX().length; i++) {
-				text = spellLikeAbilities.getX()[i];
-				printAnIndentedLine(text);
-			}
 		}
 	}
 	private void writeSpecialAttacks() throws IOException {
@@ -1412,10 +1556,10 @@ public class Creature {
 		contentStream.setLeading(italics.getFontDescriptor().getFontBoundingBox().getHeight() / 1000 * shortDescSize);
 		contentStream.setFont(italics, shortDescSize);
 		WrappingText shortDesc = new WrappingText(this.shortDesc, italics, PDRectangle.LETTER.getWidth() - 2 * border, shortDescSize);
-		if (shortDesc.getLines().size() > 2)
-			System.out.println("The short description for " + name + " is too long!");
+		if (shortDesc.getStraightLines().size() > 2)
+			System.out.println("->" + name + ": The short description for " + name + " is too long!");
 		else 
-			for (String s : shortDesc.getLines()) {
+			for (String s : shortDesc.getStraightLines()) {
 				contentStream.newLine();
 				contentStream.showText(s);
 			}
@@ -1482,14 +1626,14 @@ public class Creature {
 	private void drawPictures(PDDocument pdoc) {
 		try {
 			WrappingText shortDesc = new WrappingText(this.shortDesc, italics, PDRectangle.LETTER.getWidth() - 2 * border, shortDescSize);
-			if (shortDesc.getLines().size() > 1)
+			if (shortDesc.getStraightLines().size() > 1)
 				shortDescLong = true;
 			contentStream.drawImage(PDImageXObject.createFromFile(type.getPic() , pdoc), 454, shortDescLong ? 630 : 650);
 			contentStream.drawImage(PDImageXObject.createFromFile(terrain.getPic() , pdoc), 486, shortDescLong ? 630 : 650);
 			contentStream.drawImage(PDImageXObject.createFromFile(climate.getPic() , pdoc), 518, shortDescLong ? 630 : 650);
 		} catch (Exception e) {
+			System.out.println("->" + name + ": The images at the top right didn't print because they don't exist. You can add them yourself if you'd like, as described at https://github.com/bjpaupor/rpg-utility/tree/master.");
 			e.printStackTrace();
-			System.out.println("->The images at the top right didn't print because they don't exist. You can add them yourself if you'd like, as described at https://github.com/bjpaupor/rpg-utility/tree/master.");
 			return;
 		}
 	}
@@ -1511,25 +1655,8 @@ public class Creature {
 	 * @throws IOException
 	 */
 	public static void main(String[] args) throws IOException {
-		printSet("src/CreatureFiles/Hollow'sLastHope/");
-		printSet("src/CreatureFiles/Bestiary1/");
-		printSet("src/CreatureFiles/");
+		printSet("src/Assets/CreatureFiles/");
 		for (String s : args)
 			printSet(s);
-		Creature d = new Creature("src/CreatureFiles/StrangeAeonsPC's/DrErasmusKhan.creature");
-		d.printToPdf();
-		d.saveToFile();
-		Creature c = new Creature("src/CreatureFiles/StrangeAeonsPC's/VeruccLellinstein.creature");
-		c.printToPdf();
-		c.saveToFile();
-		Creature b = new Creature("src/CreatureFiles/StrangeAeonsPC's/UrorSiegfried.creature");
-		b.printToPdf();
-		b.saveToFile();
-		Creature a = new Creature("src/CreatureFiles/StrangeAeonsPC's/LeonGrylls.creature");
-		a.printToPdf();
-		a.saveToFile();
-		Creature m = new Creature("src/CreatureFiles/Monty.creature");
-		m.printToPdf();
-		m.saveToFile();
 	}
 }

@@ -1,0 +1,188 @@
+Where to place finished PDF: /home/brandon/Documents/StatBloccs/StrangeAeonsPC's/
+Name: Doctor Erasmus Khan
+Basic Name: 
+Short Description: An unusual character with gaunt skin, dark hair, piercing green eyes, a fine suit, and a few friends on the other side.
+Title Name: Erasmus Khan
+CR: 2
+Type: OUTSIDER
+Terrain: URBAN
+Climate: TEMPERATE
+XP: 600
+Race: Aasimar
+Number of classes with levels (First is favored): 1
+Class: oracle (dual-cursed)
+Levels in above: 2
+Alignment: CG
+Size: Medium
+Number of Subtypes: 2
+Subtype: native
+Subtype: human
+Init: 3
+Number of senses: 1
+Sense: darkvision 60ft.
+Perception: 6
+Number of auras: 0
+AC: 14
+touch: 11
+flat-footed: 13
+Number of AC Modifiers: 2
+Modifier: 3
+Type of above Modifier: armor
+Modifier: 1
+Type of above Modifier: Dex
+Number of Conditional AC Modifiers: 0
+HP: 16
+HP breakdown: 2d8+3
+Fast Healing: 0
+Regeneration: 0
+Fort: 1
+Ref: 1
+Will: 5
+Number of conditional save modifiers: 2
+Modifier: 1
+Condition/Type of above Modifier: vs. spells/SLAs of evil creatures
+Modifier: -1
+Condition/Type of above Modifier: vs. disease/infestation
+Number of Defensive Abilities: 0
+DR: 0
+Number of Immunities: 1
+Immunity: sickened
+Number of Resistances: 3
+Resistance Type: acid
+Resistance Amount: 5
+Resistance Type: cold
+Resistance Amount: 5
+Resistance Type: electricity
+Resistance Amount: 5
+SR: 0
+Number of Weaknesses: 0
+Speed: 30
+Number of other speeds (#B means base speed): 0
+Melee: longspear +2 (1d8+1/x3) or #Ired #Idestiny -2 (1d6+1/19-20)
+Ranged: light crossbow +2 (1d8)
+Space: 5
+Reach: 5
+Number of Special Attacks: 1
+Special Attack: driven by guilt 1/day (+3 attack, +2 damage)
+Psychic Magic CL: 0
+SLA Sources: 1
+SLA Use Categories (1/day, etc.): 1
+SLA Source: Aasimar
+SLA CL: 2
+SLA Concentration: 5
+SLA Use Category and Spells: 1/day—#Idaylight
+Spells Known Levels: 1
+Spells Known Levels: 2
+Spells Known Class: Oracle
+Spells Known CL: 2
+Spells Known Concentration: 5
+Number of Bolded Sections: 1
+Bold Section: #HMystery juju
+Spells Known and Use Level: 1st (5/day)—#Ibless, #Icure #Ilight #Iwounds, #Iremove #Ifear, #Iill #Iomen
+Spells Known and Use Level: 0 (at will)—#Icreate #Iwater, #Idetect #Imagic, #Ipurify #Ifood #Iand #Idrink, #Iread #Imagic, #Istabilize
+Spells Prepared Levels: 0
+Before Combat: 
+During Combat: 
+Morale: 
+Base Statistics: 
+Str: 12
+Dex: 12
+Con: 12
+Int: 10
+Wis: 14
+Cha: 17
+BAB: 1
+CMB: 2
+Number of Special CMBs: 0
+CMD: 13
+Number of Special CMDs: 0
+Number of Feats: 1
+Feat: Extra Revelation
+Number of Skills: 8
+Skill: +7 Diplomacy
+Skill: +7 Disguise
+Skill: +6 Heal
+Skill: +4 Knowledge (religion)
+Skill: +7 Linguistics
+Skill: +7 Perception
+Skill: +8 Sense Motive
+Skill: +4 Spellcraft
+Number of Racial Modifiers: 2
+Racial Modifier: +2 Linguistics
+Racial Modifier: +2 Sense Motive
+Number of Languages: 4
+Language: Celestial
+Language: Common
+Language: Draconic
+Language: Sylvan
+Number of Special Languages: 0
+Number of Special Qualities: 4
+SQ: oracle's curses (plagued, tongues [celestial])
+SQ: revelations (beast tongue [birds], natural divination [1/day])
+SQ: scion of humanity
+SQ: umbral unmasking (monstrous)
+Number of Combat Gear: 6
+Combat Gear: alchemist's fire (2)
+Combat Gear: #Iwand #Iof #Icure #Ilight #Iwounds (4 charges)
+Combat Gear: #Iwand #Iof #Ilesser #Irestoration (7 charges)
+Combat Gear: #Iscroll #Iof #Icure #Ilight #Iwounds (2) #Iand #Isanctuary
+Combat Gear: #Iscroll #Iof #Iremove #Iparalysis (2)
+Combat Gear: #Iscroll #Iof #Ifox's #Icunning
+Number of Other Gear: 43
+Other Gear: hide shirt
+Other Gear: #Imagic #Ishortsword #I(Red #IDestiny)
+Other Gear: light crossbow with 30 bolts
+Other Gear: longspear
+Other Gear: #Ihandy #Ihaversack
+Other Gear: #Ilesser #Italisman #Iof #Ihealing #Ipower
+Other Gear: #Imagic #Iphylactery
+Other Gear: #Isleeves #Iof #Imany #Igarments
+Other Gear: shrunken head [divine focus]
+Other Gear: bedroll
+Other Gear: bird feed (2 days)
+Other Gear: book of psychology on night terrors
+Other Gear: book of medicine on brain tumors
+Other Gear: candles (30)
+Other Gear: cards
+Other Gear: chalk
+Other Gear: cigars (29)
+Other Gear: cleric vestments of Pharasma
+Other Gear: crossword
+Other Gear: crowbar
+Other Gear: dice
+Other Gear: doctor's lab coats (4)
+Other Gear: earplugs
+Other Gear: eye with cross-shaped pupil
+Other Gear: flint and steel
+Other Gear: fortune cookies (27)
+Other Gear: freshwater pearl necklace
+Other Gear: gaudy red leather boots with cat skin lining
+Other Gear: gentlemen's attire
+Other Gear: gold ring
+Other Gear: grappling hook
+Other Gear: grooming kit
+Other Gear: mess kit
+Other Gear: mirror
+Other Gear: smoked goggles
+Other Gear: tarnished old silver necklace
+Other Gear: tumored brain
+Other Gear: masterwork viol
+Other Gear: whetstone
+Other Gear: winter blankets (2)
+Other Gear: wooden holy symbol of Pharasma
+Other Gear: bloody yellow robes
+Other Gear: 40 gp
+Environment: 
+Organization: 
+Treasure: 
+Number of Special Abilities: 3
+Ability Name: Scion of Humanity
+Ability Text: Some aasimars’ heavenly ancestry is extremely distant. An aasimar with this racial trait counts as an outsider (native) and a humanoid (human) for any effect related to race, including feat prerequisites and spells that affect humanoids. She can pass for human without using the Disguise skill. This racial trait replaces the Celestial language and alters the native subtype.
+Number of Sub-Descriptions: 0
+Ability Name: Truespeaker
+Ability Text: There are some aasimars whose language transcends all boundaries. They gain a +2 bonus on Linguistics and Sense Motive checks, and they learn two languages each time they gain a rank in Linguistics. This racial trait replaces skilled.
+Number of Sub-Descriptions: 0
+Ability Name: Umbral Unmasking
+Ability Text: You cast no shadow whatsoever, or the shadow you do have is monstrous. Under normal lighted conditions, this is not hard to observe—but uncommon to notice. Creatures that succeed at a DC 15 Wisdom check notice it plainly (an additional Perception check may be required based on environmental conditions). This telltale sign of wickedness cannot be concealed by misdirection, nondetection, or illusions, except those that also affect shadows (such as invisibility).
+Number of Sub-Descriptions: 0
+Description: 

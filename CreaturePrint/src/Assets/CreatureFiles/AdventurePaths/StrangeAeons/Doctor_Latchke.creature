@@ -1,0 +1,119 @@
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/AdventurePaths/StrangeAeons/
+Name : "Doctor" Latchke
+Basic Name (Dinosaur):
+Short description: Another figure, unsettlingly thin and wearing a blood-smeared doctor’s coat, circles the table casually
+Title Name : Doctor Latchke
+CR: 3
+Type: Monstrous_Humanoid
+Terrain: Urban
+Climate: Temperate
+XP:800
+Race:
+Number of classes with levels in (First is Favored): 0
+Alignment:NE
+Size:Medium
+Number of subtypes:1
+Subtype:shapechanger
+Init:1
+Number of senses (#I means to make italic, for spells):1
+Sense:darkvision 60ft.
+Perception:+9
+Number of auras (#I means to make italic, for spells):0
+AC:19
+touch:12
+flat-footed:17
+Number of AC modifiers:4
+Modifier:1
+Type of above Modifier: Dex
+Modifier:1
+Type of above Modifier: dodge
+Modifier:4
+Type of above Modifier: natural
+Modifier:3
+Type of above Modifier: shield
+Number of Conditional AC modifiers:0
+HP:26
+HP breakdown:4d10+4
+Fast Healing:0
+Regeneration:0
+fort:4
+ref:5
+will:6
+Number of Conditional Save modifiers:0
+Number of Defensive Abilities: 0
+DR: 0
+Immunities : 2
+Immunity : charm
+Immunity : sleep
+Resistances: 0
+SR: 0
+Num of Weaknesses: 0
+Speed: 30
+Other Speeds(#B means base speed if reduced normally): 0
+Melee: 2 claws +8 (1d8+4)
+Ranged: 
+Space: 5
+Reach: 5
+Num of Special Attacks: 0
+Psychic Magic CL: 0
+SLA Sources: 1
+SLA Use Categories (1/day, 3/week, etc.): 1
+SLA Source: none
+SLA CL: 18
+SLA Concentration: 19
+SLA Use Category and Spells: At will—#Idetect #Ithoughts (DC 13) 
+Spells Known Levels: 0
+Spells Prepared Levels: 0
+Before Combat:If come upon unawares, Doctor Latchke is stripping skins from the human and doppelganger corpses and laying them alongside one another in long strips. This morbid organization marks the extent of his “science.”
+During Combat:If Doctor Latchke is aware of the PCs’ approach and has time to prepare, he falls amid the human bodies in his experiment and transforms into a grandmotherly old nurse with a gruesomely broken leg. He keeps up the facade until he has an opportune moment to attack a PC, he can escape toward area B14, or his disguise is compromised. He refuses to go to the chapel, expecting the paranoid guards to unmask him.
+Morale: 
+Base Statistics:
+Str:18
+Dex:13
+Con:12
+Int:13
+Wis:14
+Cha:13
+BAB:4
+CMB:8
+Num of Special CMBs:0
+CMD:20
+Num of Special CMDs:0
+Num of Feats: 2
+Feat: Dodge
+Feat: Great Fortitude
+Num of Skills: 6
+Skill: Bluff +9 (+13 while using change shape ability)
+Skill: Diplomacy +4
+Skill: Disguise +9 (+29 while using change shape ability)
+Skill: Perception +9
+Skill: Sense Motive +6
+Skill: Stealth +4
+Num of Racial Mods: 2
+Racial Mod: +4 Bluff
+Racial Mod: +4 Disguise
+Num of Lanugagues: 1
+Language: Common
+Num of Special Languages: 0
+Num of Special Qualities: 3
+SQ: change shape (#Ialter #Iself#)
+SQ: perfect copy
+SQ: mimicry
+Num of Combat Gear: 1
+Combat Gear: #Iscroll #Iof #Ihold #Iperson#
+Num of Other Gear: 3
+Other Gear: #I+1 #Iheavy #Iwooden #Ishield#
+Other Gear: 34 gp
+Other Gear: 60 sp
+Environment: 
+Organization: 
+Treasure: 
+Num of Special Abilities: 2
+Ability Name: Mimicry (Ex)
+Abliity Text: A doppelganger is proficient in all weapons, armor, and shields. In addition, a doppelganger can use any spell trigger or spell completion item as if the spells were on its spell list. Its caster level is equal to its racial Hit Dice.
+Num of Sub-Descriptions: 0
+Ability Name: Perfect Copy (Su)
+Abliity Text: When a doppelganger uses change shape, it can assume the appearance of specific individuals
+Num of Sub-Descriptions: 0
+Description: Doppelgangers are strange beings that can take on the shapes of those they encounter. In its natural form, the creature looks more or less humanoid, but slender and frail, with gangly limbs and half-formed facial features. Its flesh is pale and hairless, and its eyes are vacant and white. #PDoppelgangers prefer infiltrating societies where they can gather wealth and inf luence, and see little point in forming cities of their own kind. Younger doppelgangers practice their skills by taking over small orc or goblin tribes, then move to more complicated societies like dwarven, elven, and human communities. Rather than making themselves targets by taking positions of leadership, they prefer to be the power behind the throne, or use multiple identities to manipulate inf luential citizens or entire guilds. #PDoppelgangers make excellent use of their natural mimicry to stage ambushes, bait traps, and infiltrate humanoid society. Although not usually evil, they are interested only in themselves and regard all others as playthings to be manipulated and deceived. They are particularly fond of invading human societies in order to indulge in their desires—some enjoy the complex dance of politics while others seek constant change in the race and gender of both themselves and their romantic companions. While not standard, it is those doppelgangers use their gifts for cruel and sadistic purposes that are most notorious, and these shapeshifters are the primary cause of the race’s sinister reputation. Certainly, a creature capable of changing its shape has a handy way to avoid capture for its crimes, and some particularly malicious doppelgangers enjoy disrupting relationships by posing as unfaithful lovers. #PRumors persist of even more powerful doppelgangers capable of not only shifting their appearance, but also skills, memories, and even the extraordinary and supernatural abilities of creatures whose forms they choose to mimic. These doppelgangers’ change shape ability functions like the spell #Ipolymorph rather than #Ialter #Iself.
+

@@ -1,0 +1,137 @@
+Where to place finished PDF: /home/brandon/Documents/StatBloccs/StrangeAeonsPC's/
+Name: Uror "Ror" Siegfried
+Basic Name: 
+Short Description: A muscular and impressively tattooed half-orc man with brown eyes, a dark goatee, and an assortment of deadly-looking weapons
+Title Name: Ror
+CR: 2
+Type: HUMANOID
+Terrain: URBAN
+Climate: TEMPERATE
+XP: 600
+Race: Half-orc
+Number of classes with levels (First is favored): 1
+Class: barbarian (invulnerable rager)
+Levels in above: 2
+Alignment: CN
+Size: Medium
+Number of Subtypes: 2
+Subtype: human
+Subtype: orc
+Init: 1
+Number of senses: 1
+Sense: darkvision 60 ft.
+Perception: 6
+Number of auras: 0
+AC: 13
+touch: 9
+flat-footed: 12
+Number of AC Modifiers: 3
+Modifier: 4
+Type of above Modifier: armor
+Modifier: 1
+Type of above Modifier: Dex
+Modifier: -2
+Type of above Modifier: rage
+Number of Conditional AC Modifiers: 0
+HP: 30
+HP breakdown: 2d12+9
+Fast Healing: 0
+Regeneration: 0
+Fort: 8
+Ref: 2
+Will: 4
+Number of conditional save modifiers: 1
+Modifier: 2
+Condition/Type of above Modifier: vs. magic
+Number of Defensive Abilities: 0
+DR: 1
+Bypass: — (2 vs. nonlethal)
+Number of Immunities: 0
+Number of Resistances: 0
+SR: 0
+Number of Weaknesses: 0
+Speed: 30
+Number of other speeds (#B means base speed): 1
+Other Speed: #B40 ft.
+Melee: greatsword +8 (2d6+9/19-20) or cold iron lucerne hammer +8 (1d12+9) or sap +8 (1d6+6 nonlethal)
+Ranged: sling +3 (1d4+6)
+Space: 5
+Reach: 5
+Number of Special Attacks: 4
+Special Attack: cruel rager
+Special Attack: pugnacious
+Special Attack: rage (14 rounds/day)
+Special Attack: rage powers (superstition +2)
+Psychic Magic CL: 0
+SLA Sources: 0
+Spells Known Levels: 0
+Spells Prepared Levels: 0
+Before Combat: 
+During Combat: 
+Morale: 
+Base Statistics: When not raging, Ror's statistics are #HAC 15, touch 11, flat-footed 14; #Hhp 26; #HFort +6, #HWill +2; #HMelee greatsword +6 (2d6+6/19-20) or cold iron lucerne hammer +6 (1d12+6) or sap +6 (1d6+4 nonlethal); #HRanged sling +3 (1d4+4); #HStr 18, #HCon 14; #HCMB +6 (+8 sunder medium/heavy armor with lucerne hammer). When not carrying a medium load, Ror's statistics are #HSpeed 40 ft.; #HSkills +4 Acrobatics.
+Str: 22
+Dex: 12
+Con: 18
+Int: 8
+Wis: 12
+Cha: 8
+BAB: 2
+CMB: 8
+Number of Special CMBs: 1
+Special CMB: +10 sunder medium/heavy armor with lucerne hammer
+CMD: 17
+Number of Special CMDs: 0
+Number of Feats: 1
+Feat: Extra Rage
+Number of Skills: 4
+Skill: +2 Acrobatics
+Skill: +6 Intimidate
+Skill: +6 Perception
+Skill: +5 Survival
+Number of Racial Modifiers: 1
+Racial Modifier: +2 Intimidate
+Number of Languages: 2
+Language: Common
+Language: Orc
+Number of Special Languages: 0
+Number of Special Qualities: 3
+SQ: fast movement
+SQ: orc blood
+SQ: weapon familiarity
+Number of Combat Gear: 2
+Combat Gear: alchemist's fire
+Combat Gear: #Ipotion #Iof #Icure #Ilight #Iwounds
+Number of Other Gear: 21
+Other Gear: masterwork living steel chain shirt
+Other Gear: scale mail
+Other Gear: greatsword
+Other Gear: cold iron lucerne hammer
+Other Gear: sap
+Other Gear: sling with 10 bullets
+Other Gear: #Ilesser #Italisman #Iof #Iwarrior's #Icourage
+Other Gear: backpack
+Other Gear: belt pouch
+Other Gear: blanket
+Other Gear: clothes
+Other Gear: flint and steel
+Other Gear: iron pot
+Other Gear: patient records
+Other Gear: rope (50 ft.)
+Other Gear: soap
+Other Gear: torches (9)
+Other Gear: trail rations (5 days)
+Other Gear: waterskin
+Other Gear: 9 sp
+Other Gear: 10 gp
+Environment: 
+Organization: 
+Treasure: 
+Number of Special Abilities: 2
+Ability Name: Cruel Rager
+Ability Text: If you successfully confirm a critical hit against an enemy while raging, you regain 1 round of rage. This can occur only once per rage.
+Number of Sub-Descriptions: 0
+Ability Name: Pugnacious
+Ability Text: You gain a +1 trait bonus on attack rolls when threatened by two or more enemies. In addition, once per day you can gain one of the following effects as an immediate action: You can increase the reach of your melee attacks by 5 feet for 1 round, or you can treat your weapon as one size category larger than it actually is for purposes of determining damage for 1 round.
+Number of Sub-Descriptions: 0
+Description: 

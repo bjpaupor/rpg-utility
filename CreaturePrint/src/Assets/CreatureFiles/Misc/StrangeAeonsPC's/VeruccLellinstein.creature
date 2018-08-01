@@ -1,0 +1,165 @@
+Where to place finished PDF: /home/brandon/Documents/StatBloccs/StrangeAeonsPC's/
+Name: Verucc Lellinstein
+Basic Name: 
+Short Description: An elven wizard with black hair, brown eyes, and a darkwood amulet in the shape of an eye covered in strange runes
+Title Name: Verucc Lellinstein
+CR: 2
+Type: HUMANOID
+Terrain: URBAN
+Climate: TEMPERATE
+XP: 600
+Race: Elf
+Number of classes with levels (First is favored): 1
+Class: void elementalist (elder mythos scholar)
+Levels in above: 2
+Alignment: N
+Size: Medium
+Number of Subtypes: 1
+Subtype: elf
+Init: 1
+Number of senses: 1
+Sense: low-light vision
+Perception: 2
+Number of auras: 0
+AC: 11
+touch: 11
+flat-footed: 10
+Number of AC Modifiers: 1
+Modifier: 1
+Type of above Modifier: Dex
+Number of Conditional AC Modifiers: 0
+HP: 13
+HP breakdown: 2d6+5
+Fast Healing: 0
+Regeneration: 0
+Fort: 0
+Ref: 1
+Will: 3
+Number of conditional save modifiers: 2
+Modifier: 2
+Condition/Type of above Modifier: insight vs. spells/SLAs
+Modifier: 2
+Condition/Type of above Modifier: vs. enchantments
+Number of Defensive Abilities: 1
+Defensive Ability: eldritch knowledge
+DR: 0
+Number of Immunities: 1
+Immunity: sleep
+Number of Resistances: 0
+SR: 0
+Number of Weaknesses: 0
+Speed: 30
+Number of other speeds (#B means base speed): 0
+Melee: dagger +0 (1d4-1/19-20) or mwk alchemical silver dagger +1 (1d4-2/19-20) or sap -4 (1d6-1 nonlethal)
+Ranged: light crossbow +2 (1d8/19-20)
+Space: 5
+Reach: 5
+Number of Special Attacks: 1
+Special Attack: reveal weakness (-1, 6/day)
+Psychic Magic CL: 0
+SLA Sources: 0
+Spells Known Levels: 0
+Spells Prepared Levels: 1
+Spells Prepared Levels: 2
+Spells Prepared Class: #HVoid #HElementalist
+Spells Prepared CL: 2
+Spells Prepared Concentration: 8
+Number of Bolded Sections: 1
+Bold Section: #HOpposition #HSchool water
+Spells Prepared at Level: 1st (5/day)—#Icomprehend #Ilanguages, #Ienlarge #Iperson, #Igravity #Ibow, #Image #Iarmor, #Iprotection #Ifrom #Ichaos
+Spells Prepared at Level: 0 (at will)—#Iacid #Isplash, #Idetect #Imagic, #Ilight, #Iprestidigitation
+Before Combat: 
+During Combat: 
+Morale: 
+Base Statistics: 
+Str: 8
+Dex: 12
+Con: 10
+Int: 20
+Wis: 10
+Cha: 8
+BAB: 1
+CMB: 0
+Number of Special CMBs: 0
+CMD: 11
+Number of Special CMDs: 0
+Number of Feats: 1
+Feat: Toughness
+Number of Skills: 14
+Skill: +9 Appraise
+Skill: -1 Bluff (+5 to lie)
+Skill: -1 Diplomacy (+5 to persuade)
+Skill: +11 Knowledge (arcana)
+Skill: +11 Knowledge (dungeoneering)
+Skill: +9 Knowledge (engineering)
+Skill: +9 Knowledge (history)
+Skill: +9 Knowledge (local)
+Skill: +9 Knowledge (nature)
+Skill: +10 Knowledge (planes)
+Skill: +9 Knowledge (religion)
+Skill: +10 Linguistics
+Skill: +2 Perception
+Skill: +9 Spellcraft (+11 to identify magic item properties)
+Number of Racial Modifiers: 2
+Racial Modifier: +2 Perception
+Racial Modifier: +2 Spellcraft to identify magic item properties
+Number of Languages: 9
+Language: Aboleth
+Language: Aklo
+Language: Celestial
+Language: Common
+Language: Common Sign
+Language: Draconic
+Language: Elven
+Language: Orc
+Language: Sylvan
+Number of Special Languages: 0
+Number of Special Qualities: 6
+SQ: arcane bond (amulet)
+SQ: arcane focus
+SQ: eldritch grimoire
+SQ: elven magic
+SQ: methodical mind
+SQ: student of philosophy
+Number of Combat Gear: 1
+Combat Gear: alchemist's fire (2)
+Number of Other Gear: 16
+Other Gear: dagger
+Other Gear: masterwork alchemical silver dagger
+Other Gear: sap
+Other Gear: light crossbow with 19 bolts
+Other Gear: #Ibag #Iof #Iholding, #Iminor
+Other Gear: #Ipearl #Iof #Ipower (1st)
+Other Gear: darkwood eye amulet
+Other Gear: backpack
+Other Gear: clothes
+Other Gear: sunrod (2)
+Other Gear: spellbooks (2; contain all 0-level spells except #Iray #Iof #Ifrost and all prepared spells as well as the following: 1st—#Imagic #Imissile, #Iheightened #Iawareness, #Iinfernal #Ihealing, #Isnowball, #Icharm #Iperson#)
+Other Gear: spell component pouch
+Other Gear: waterskin
+Other Gear: writing kit
+Other Gear: 5 sp
+Other Gear: 27 gp
+Environment: 
+Organization: 
+Treasure: 
+Number of Special Abilities: 6
+Ability Name: Arcane Focus
+Ability Text: Elves with this racial trait gain a +2 racial bonus on concentration checks made to cast arcane spells defensively. This racial trait replaces weapon familiarity.
+Number of Sub-Descriptions: 0
+Ability Name: Eldritch Grimoire
+Ability Text: An Elder Mythos scholar keeps copious notes on how to use magic against the servants of the Elder Mythos in his spellbook. Every spell he adds to his spellbook takes up an additional 1d6 pages and costs twice the normal amount to inscribe; however, when casting spells prepared from his grimoire, he gains a +2 bonus on caster level checks and increases the save DCs by 1 against the creatures listed in talisman of revealing below.
+Number of Sub-Descriptions: 0
+Ability Name: Eldritch Knowledge (Su)
+Ability Text: An Elder Mythos scholar gains two fewer daily uses of his 1st-level arcane school ability, which is normally used a number of times per day equal to 3 + his Intelligence modifier. If he has no such ability, he can’t take this archetype. When an Elder Mythos scholar attempts a Will save against confusion, fear, insanity, or madness (see page 12), whether magical or mundane, he can spend 2 daily uses of that arcane school ability to apply his Intelligence modifier instead of his Wisdom modifier to the save. However, whenever he uses this ability, he is affected by a nightmare the next time he sleeps, with no saving throw. Until he sleeps and experiences the nightmare, he can’t recover the spent uses of the arcane school ability by any means.
+Number of Sub-Descriptions: 0
+Ability Name: Methodical Mind
+Ability Text: You gain a +1 trait bonus on Knowledge(arcana, dungeoneering, planes) and on concentration checks. When researching, you are considered to have Skill Focus in Knowledge(arcana) when determining what die you roll to reduce a library’s knowledge points (kp).
+Number of Sub-Descriptions: 0
+Ability Name: Student of Philosophy
+Ability Text: You were trained in a nowdefunct philosophical tradition—such as that of the nowdestroyed Galtan universities or Lirgeni astrologers—and learned to use logic and reason to persuade others. You can use your Intelligence modifier in place of your Charisma modifier on Diplomacy checks to persuade others and on Bluff checks to convince others that a lie is true. (This trait does not affect Diplomacy checks to gather information or Bluff checks to feint in combat.)
+Number of Sub-Descriptions: 0
+Ability Name: Talisman of Revealing
+Ability Text: While wearing or wielding his bonded item, an Elder Mythos scholar can spontaneously cast a special #Idetect #Iaberration spell by sacrificing a prepared 1st-level spell. Instead of detecting aberrations, this spell detects creatures associated with the Elder Mythos. He gains a +2 circumstance bonus on Knowledge checks to identify such creatures and Spellcraft checks to identify effects they create.
+Number of Sub-Descriptions: 0
+Description: 
