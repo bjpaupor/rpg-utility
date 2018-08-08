@@ -11,8 +11,7 @@ Ideas for tools that may be worked on in the future:
 - Item Cards
 - Spell Cards
 
-Pictures
-If desired, pictures can be added for Creatures' type, terrain, and climate.
+Pictures if desired can be added for Creatures' type, terrain, and climate.
 - Within CreaturePrint/src/ add folder structure Pictures/CreatureClimates
 							/CreatureTerrains
 							/CreatureTypes
