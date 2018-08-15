@@ -1,13 +1,11 @@
-Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/AdventurePaths/RiseOfTheRunelords/BurntOfferings/
 Name : Boar
-Basic Name (Dinosaur):
 Short description: The boars of Tickwood aren't all that fierce.
 Title Name : Boar
 CR: 1/3
 Type: Animal
 Terrain: Forest_jungle
 Climate: Temperate
-XP: 135
+Gender:
 Race: 
 Number of classes with levels in (First is Favored): 0
 Alignment:N
@@ -19,9 +17,6 @@ Sense: low-light vision
 Sense: scent
 Perception:+8
 Number of auras (#I means to make italic, for spells):0
-AC:13
-touch:12
-flat-footed:12
 Number of AC modifiers:3
 Modifier:1
 Type of above Modifier: Dex

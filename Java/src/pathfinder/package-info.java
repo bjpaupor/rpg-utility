@@ -1,9 +1,9 @@
 /**
  * @author Brandon Paupore
  * To represent the Pathfinder RPG within java.
- * TODO:	Races
- * 			Classes
- * 			Skills
+ * TODO:	Races - Set up
+ * 			Classes - Set up
+ * 			Skills - Set up
  * 			Feats
  * 			Items
  * 				Weapons
@@ -24,17 +24,19 @@
  * 				Siege Engines
  * 					Magic Siege Engines
  * 			Spells
- * 			Creatures -working on it
+ * 			Creatures - Working on it
  * 			Encounters
  * 			Dungeons
  *			Traps
  *			Wilds
  *			Communities
- *			Features
- *			Abilities
+ *			Features - Set up
+ *				Abilities - Set up
  *			Conditions
  *			Afflictions
- *			Feat Types
  *			Materials
+ *			Creature Types - Set up
+ *			Creature Subtypes - Set up
+ *			Sizes - Set up
  */
 package pathfinder;
