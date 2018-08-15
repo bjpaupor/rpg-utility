@@ -1,2 +1,2 @@
-CreaturePrint/bin/*
-CreaturePrint/src/Pictures/*
+Assets/**
+bin/**
