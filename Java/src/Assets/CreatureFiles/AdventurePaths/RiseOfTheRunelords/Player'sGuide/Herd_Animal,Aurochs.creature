@@ -1,0 +1,94 @@
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/AdventurePaths/RiseOfTheRunelords/Player'sGuide/
+Name : Aurochs
+Basic Name (Dinosaur):Herd Animal
+Short description: This large, horned bull has a dirty gray hide and an aggressive temper. Its horns are wide and sharp.
+Title Name : Aurochs
+CR: 5
+Type: Animal
+Terrain: Plain
+Climate: Temperate
+XP:1600
+Race: 
+Number of classes with levels in (First is Favored): 0
+Alignment:N
+Size:Large
+Number of subtypes:0
+Init:0
+Number of senses (#I means to make italic, for spells):2
+Sense: low-light vision
+Sense: scent
+Perception:+10
+Number of auras (#I means to make italic, for spells):0
+AC:17
+touch:9
+flat-footed:17
+Number of AC modifiers:2
+Modifier:8
+Type of above Modifier: natural
+Modifier:-1
+Type of above Modifier: size
+Number of Conditional AC modifiers:0
+HP:59
+HP breakdown:7d8+28
+Fast Healing:0
+Regeneration:0
+fort:9
+ref:5
+will:4
+Number of Conditional Save modifiers:0
+Number of Defensive Abilities: 0
+DR: 0
+Immunities : 0
+Resistances: 0
+SR: 0
+Num of Weaknesses: 0
+Speed: 40
+Other Speeds(#B means base speed if reduced normally): 0
+Melee: gore +12 (2d6+12)
+Ranged: 
+Space: 10
+Reach: 5
+Num of Special Attacks: 2
+Special Attack: stampede
+Special Attack: trample (2d6+12, DC 21)
+Psychic Magic CL: 0
+SLA Use Categories (1/day, 3/week, etc.): 0
+Spells Known Levels: 0
+Spells Prepared Levels: 0
+Before Combat:
+During Combat:
+Morale: 
+Base Statistics:
+Str:27
+Dex:10
+Con:19
+Int:2
+Wis:11
+Cha:4
+BAB:5
+CMB:14
+Num of Special CMBs:0
+CMD:24
+Num of Special CMDs:1
+Special CMD: 28 vs. trip
+Num of Feats: 4
+Feat: Endurance
+Feat: Improved Bull Rush
+Feat: Iron Will
+Feat: Power Attack
+Num of Skills: 1
+Skill: Perception: +10
+Num of Racial Mods:0
+Num of Lanugagues: 0
+Num of Special Languages: 0
+Num of Special Qualities: 0
+Num of Combat Gear: 0
+Num of Other Gear: 0
+Environment: cold or temperate plains
+Organization: solitary, pair, or herd (3–30)
+Treasure: none
+Num of Special Abilities: 1
+Special Ability: Stampede (Ex)
+Description: A stampede occurs if three or more creatures with stampede make a trample attack while remaining adjacent to each other. While stampeding, the creatures can trample foes of their size or smaller, and the trample’s save DC increases by +2
+Number of Sub-descriptions: 0
+Description: Powerfully built herd animals that range across the northern Storval Plateau and western hills, aurochs refuse to be mere prey animals. With thick, mottled gray hides and forward-curving horns (reaching 2-1/2 feet in length), adult aurochs often weigh well over a ton.

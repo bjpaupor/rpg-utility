@@ -1,0 +1,102 @@
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/Modules/Hollow'sLastHope/
+Name : Darkmantle
+Basic Name (Dinosaur): 
+Short description: As this creature falls from the cavern roof, it opens like a hideous octopus, its thin, hook-lined tentacles connected by a fleshy web.
+Title Name : Darkmantle
+CR: 1
+Type: Magical_Beast
+Terrain: Underground
+Climate: Temperate
+XP: 400
+Race: 
+Number of classes with levels in (First is Favored): 0
+Alignment:N
+Size:Small
+Number of subtypes:0
+Init:6
+Number of senses (#I means to make italic, for spells):3
+Sense: blindsight 90 ft.
+Sense: darkvision 60 ft.
+Sense: low-light vision
+Perception:+4
+Number of auras (#I means to make italic, for spells):0
+AC:15
+touch:13
+flat-footed:13
+Number of AC modifiers:3
+Modifier:2
+Type of above Modifier: Dex
+Modifier: 2
+Type of above Modifier: natural
+Modifier: 1
+Type of above Modifier: size
+Number of Conditional AC modifiers:0
+HP:15
+HP breakdown:2d10+4
+Fast Healing:0
+Regeneration:0
+fort: 5
+ref: 5
+will: 0
+Number of Conditional Save modifiers:0
+Number of Defensive Abilities: 0
+DR: 0
+Immunities : 0
+Resistances: 0
+SR: 0
+Num of Weaknesses: 0
+Speed: 20
+Other Speeds(#B means base speed if reduced normally): 1
+Other Speed: fly 30 ft. (poor)
+Melee: slam +3 (1d4 plus grab)
+Ranged: 
+Space: 5
+Reach: 5
+Num of Special Attacks: 2
+Special Attack : constrict (1d4)
+Special Attack : grab (any size)
+Psychic Magic CL: 0
+SLA Sources : 1
+SLA Use Categories (1/day, 3/week, etc.): 1
+SLA Source: none
+SLA CL: 5
+SLA Concentration: 5
+SLA Use Category and Spells: 1/day—#Idarkness
+Spells Known Sources: 0
+Spells Prepared Sources: 0
+Before Combat: On the round before the darkmantles drop down to attack, each one casts darkness on a small stone it is holding in one of its tentacles. They wait until the entire group is inside the chamber before dropping down to strike.
+During Combat: Each darkmantle targets a different foe, attempting to grapple and constrict as quickly as possible.
+Morale: The darkmantles are in their lair and fight to the death.
+Base Statistics:
+Str: 11
+Dex: 15
+Con: 14
+Int: 2
+Wis: 11
+Cha: 10
+BAB: 2
+CMB: 1
+Num of Special CMBs:1
+Special CMB: +5 grapple
+CMD:13
+Num of Special CMDs:1
+Special CMD : can't be tripped
+Num of Feats: 1
+Feat: Improved Initiative
+Num of Skills: 3
+Skill : Fly +5
+Skill : Perception +4
+Skill : Stealth +10
+Num of Racial Mods: 2
+Racial Mod: +4 Perception
+Racial Mod: +4 Stealth
+Num of Lanugagues: 0
+Num of Special Languages: 0
+Num of Special Qualities: 0
+Num of Combat Gear: 0
+Num of Other Gear: 0
+Environment: any underground
+Organization: solitary, pair, or clutch (3–12)
+Treasure: none
+Num of Special Abilities: 0
+Description : A darkmantle’s tentacle-span measures just under 5 feet—when attached to a cave roof and disguised as a stalactite, its length varies from 2 to 3 feet. A typical darkmantle weighs 40 pounds. The creatures’ heads and bodies are usually the color of basalt or dark granite, but their webbed tentacles can change color to match their surroundings. #PThe darkmantle isn’t a particularly good climber, but it can cling to a cave roof like a bat, hanging by the hooks at the ends of its tentacles so that its dangling body looks nearly indistinguishable from a stalactite. In this hidden position, the darkmantle waits for prey to pass beneath, at which point it drops and swoops down to attack its victim, slamming its body against the foe and attempting to wrap its webbed tentacles around the target. If the darkmantle misses its prey, it swoops back up and drops again until its prey is vanquished or the darkmantle is grievously injured (in which case the creature f lutters back up to the roof to hide and hope its “prey” leaves it alone). The darkmantle’s inborn ability to cloak the area around it in magical darkness gives it an additional advantage over foes that rely upon light to see. #PDarkmantles prefer to dwell and hunt in the caves and passageways that are closest to the surface, as these tend to possess more traffic for the monsters to feed upon. Yet they do not confine themselves to these dark caverns, and can sometimes be found dwelling in ruined fortresses or even in the sewers of bustling cities. Anywhere food is plentiful and there’s a ceiling to cling to is a possible den for a darkmantle. #PA darkmantle’s life cycle is swift—young grow to maturity in a matter of months, and most die of old age after only a few years. As a result, generations of darkmantles quickly accrue, and over the years the evolution of these creatures is similarly swift. In this manner, a cavern’s ecosystem can have a significant effect on a group of darkmantles’ appearance, abilities, and tactics. Aquatic caverns might develop darkmantles that can swim, while those beset with volcanism might generate darkmantles with a resistance to fire. Other darkmantle variants might develop much stonier hides, and instead of swooping down to crush prey might simply drop and pierce them through with their stalactite-like lengths. The deepest, darkest caverns are rumored to host darkmantles of incredible size, capable of smothering multiple human-sized foes at once in their leathery folds.

@@ -1,0 +1,157 @@
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/AdventurePaths/RiseOfTheRunelords/BurntOfferings/
+Name : Erylium
+Basic Name (Dinosaur):
+Short description: Ram horns curl back from the twisted head of this tiny winged demon, and its body is thin and wiry.
+Title Name : Erylium
+CR: 4
+Type: Outsider
+Terrain: Ruins_Dungeon
+Climate: Extraplanar
+XP:1200
+Race: Female quasit
+Number of classes with levels in (First is Favored): 1
+Class:  thaumaturge of Lamashtu
+Levels in class: 3
+Alignment:CE
+Size:Tiny
+Number of subtypes:4
+Subtype: chaotic
+Subtype: demon
+Subtype: evil
+Subtype: extraplanar
+Init:4
+Number of senses (#I means to make italic, for spells):1
+Sense: darkvision 60 ft.
+Perception:6
+Number of auras (#I means to make italic, for spells):0
+AC:20
+touch:16
+flat-footed:16
+Number of AC modifiers:3
+Modifier:4
+Type of above Modifier: Dex
+Modifier:4
+Type of above Modifier: natural
+Modifier:2
+Type of above Modifier: size
+Number of Conditional AC modifiers:0
+HP:35
+HP breakdown:3d10+3d6+6
+Fast Healing:2
+Regeneration:0
+fort:3
+ref:8
+will:5
+Number of Conditional Save modifiers:0
+Number of Defensive Abilities: 0
+DR: 5
+Bypass: cold iron or good
+Immunities : 2
+Immune: electricity
+Immune: poison
+Resistances: 3
+Resistance: acid 
+Amount: 10
+Resistance: cold 
+Amount: 10
+Resistance: fire
+Amount: 10
+SR: 0
+Num of Weaknesses: 0
+Speed: 20
+Other Speeds(#B means base speed if reduced normally): 1
+Other Speed: fly 50 ft. (perfect)
+Melee: 2 claws +10 (1d3-1 plus poison), bite +10 (1d4-1)
+Ranged: #I+1 #Ireturning #Idagger +11 (1d2/19-20)
+Space: 2-1/2
+Reach: 0
+Num of Special Attacks: 1
+Special Attack: hideous spittle
+Psychic Magic CL: 0
+SLA Sources: 2
+SLA Use Categories (1/day, etc.): 3
+SLA Source: #HRacial
+SLA CL: 6
+SLA Concentration: 9
+SLA Use Category and Spells: At Will—#Idetect #Igood#, #Idetect #Imagic#, #Iinvisibility (self only)
+SLA Use Category and Spells: 1/day—#Icause #Ifear (30-foot radius, DC 14)
+SLA Use Category and Spells: 1/week—#Icommune (6 questions)
+SLA Use Categories (1/day, etc.): 1
+SLA Source: #HThaumaturge
+SLA CL: 3
+SLA Concentration: 6
+SLA Use Category and Spells: 3/day—copycat (3 rounds), touch of chaos
+Spells Known Levels: 0
+Spells Prepared Sources : 1
+Spells Prepared Levels: 3
+Spells Prepared Class: #HThaumaturge
+Spells Prepared CL: 3
+Spells Prepared Concentration: 6
+Num Bolded Sections: 2
+Bold Section: #HD domain spell
+Bold Section: #HDomains Chaos, Trickery
+Spells Prepared At Level:2nd—#Iinvisibility#UD#, #Ishatter (DC 15), #Isummon #Imonster #III
+Spells Prepared At Level:1st—#Ibane (DC 14), #Idisguise #Iself#UD (DC 14), #Ishield #Iof #Ifaith#, #Isummon #Imonster #II
+Spells Prepared At Level:0 (at will)—#Ibleed (DC 13), #Iguidance#, #Imending#, #Iresistance
+Before Combat:Erylium becomes invisible and casts #Ishield #Iof #Ifaith as soon as she hears enemies approaching.
+During Combat: Although tough to hit and capable of healing wounds quickly, Erylium remains something of a coward in a fight. She uses flight to maintain ranged superiority over foes, using spells like #Isummon #Imonster or #Ishatter (aimed at the largest weapon carried by her foes) in the first few rounds of combat. She uses her Tiny #I+1 #Ireturning #Idagger against foes once she runs out of spells, but if cornered, she fights with her claws and bite. She saves her hideous spittle for use against a particularly powerful foe that corners her in melee combat.
+Morale: If reduced to 10 hit points or less, Erylium becomes invisible and flees, waiting for her fast healing to fix her up before returning here to attack the PCs again.
+Base Statistics:
+Str:8
+Dex:18
+Con:13
+Int:13
+Wis:10
+Cha:16
+BAB:4
+CMB:6
+Num of Special CMBs:0
+CMD:15
+Num of Special CMDs:0
+Num of Feats: 3
+Feat: Adept Summoner
+Feat: Master Summoner
+Feat: Weapon Finesse
+Num of Skills: 9
+Skill: Bluff +10
+Skill: Diplomacy +4
+Skill: Intimidate +14
+Skill: Knowledge (arcana) +10
+Skill: Knowledge (planes) +10
+Skill: Perception +6
+Skill: Perform (oratory or sing) +0
+Skill: Spellcraft +10
+Skill: Stealth +19
+Num of Racial Mods:0
+Num of Lanugagues: 3
+Language: Abyssal
+Language: Common
+Language: Thassilonian
+Num of Special Languages: 1
+Special Language: telepathy (touch)
+Num of Special Qualities: 3
+SQ: change shape (raven, toad; #Ipolymorph#)
+SQ: corruptions
+SQ: familiar (black wren named Orm)
+Num of Combat Gear: 0
+Num of Other Gear: 0
+Environment: 
+Organization: 
+Treasure: 
+Num of Special Abilities: 4
+Special Ability: Poison (Ex)
+Description: Claw–injury; #Isave Fort DC 13; #Ifrequency 1/round for 6 rounds; #Ieffect 1d2 Dex damage; #Icure 2 consecutive saves. The save DC is Constitution-based and includes a +2 racial bonus.
+Number of Sub-descriptions: 0
+Special Ability: Corruptions (Ex)
+Description: Erylium’s close association with Lamashtu and thaumaturgical magic have corrupted her even more than a normal quasit. These corruptions are as follows:
+Number of Sub-descriptions: 3
+Sub Desc: #IRaspy #IVoice#: Erylium’s voice is raspy and harsh, granting her a +3 bonus on Intimidate checks but a –3 penalty on Perform (oratory or sing) checks.
+Sub Desc: #IScaly #ISkin#: Erylium’s skin is much more scaly than that of a normal quasit, increasing her natural armor by +2.
+Sub Desc: #ITerrible #IBreath#: Something inside of Erylium is rotten, and it makes itself known every time she speaks. She suffers a –2 penalty on Bluff and Diplomacy checks, but may belch a hideous wad of phlegm once per day as detailed under Hideous Spittle.
+Special Ability: Hideous Spittle (Ex)
+Description: Once per day, Erylium can belch a wad of foul phlegm at any living target within 20 feet as a +10 ranged touch attack. If she hits, the creature must make a DC 12 Fortitude save or be nauseated for 1d4 rounds. The save DC is Constitution-based.
+Number of Sub-descriptions: 0
+Special Ability: Feats
+Description: Adept Summoner (The Book of Fiends, 15) grants Erylium abnormal command over her summoned creatures, but further twists her body and causes her to suffer an additional lesser corruption. The duration of any summon monster spell she casts is extended by a number of rounds equal to her Charisma modifier (3 rounds). Master Summoner (The Book of Fiends, 16) increases the range of her summon monster spells to Medium (100 ft. + 10 ft./level), but afflicts her with a greater corruption.
+Number of Sub-descriptions: 0
+Description: 

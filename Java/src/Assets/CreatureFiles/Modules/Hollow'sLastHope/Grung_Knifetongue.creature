@@ -1,0 +1,102 @@
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/Modules/Hollow'sLastHope/
+Name : Grung Knifetongue
+Basic Name (Dinosaur):
+Short description: A gray-skinned hobgoblin with a prodigious cleft palate lurks in the tree line, watching over with his bow waiting for greater prey.
+Title Name : Grung Knifetongue
+CR: 1/3
+Type: Humanoid
+Terrain: Urban
+Climate: Temperate
+XP: 135
+Race: Hobgoblin
+Number of classes with levels in (First is Favored): 1
+Class:warrior
+Levels in class above:1
+Alignment:LE
+Size:Medium
+Number of subtypes:1
+Subtype: goblinoid
+Init:1
+Number of senses (#I means to make italic, for spells):1
+Sense:darkvision 60 ft.
+Perception:+2
+Number of auras (#I means to make italic, for spells):0
+AC:15
+touch:11
+flat-footed:14
+Number of AC modifiers:3
+Modifier:3
+Type of above Modifier: armor
+Modifier:1
+Type of above Modifier: Dex
+Modifier:1
+Type of above Modifier: shield
+Number of Conditional AC modifiers:0
+HP:8
+HP breakdown:1d10+3
+Fast Healing:0
+Regeneration:0
+fort:4
+ref:1
+will:-1
+Number of Conditional Save modifiers:0
+Number of Defensive Abilities: 0
+DR: 0
+Immunities : 0
+Resistances: 0
+SR: 0
+Num of Weaknesses: 0
+Speed: 30
+Other Speeds(#B means base speed if reduced normally): 0
+Melee: longsword +2 (1d8+1/19-20)
+Ranged: shortbow +2 (1d6/x3)
+Space: 5
+Reach: 5
+Num of Special Attacks: 0
+Psychic Magic CL: 0
+SLA Use Categories (1/day, 3/week, etc.): 0
+Spells Known Levels: 0
+Spells Prepared Levels: 0
+Before Combat: Grung hides nearby, taking 10 on his Stealth check (for a total of 22 including penalties for distance). Those who fail to spot him are surprised when he attacks.
+During Combat: Grung has a shortbow and fires every round at the PCs, while his razorcrows attack.
+Morale: If Grung takes any amount of damage or if the PCs close to within 20 feet of him, he leaps from his perch (10 feet up in the trees) and attempts to flee.
+Base Statistics:
+Str:13
+Dex:13
+Con:14
+Int:10
+Wis:9
+Cha:8
+BAB:1
+CMB:2
+Num of Special CMBs:0
+CMD:13
+Num of Special CMDs:0
+Num of Feats: 1
+Feat: Alertness
+Num of Skills: 3
+Skill: Sense Motive +1
+Skill: Stealth +7
+Skill: Perception +2
+Num of Racial Mods: 1
+Racial Mod: +4 Stealth
+Num of Lanugagues: 2
+Language: Common
+Language: Goblin
+Num of Special Languages: 0
+Num of Special Qualities: 0
+Num of Combat Gear: 1
+Combat Gear: alchemist's fire
+Num of Other Gear: 7
+Other Gear: shortbow with 20 arrows
+Other Gear: longsword
+Other Gear: masterwork studded leather
+Other Gear: light steel shield
+Other Gear: 2d6x10 cp
+Other Gear: 5d10 + 4d8 sp
+Other Gear: 2d4 gp
+Environment: 
+Organization: 
+Treasure: 
+Num of Special Abilities: 0
+Description: 

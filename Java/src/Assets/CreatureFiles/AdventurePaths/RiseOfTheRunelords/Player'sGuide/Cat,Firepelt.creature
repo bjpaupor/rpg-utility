@@ -1,0 +1,95 @@
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/AdventurePaths/RiseOfTheRunelords/Player'sGuide/
+Name : Firepelt
+Basic Name (Dinosaur):Cat
+Short description: With each graceful step, this firepelt’s steely muscles ripple beneath its spotted fur.
+Title Name : Firepelt
+CR: 2
+Type: Animal
+Terrain: Forest_Jungle
+Climate: Tropical
+XP:600
+Race: 
+Number of classes with levels in (First is Favored): 0
+Alignment:N
+Size:Medium
+Number of subtypes:0
+Init:4
+Number of senses (#I means to make italic, for spells):2
+Sense: low-light vision
+Sense: scent
+Perception:+5
+Number of auras (#I means to make italic, for spells):0
+AC:15
+touch:14
+flat-footed:11
+Number of AC modifiers:2
+Modifier:4
+Type of above Modifier: Dex
+Modifier:1
+Type of above Modifier: natural
+Number of Conditional AC modifiers:0
+HP:19
+HP breakdown:3d8+6
+Fast Healing:0
+Regeneration:0
+fort:5
+ref:7
+will:2
+Number of Conditional Save modifiers:0
+Number of Defensive Abilities: 0
+DR: 0
+Immunities : 0
+Resistances: 0
+SR: 0
+Num of Weaknesses: 0
+Speed: 30
+Other Speeds(#B means base speed if reduced normally): 1
+Other Speed: climb 20 ft.
+Melee: bite +6 (1d6+3 plus grab), 2 claws +6 (1d3+3)
+Ranged: 
+Space: 5
+Reach: 5
+Num of Special Attacks: 2
+Special Attack: pounce
+Special Attack: rake (2 claws +6, 1d3+3)
+Psychic Magic CL: 0
+SLA Use Categories (1/day, 3/week, etc.): 0
+Spells Known Levels: 0
+Spells Prepared Levels: 0
+Before Combat:
+During Combat:
+Morale: 
+Base Statistics:
+Str:16
+Dex:19
+Con:15
+Int:2
+Wis:13
+Cha:6
+BAB:2
+CMB:5
+Num of Special CMBs:1
+CMB: +9 grapple
+CMD:19
+Num of Special CMDs:1
+Special CMD: 23 vs. trip
+Num of Feats: 2
+Feat: Skill Focus (Stealth)
+Feat: Weapon Finesse
+Num of Skills: 4
+Skill: Acrobatics +8
+Skill: Climb +11
+Skill: Perception: +5
+Skill: Stealth +11 (+15 in undergrowth)
+Num of Racial Mods:1
+Racial Mod: +4 Stealth in undergrowth
+Num of Lanugagues: 0
+Num of Special Languages: 0
+Num of Special Qualities: 0
+Num of Combat Gear: 0
+Num of Other Gear: 0
+Environment: any forest
+Organization: solitary or pair
+Treasure: none
+Num of Special Abilities: 0
+Description: These black-and-red-furred mountain lions stalk much of northwestern Varisia. The color of their pelts changes from predominantly black to a range of autumnal colors with the seasons.

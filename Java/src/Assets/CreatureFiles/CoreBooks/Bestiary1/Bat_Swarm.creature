@@ -1,0 +1,96 @@
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/CoreBooks/Bestiary1/
+Name : Bat Swarm
+Basic Name (Dinosaur):
+Short description: Hundreds of high-pitched squeaks fill the air as a mass of small, carnivorous bats surges forth, all of them hungry for blood.
+Title Name : Bat Swarm
+CR: 2
+Type: Animal
+Terrain: Underground
+Climate: Temperate
+XP: 600
+Race: 
+Number of classes with levels in (First is Favored): 0
+Alignment:N
+Size:Diminutive
+Number of subtypes:1
+Subtype : swarm
+Init:2
+Number of senses (#I means to make italic, for spells):2
+Sense: blindsense 20 ft.
+Sense: low-light vision
+Perception:+15
+Number of auras (#I means to make italic, for spells):0
+AC:16
+touch:16
+flat-footed:14
+Number of AC modifiers:2
+Modifier:2
+Type of above Modifier: Dex
+Modifier:4
+Type of above Modifier: size
+Number of Conditional AC modifiers:0
+HP:13
+HP breakdown:3d8
+Fast Healing:0
+Regeneration:0
+fort:3
+ref:7
+will:3
+Number of Conditional Save modifiers:0
+Number of Defensive Abilities: 0
+DR: 0
+Immunities : 0
+Resistances: 0
+SR: 0
+Num of Weaknesses: 0
+Speed: 5
+Other Speeds(#B means base speed if reduced normally): 1
+Other Speed: fly 40 ft. (good)
+Melee: swarm (1d6)
+Ranged: 
+Space: 10
+Reach: 0
+Num of Special Attacks: 2
+Special Attack: distraction (DC 11)
+Special Attack: wounding
+Psychic Magic CL: 0
+SLA Sources: 0
+Spells Known Sources: 0
+Spells Prepared Sources: 0
+Before Combat: 
+During Combat: 
+Morale: 
+Base Statistics:
+Str:3
+Dex:15
+Con:11
+Int:2
+Wis:14
+Cha:4
+BAB:2
+CMB:-25000
+Num of Special CMBs:0
+CMD:-25000
+Num of Special CMDs:0
+Num of Feats: 2
+Feat: Lightning Reflexes
+Feat: Skill Focus (Perception)
+Num of Skills: 2
+Skill: Fly +12
+Skill: Perception +15
+Num of Racial Mods: 1
+Racial Mod: +4 Perception when using blindsense
+Num of Lanugagues: 0
+Num of Special Languages: 0
+Num of Special Qualities: 1
+SQ: swarm traits
+Num of Combat Gear: 0
+Num of Other Gear: 0
+Environment: any temperate or tropical
+Organization: solitary, pair, flight (3–6 swarms), or colony (7–20)
+Treasure: none
+Num of Special Abilities:1
+Special Ability Name: Wounding (Ex)
+Special Ability Desc: Any living creature damaged by a bat swarm continues to bleed, losing 1 hit point per round thereafter. Multiple wounds do not result in cumulative bleeding loss. The bleeding can be stopped by a DC 10 Heal check or the application of a cure spell or some other healing magic.
+Num of Sub Desc: 0
+Description :Bat swarms dwell in large caves, ruins, or even city sewers—anywhere they can find darkness to hide in during the day and a supply of food to feast upon at night. They are only encountered outside in a group at dawn or dusk, or when they have been startled and forced to flee their lairs.

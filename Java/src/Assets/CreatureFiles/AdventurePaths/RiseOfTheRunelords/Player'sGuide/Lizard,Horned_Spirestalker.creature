@@ -1,0 +1,92 @@
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/AdventurePaths/RiseOfTheRunelords/Player'sGuide/
+Name : Spirestalker
+Basic Name (Dinosaur):Lizard
+Short description: With large bulging eyes to spot prey from afar, this oversized, smooth-scaled lizard has splayed, padded feet and a toothy maw.
+Title Name : Horned Spirestalker
+CR: 2
+Type: Animal
+Terrain: Forest_Jungle
+Climate: Tropical
+XP:600
+Race: 
+Number of classes with levels in (First is Favored): 0
+Alignment:N
+Size:Medium
+Number of subtypes:0
+Init:8
+Number of senses (#I means to make italic, for spells):1
+Sense: low-light vision
+Perception:+8
+Number of auras (#I means to make italic, for spells):0
+AC:18
+touch:14
+flat-footed:14
+Number of AC modifiers:2
+Modifier:4
+Type of above Modifier: Dex
+Modifier:4
+Type of above Modifier: natural
+Number of Conditional AC modifiers:0
+HP:15
+HP breakdown:2d8+6
+Fast Healing:0
+Regeneration:0
+fort:6
+ref:7
+will:4
+Number of Conditional Save modifiers:0
+Number of Defensive Abilities: 0
+DR: 0
+Immunities : 0
+Resistances: 0
+SR: 0
+Num of Weaknesses: 0
+Speed: 40
+Other Speeds(#B means base speed if reduced normally): 1
+Other Speed: climb 40 ft.
+Melee: bite +4 (2d4+4)
+Ranged: 
+Space: 5
+Reach: 5
+Num of Special Attacks: 0
+Psychic Magic CL: 0
+SLA Use Categories (1/day, 3/week, etc.): 0
+Spells Known Levels: 0
+Spells Prepared Levels: 0
+Before Combat:
+During Combat:
+Morale: 
+Base Statistics:
+Str:17
+Dex:19
+Con:16
+Int:2
+Wis:18
+Cha:11
+BAB:1
+CMB:4
+Num of Special CMBs:0
+CMD:18
+Num of Special CMDs:1
+Special CMD: 22 vs. trip
+Num of Feats: 1
+Feat: Improved Initiative
+Num of Skills: 2
+Skill: Climb +23
+Skill: Perception: +8
+Num of Racial Mods:1
+Racial Mod: +8 Climb
+Num of Lanugagues: 0
+Num of Special Languages: 0
+Num of Special Qualities: 1
+SQ: expert climber
+Num of Combat Gear: 0
+Num of Other Gear: 0
+Environment: warm forests or mountains
+Organization: solitary, pair, or nest (3–6)
+Treasure: none
+Num of Special Abilities: 1
+Special Ability: Expert Climber (Ex)
+Description: A gecko’s feet allow it to climb virtually any surface, no matter how slick or sheer. In effect, geckos are treated as constantly being under a natural version of the spell #Ispider #Iclimb#.
+Number of Sub-descriptions: 0
+Description: Upon the Storval Plateau, aggressive horned spirestalker lizards hide among rocky outcroppings and fearlessly attack anything that comes in sight.

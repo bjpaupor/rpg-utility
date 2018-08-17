@@ -1,0 +1,84 @@
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/AdventurePaths/RiseOfTheRunelords/BurntOfferings/
+Name : Zombie 
+Basic Name (Dinosaur):
+Short description: This walking corpse wears only a few soiled rags, its flesh rotting off its bones as it stumbles forward, arms outstretched.
+Title Name : Human Zombie
+CR: 1/2
+Type: Undead
+Terrain: Ruins_Dungeon
+Climate: Temperate
+XP: 200
+Race: 
+Number of classes with levels in (First is Favored): 0
+Alignment:NE
+Size:Medium
+Number of subtypes:0
+Init:+0
+Number of senses (#I means to make italic, for spells):1
+Sense: darkvision 60 ft.
+Perception:+0
+Number of auras (#I means to make italic, for spells):0
+AC:12
+touch:10
+flat-footed:12
+Number of AC modifiers:1
+Modifier: 2
+Type of above Modifier: natural
+Number of Conditional AC modifiers:0
+HP:12
+HP breakdown:2d8+3
+Fast Healing:0
+Regeneration:0
+fort:0
+ref:0
+will:3
+Number of Conditional Save modifiers:0
+Number of Defensive Abilities: 0
+DR: 5
+Bypass : slashing
+Immunities : 1
+Immunity : undead traits
+Resistances: 0
+SR: 0
+Num of Weaknesses: 0
+Speed: 30
+Other Speeds(#B means base speed if reduced normally): 0
+Melee: slam +4 (1d6+4)
+Ranged: 
+Space: 5
+Reach: 5
+Num of Special Attacks: 0
+Psychic Magic CL: 0
+SLA Use Categories (1/day, 3/week, etc.): 0
+Spells Known Levels: 0
+Spells Prepared Levels: 0
+Before Combat: 
+During Combat: 
+Morale: 
+Base Statistics:
+Str:17
+Dex:10
+Con:-25000
+Int:-25000
+Wis:10
+Cha:10
+BAB:1
+CMB:4
+Num of Special CMBs:0
+CMD:14
+Num of Special CMDs:0
+Num of Feats: 1
+Feat: Toughness#UB
+Num of Skills: 0
+Num of Racial Mods: 0
+Num of Lanugagues: 0
+Num of Special Languages: 0
+Num of Special Qualities: 1
+SQ : staggered
+Num of Combat Gear: 0
+Num of Other Gear: 0
+Environment: any
+Organization: any
+Treasure: none
+Num of Special Abilities: 0
+Description : Zombies are the animated corpses of dead creatures, forced into foul unlife via necromantic magic like animate dead. While the most commonly encountered zombies are slow and tough, others possess a variety of traits, allowing them to spread disease or move with increased speed. #PZombies are unthinking automatons, and can do little more than follow orders. When left unattended, zombies tend to mill about in search of living creatures to slaughter and devour. Zombies attack until destroyed, having no regard for their own safety. #PAlthough capable of following orders, zombies are more often unleashed into an area with no command other than to kill living creatures. As a result, zombies are often encountered in packs, wandering around places the living frequent, looking for victims. Most zombies are created using #Ianimate #Idead#. Such zombies are always of the standard type, unless the creator also casts haste or #Iremove #Iparalysis to create fast zombies, or #Icontagion to create plague zombies. #TCreating a Zombie# “Zombie” is an acquired template that can be added to any corporeal creature (other than an undead), referred to hereafter as the base creature. #P#HChallenge #HRating: This depends on the creature’s new total number of Hit Dice, as follows: #C3x11# HD#E CR#E XP#E 1#E 1/4#E 100#E 2#E 1/2#E 200#E 3-4#E 1#E 400#E 5-6#E 2#E 600#E 7-8#E 3#E 800#E 9-10#E 4#E 1,200#E 11-12#E 5#E 1,600#E 13-16#E 6#E 2,400#E 17-20#E 7#E 3,200#E 21-24#E 8#E 4,800#E 25-28#E 9#E 6,400#E #P#HAlignment: Always neutral evil. #P#HType: The creature’s type changes to undead. It retains any subtype except for alignment subtypes (such as good) and subtypes that indicate kind. It does not gain the augmented subtype. It uses all the base creature’s statistics and special abilities except as noted here.  #P#HArmor #HClass: Natural armor is based on the zombie’s size: #C2x7# Zombie Size#E Natural Armor Bonus#E Tiny or smaller#E +0#E Small#E +1#E Medium#E +2#E Large#E +3#E Huge#E +4#E Gargantuan#E +7#E Colossal#E +11#E #P#HHit #HDice: Drop HD gained from class levels (minimum of 1) and change racial HD to d8s. Zombies gain a number of additional HD as noted on the following table. #C2x6# Zombie Size#E Bonus Hit Dice#E Tiny or Smaller#E —#E Small or Medium#E +1 HD#E Large#E +2 HD#E Huge#E +4 HD#E Gargantuan#E +6 HD#E Colossal#E +10 HD#E #PZombies use their Charisma modifiers to determine bonus hit points (instead of Constitution). #P#HSaves: Base save bonuses are Fort +1/3 HD, Ref +1/3 HD, and Will +1/2 HD +2. #P#HDefensive #HAbilities: Zombies lose their defensive abilities and gain all of the qualities and immunities granted by the undead type. Zombies gain DR 5/slashing. #P#HSpeed: Winged zombies can still fly, but maneuverability drops to clumsy. If the base creature flew magically, so can the zombie. Retain all other movement types. #P#HAttacks: A zombie retains all the natural weapons, manufactured weapon attacks, and weapon proficiencies of the base creature. It also gains a slam attack that deals damage based on the zombie’s size, but as if it were one size category larger than its actual size. #P#HSpecial #HAttacks: A zombie retains none of the base creature’s special attacks. #P#HAbilities: Str +2, Dex –2. A zombie has no Con or Int score, and its Wis and Cha become 10. #P#HBAB: A zombie’s base attack is equal to 3/4 its Hit Dice. #P#HSkills: A zombie has no skill ranks. #P#HFeats: A zombie loses all feats possessed by the base creature, and does not gain feats as its Hit Dice increase, but it does gain Toughness as a bonus feat. #P#HSpecial #HQualities: A zombie loses most special qualities of the base creature. It retains any extraordinary special qualities that improve its melee or ranged attacks. A zombie gains the following special quality. #P#IStaggered #I(Ex)#: Zombies have poor reflexes and can only perform a single move action or standard action each round. A zombie can move up to its speed and attack in the same round as a charge action. #TVariant Zombies# The typical zombie is a slow-moving abomination that is tough to destroy. Yet this tough zombie is not the only type of zombie to plague crypts or stalk graveyards. Each of the following two variant zombies modif ies the base zombie in a few simple ways. #TFast Zombie# Unlike the standard, plodding zombie, a fast zombie moves with a supernatural quickness. #P#HSpeed: Increase the base creature’s land speed by 10 feet. #P#HDefensive #HAbilities: A fast zombie does not gain DR 5/slashing. #P#HSpecial #HAttacks: A fast zombie gains the following special attack. #P#IQuick #IStrikes #I(Ex)#: Whenever a fast zombie takes a full-attack action, it can make one additional slam attack at its highest base attack bonus. #P#HAbilities: As a standard zombie, except its Dexterity is increased by 2 instead of reduced by 2. #P#HSpecial #HQualities: A fast zombie does not gain the staggered special quality. #TPlague Zombie# These zombies carry a terrible disease that perpetuates their undead lineage—those infected by a plague zombie’s contagion rise as zombies themselves when they perish. #P#HDefensive #HAbilities: A plague zombie does not gain DR 5/slashing. #P#HSpecial #HAttacks: A plague zombie gains the following special attacks. #P#IDeath #IBurst #I(Ex)#: When a plague zombie dies, it explodes in a burst of decay. All creatures adjacent to the plague zombie are exposed to its plague as if struck by a slam attack and must make a Fortitude save or contract zombie rot. #P#IDisease #I(Su)#: The slam attack—as well as any other natural attacks—of a plague zombie carries the zombie rot disease. #IZombie #Irot#: slam; #Isave Fort DC = 10 + 1/2 the zombie’s Hit Dice + the zombie’s Cha modifier; #Ionset 1d4 days; #Ifrequency 1/day; #Ieffect 1d2 Con, this damage cannot be healed while the creature is infected; #Icure 2 consecutive saves. Anyone who dies while infected rises as a plague zombie in 2d6 hours.

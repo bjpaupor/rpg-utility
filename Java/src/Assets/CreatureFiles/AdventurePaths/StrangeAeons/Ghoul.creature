@@ -1,0 +1,95 @@
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/AdventurePaths/StrangeAeons/
+Name : Ghoul
+Basic Name (Dinosaur):
+Short description: This humanoid creature has long, sharp teeth, and its pallid flesh is stretched tightly over its starved frame.
+Title Name : Ghoul
+CR: 1
+Type: Undead
+Terrain: Ruins_Dungeon
+Climate: Temperate
+XP:400
+Race: 
+Number of classes with levels in (First is Favored): 0
+Alignment:CE
+Size: Medium
+Number of subtypes:0
+Init:0
+Number of senses (#I means to make italic, for spells):1
+Sense: darkvision 60 ft.
+Perception:+7
+Number of auras (#I means to make italic, for spells):0
+AC:14
+touch:12
+flat-footed:12
+Number of AC modifiers:2
+Modifier:2
+Type of above Modifier: Dex
+Modifier: 2
+Type of above Modifier: natural
+Number of Conditional AC modifiers:0
+HP:13
+HP breakdown:2d8+4
+Fast Healing:0
+Regeneration:0
+fort:2
+ref:2
+will:5
+Number of Conditional Save modifiers:0
+Number of Defensive Abilities: 1
+Defensive Ability: channel resistance +2
+DR: 0
+Immunities : 1
+Immunity: undead traits
+Resistances: 0
+SR: 0
+Num of Weaknesses: 0
+Speed: 30
+Other Speeds(#B means base speed if reduced normally): 0
+Melee: bite +3 (1d6+1 plus disease and paralysis) and 2 claws +3 (1d6+1 plus paralysis)
+Ranged: 
+Space: 5
+Reach: 5
+Num of Special Attacks:1
+Special Attack: paralysis (1d4+1 rounds, DC 13, elves are immune to this effect)
+Psychic Magic CL: 0
+SLA Use Categories (1/day, 3/week, etc.): 0
+Spells Known Levels: 0
+Spells Prepared Levels: 0
+Before Combat:
+During Combat:
+Morale: 
+Base Statistics:
+Str:13
+Dex:15
+Con:-25000
+Int:13
+Wis:14
+Cha:14
+BAB:1
+CMB:2
+Num of Special CMBs:0
+CMD:14
+Num of Special CMDs:0
+Num of Feats: 1
+Feat: Weapon Finesse
+Num of Skills: 5
+Skill: Acrobatics +4
+Skill: Climb +6
+Skill: Perception +7
+Skill: Stealth +7
+Skill: Swim +3
+Num of Racial Mods:0
+Num of Lanugagues: 1
+Language: Common
+Num of Special Languages: 0
+Num of Special Qualities: 0
+Num of Combat Gear: 0
+Num of Other Gear: 0
+Environment: any land
+Organization: solitary, gang (2–4), or pack (7–12)
+Treasure: standard
+Num of Special Abilities: 1
+Special Ability: Disease (Su)
+Description: #IGhoul #IFever#: Bite–injury; #Isave Fort DC 13; #Ionset 1 day; #Ifrequency 1/day; #Ieffect 1d3 Dex damage and 1d3 Con damage; #Icure 2 consecutive saves. The save DC is Charisma-based. A humanoid who dies of ghoul fever rises as a ghoul at the next midnight. A humanoid who becomes a ghoul in this way retains none of the abilities it possessed in life. It is not under the control of any other ghouls, but it hungers for the flesh of the living and behaves like a normal ghoul in all respects. A humanoid of 4 Hit Dice or more rises as a ghast.
+Number of Sub-descriptions: 0
+Description: Ghouls are undead that haunt graveyards and eat corpses. Legends hold that the first ghouls were either cannibalistic humans whose unnatural hunger dragged them back from death or humans who in life fed on the rotting remains of their kin and died (and were reborn) from the foul disease—the true source of these undead scavengers is unclear. #PGhouls lurk on the edges of civilization (in or near cemeteries or in city sewers) where they can find ample supplies of their favorite food. Though they prefer rotting bodies and often bury their victims for a while to improve their taste, they eat fresh kills if they are hungry enough. Though most surface ghouls live primitively, rumors speak of ghoul cities deep underground led by priests who worship ancient cruel gods or strange demon lords of hunger. These “civilized” ghouls are no less horrific in their eating habits, and in fact the concept of a well-laid ghoul banquet table is perhaps even more horrifying than the concept of taking a meal fresh from the coffin.

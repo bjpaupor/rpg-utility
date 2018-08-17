@@ -1,0 +1,100 @@
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/AdventurePaths/StrangeAeons/
+Name : Rat Swarm
+Basic Name (Dinosaur):
+Short description: A squirming, roiling mass of squeaking rats draws closer, teeth flashing and claws scratching everything in its path.
+Title Name : Rat Swarm
+CR: 2
+Type: Animal
+Terrain: Urban
+Climate: Temperate
+XP:600
+Race: 
+Number of classes with levels in (First is Favored): 0
+Alignment:N
+Size:Tiny
+Number of subtypes:1
+Subtype: swarm
+Init:6
+Number of senses (#I means to make italic, for spells):2
+Sense: low-light vision
+Sense: scent
+Perception:+8
+Number of auras (#I means to make italic, for spells):0
+AC:14
+touch:14
+flat-footed:12
+Number of AC modifiers:2
+Modifier:2
+Type of above Modifier: Dex
+Modifier:2
+Type of above Modifier: size
+Number of Conditional AC modifiers:0
+HP:16
+HP breakdown:3d8+3
+Fast Healing:0
+Regeneration:0
+fort:4
+ref:5
+will:2
+Number of Conditional Save modifiers:0
+Number of Defensive Abilities: 1
+Defensive Abilities: swarm traits
+DR: 0
+Immunities : 0
+Resistances: 0
+SR: 0
+Num of Weaknesses: 0
+Speed: 15
+Other Speeds(#B means base speed if reduced normally): 2
+Other Speed: climb 15 ft.
+Other Speed: swim 15 ft.
+Melee: swarm (1d6 plus disease)
+Ranged: 
+Space: 10
+Reach: 0 
+Num of Special Attacks: 2
+Special Attack: disease
+Special Attack: distraction (DC 12)
+Psychic Magic CL: 0
+SLA Use Categories (1/day, 3/week, etc.): 0
+Spells Known Levels: 0
+Spells Prepared Levels: 0
+Before Combat:
+During Combat:
+Morale: 
+Base Statistics:
+Str:2
+Dex:15
+Con:13
+Int:2
+Wis:13
+Cha:2
+BAB:2
+CMB:-25000
+Num of Special CMBs:0
+CMD:-25000
+Num of Special CMDs:0
+Num of Feats: 2
+Feat: Improved Initiative
+Feat: Skill Focus (Perception)
+Num of Skills: 5
+Skill: Acrobatics +6
+Skill: Climb +10
+Skill: Perception: +8
+Skill: Stealth +14
+Skill: Swim +10
+Num of Racial Mods:1
+Racial Mod: uses Dex to modify Climb and Swim
+Num of Lanugagues: 0
+Num of Special Languages: 0
+Num of Special Qualities: 0
+Num of Combat Gear: 0
+Num of Other Gear: 0
+Environment: any
+Organization: solitary, pack (2–5 swarms), or infestation (6–12 swarms)
+Treasure: none
+Num of Special Abilities: 1
+Special Ability: Disease (Ex)
+Description: #IFilth #IFever#: Bite–injury; #Isave Fort DC 12; #Ionset 1d3 days; #Ifrequency 1/day; #Ieffect 1d3 Dex damage and 1d3 Con damage; #Icure 2 consecutive saves. The save DC is Constitution-based.
+Number of Sub-descriptions: 0
+Description: A rat swarm typically consists of a biting, roiling mass of hundreds of disease-ridden rats driven to uncharacteristic heights of aggression by fantastic and overwhelming hunger. In such numbers, they become voracious hunters, capable of killing a full-grown human with hundreds of bites. Rat swarms are often found in the sewers of large human settlements. Rat swarms surround and attack any warm-blooded prey in their path.

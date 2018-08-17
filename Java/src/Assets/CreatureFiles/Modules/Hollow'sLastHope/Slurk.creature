@@ -1,0 +1,104 @@
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/Modules/Hollow'sLastHope/
+Name : Slurk
+Basic Name (Dinosaur): 
+Short description: The splosh of thick liquid heralds this disgusting creature’s sloppy approach.
+Title Name : Slurk
+CR: 2
+Type: Magical_Beast
+Terrain: Underground
+Climate: Temperate
+XP: 600
+Race: 
+Number of classes with levels in (First is Favored): 0
+Alignment:N
+Size:Medium
+Number of subtypes:0
+Init:6
+Number of senses (#I means to make italic, for spells):2
+Sense: darkvision 60 ft.
+Sense: low-light vision
+Perception:+0
+Number of auras (#I means to make italic, for spells):0
+AC:15
+touch:12
+flat-footed:13
+Number of AC modifiers:2
+Modifier:2
+Type of above Modifier: Dex
+Modifier: 3
+Type of above Modifier: natural
+Number of Conditional AC modifiers:0
+HP:13
+HP breakdown:2d10+2
+Fast Healing:0
+Regeneration:0
+fort: 4
+ref: 5
+will: 0
+Number of Conditional Save modifiers:0
+Number of Defensive Abilities: 1
+Defensive Ability: belly grease
+DR: 0
+Immunities : 0
+Resistances: 0
+SR: 0
+Num of Weaknesses: 0
+Speed: 30
+Other Speeds(#B means base speed if reduced normally): 0
+Melee: bite +4 (1d6+3)
+Ranged: 
+Space: 5
+Reach: 5
+Num of Special Attacks: 2
+Special Attack : back slime (+4 ranged touch)
+Special Attack : belly grease
+Psychic Magic CL: 0
+SLA Use Categories (1/day, 3/week, etc.): 0
+Spells Known Levels: 0
+Spells Prepared Levels: 0
+Before Combat: 
+During Combat: Slurks Overrun or Bull Rush their foes first, or spray them with their back slime to hinder their actions, before they close to bite.
+Morale: Most slurks flee if reduced to less than 5 hp.
+Base Statistics:
+Str: 15
+Dex: 14
+Con: 13
+Int: 3
+Wis: 10
+Cha: 10
+BAB: 2
+CMB: 4
+Num of Special CMBs:0
+CMD:16
+Num of Special CMDs:1
+Special CMD : 20 vs. bull rush, grapple, overrun, trip
+Num of Feats: 3
+Feat: Improved Bull Rush#UB#
+Feat: Improved Initiative
+Feat: Improved Overrun#UB#
+Num of Skills: 2
+Skill : Acrobatics +6 (+16 balancing or jumping)
+Skill : Climb +16
+Num of Racial Mods: 2
+Racial Mod: +10 Acrobatics when balancing or jumping
+Racial Mod: +10 Climb
+Num of Lanugagues: 0
+Num of Special Languages: 0
+Num of Special Qualities: 1
+SQ : wall crawl
+Num of Combat Gear: 0
+Num of Other Gear: 0
+Environment: temperate and warm swamps
+Organization: solitary, colony (2–4), flock (5–8), storm (9–14), or swarm (15–40)
+Treasure: none
+Num of Special Abilities: 3
+Ability Name: Back Slime (Ex)
+Ability Text: Strange rough nodules on the slurk’s back expel thick slime that hardens quickly after making contact with the air. A slurk can spray a blast of this slime at a target within 30 feet as an attack action (requiring only a ranged touch attack). Anyone coated in the slime suffers hampered movement as it hardens into a chitinous crust and takes a –2 on all attack rolls, Reflex saves, and skill checks, and all his movement speeds are reduced by 10 feet. The slurk also coats anyone it successfully targets with a bull rush or overrun. Removing the slime is no mean feat, and can only be accomplished as a full-round action requiring a DC 15 Strength check to crack and slough it off. The Strength check is reduced to DC 10 if carving or digging implements are handy. The adhesive quality of the back slime also allows a rider to maintain his seat even without a saddle, and even when the slurk is upside down on the ceiling.
+Number of Sub-descriptions: 0
+Ability Name: Belly Grease (Ex)
+Abliity Text: The slurk’s unnaturally slippery belly constantly exudes a greasy secretion. This viscous substance makes it very difficult to hold onto the beast, granting the slurk a +4 on attempts to escape a grapple. In addition, at will, a slurk may slide along a surface during its move to coat the ground with a #Igrease effect that lasts for 5 rounds (as the spell, DC 12).
+Number of Sub-descriptions: 0
+Ability Name: Wall Crawl (Ex)
+Abliity Text: A slurk’s suckerlike psuedopodic feet are designed to gain purchase even on surfaces coated with its belly grease. The slurk gains a +4 bonus on any saving throw or check to avoid being bull rushed, overrun, or otherwise forcibly moved. These sucker-feet also allow a slurk to traverse walls and ceilings as easily as it may hop and run on horizontal surfaces.
+Number of Sub-descriptions: 0
+Description : This oozy abomination resembles a pale, slime-slick toad, its back dripping thick mucus-like secretions as it effortlessly hops back and forth, spattering secretions as it comes. The creature’s huge walrus-like tusks drag along the ground. #PLong ago, dwarves dragged giant forest toads beneath the earth and altered their physiology with powerful magic in hopes of creating perfect underground beasts of burden and mounts. The slurk is the disgusting result of their aborted efforts. The creature’s unappealing slime and foul-smelling reek caused the dwarves to drive them deeper below the ground, out of sight. Kobolds, on the other hand, are less selective and find the slurks to be useful pets. #PSlurks lair underground in damp caverns where fungus and lichens (their food of choice) grow.

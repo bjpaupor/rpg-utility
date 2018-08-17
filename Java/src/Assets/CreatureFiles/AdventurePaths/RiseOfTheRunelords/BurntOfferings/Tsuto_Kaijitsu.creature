@@ -1,0 +1,129 @@
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/AdventurePaths/RiseOfTheRunelords/BurntOfferings/
+Name : Tsuto Kaijitsu
+Basic Name (Dinosaur):
+Short description: The bastard child of the Kaijitsu clan.
+Title Name : Tsuto Kaijitsu
+CR: 2
+Type: Humanoid
+Terrain: Urban
+Climate: Temperate
+XP:600
+Race: Male half-elf
+Number of classes with levels in (First is Favored): 2
+Class: rogue
+Levels in class: 1
+Class: monk
+Levels in class: 2
+Alignment:LE
+Size:Medium
+Number of subtypes:2
+Subtype: elf
+Subtype: human
+Init:3
+Number of senses (#I means to make italic, for spells):1
+Sense: low-light vision
+Perception:+8
+Number of auras (#I means to make italic, for spells):0
+AC:17
+touch:17
+flat-footed:13
+Number of AC modifiers:4
+Modifier:3
+Type of above Modifier: Dex
+Modifier:1
+Type of above Modifier: deflection
+Modifier:1
+Type of above Modifier: dodge
+Modifier:2
+Type of above Modifier: Wis
+Number of Conditional AC modifiers:0
+HP:17
+HP breakdown:1d8+2d8
+Fast Healing:0
+Regeneration:0
+fort:2
+ref:6
+will:5
+Number of Conditional Save modifiers:1
+Modifier: 2
+Condition: vs. enchantment
+Number of Defensive Abilities: 1
+Defensive Ability: evasion
+DR: 0
+Immunities : 1
+Immunity: sleep
+Resistances: 0
+SR: 0
+Num of Weaknesses: 0
+Speed: 30
+Other Speeds(#B means base speed if reduced normally): 0
+Melee: unarmed strike +5 (1d6+1) or flurry of blows +3/+3 (1d6+1)
+Ranged: composite shortbow +5 (1d6+1/x3)
+Space: 5
+Reach: 5
+Num of Special Attacks: 3
+Special Attack: flurry of blows
+Special Attack: sneak attack +1d6
+Special Attack: stunning fist (2/day, DC 13)
+Psychic Magic CL: 0
+SLA Use Categories (1/day, 3/week, etc.): 0
+Spells Known Levels: 0
+Spells Prepared Levels: 0
+Before Combat:
+During Combat: Tsuto’s main advantage in battle is his mobility. He uses Tumble to move around the battlefield and flanks foes with his goblins as he can. When facing spellcasters, he uses his stunning fist to keep them occupied. He only resorts to a flurry of blows when he’s surrounded or backed into a corner.
+Morale:If brought below 8 hit points, or if all of his goblins are slain, Tsuto runs for his life down the smuggler’s tunnel, abandoning all thought of returning to Nualia with his sister in tow and fleeing back to Thistletop.
+Base Statistics:
+Str:12
+Dex:17
+Con:8
+Int:13
+Wis:14
+Cha:10
+BAB:2
+CMB:3
+Num of Special CMBs:0
+CMD:16
+Num of Special CMDs:0
+Num of Feats: 7
+Feat: Deflect Arrows#UB#
+Feat: Dodge#UB#
+Feat: Improved Unarmed Strike#UB#
+Feat: Mobility
+Feat: Skill Focus (Acrobatics)#UB#
+Feat: Stunning Fist#UB#
+Feat: Weapon Finesse
+Num of Skills: 8
+Skill: Acrobatics +12
+Skill: Bluff +5
+Skill: Diplomacy +6
+Skill: Disable Device +9
+Skill: Disguise +6
+Skill: Intimidate +6
+Skill: Perception +8
+Skill: Perform (wind) +8
+Num of Racial Mods:1
+Racial Mod: +2 Perception
+Num of Lanugagues: 3
+Language: Common
+Language: Elven
+Language: Goblin
+Num of Special Languages: 0
+Num of Special Qualities: 1
+SQ: trapfinding +1
+Num of Combat Gear: 1
+Combat Gear: #Ipotion #Iof #Icure #Ilight #Iwounds#
+Num of Other Gear: 9
+Other Gear: composite shortbow (+1 Strength)
+Other Gear: #Iring #Iof #Iprotection #I+1#
+Other Gear: masterwork thieves' tools
+Other Gear: masterwork flute
+Other Gear: silver earrings (25 gp for the pair)
+Other Gear: journal
+Other Gear: 6 pouches of gold dust worth 50 gp each
+Other Gear: 8 pouches of silver dust worth 5 gp each
+Other Gear: 10 pp
+Environment: 
+Organization: 
+Treasure: 
+Num of Special Abilities: 0
+Description: 

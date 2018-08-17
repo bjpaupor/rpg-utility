@@ -1,0 +1,93 @@
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/AdventurePaths/StrangeAeons/
+Name : Survivor, Young
+Basic Name (Dinosaur):
+Short description: A young individual taking refuge from the asylum's horrors within a large chapel
+Title Name : Young Survivor
+CR: 1/3
+Type: Humanoid
+Terrain: Urban
+Climate: Temperate
+XP:135
+Race: Human
+Number of classes with levels in (First is Favored): 1
+Class: commoner
+Levels in class:2
+Alignment:N
+Size:Small
+Number of subtypes:1
+Subtype:human
+Init:3
+Number of senses (#I means to make italic, for spells):0
+Perception:+1
+Number of auras (#I means to make italic, for spells):0
+AC:14
+touch:14
+flat-footed:11
+Number of AC modifiers:2
+Modifier:3
+Type of above Modifier: Dex
+Modifier:1
+Type: size
+Number of Conditional AC modifiers:0
+HP:7
+HP breakdown:2d6
+Fast Healing:0
+Regeneration:0
+fort:-1
+ref:3
+will:-1
+Number of Conditional Save modifiers:0
+Number of Defensive Abilities: 0
+DR: 0
+Immunities : 0
+Resistances: 0
+SR: 0
+Num of Weaknesses: 0
+Speed: 30
+Other Speeds(#B means base speed if reduced normally): 0
+Melee: club +0 (1d4-2)
+Ranged:
+Space: 5
+Reach: 5
+Num of Special Attacks: 0
+Psychic Magic CL: 0
+SLA Use Categories (1/day, 3/week, etc.): 0
+Spells Known Levels: 0
+Spells Prepared Levels: 0
+Before Combat:
+During Combat:
+Morale: 
+Base Statistics:
+Str:7
+Dex:17
+Con:8
+Int:10
+Wis:9
+Cha:8
+BAB:1
+CMB:-2
+Num of Special CMBs:0
+CMD:11
+Num of Special CMDs:0
+Num of Feats: 3
+Feat: Alertness
+Feat: Simple Weapon Proficiency (club)
+Feat: Skill Focus (Survival)
+Num of Skills: 4
+Skill: Perception +1
+Skill: Sense Motive +3
+Skill: Stealth +9
+Skill: Survival +4
+Num of Racial Mods:0
+Num of Lanugagues: 1
+Language: Common
+Num of Special Languages: 0
+Num of Special Qualities: 0
+Num of Combat Gear: 0
+Num of Other Gear: 1
+Other Gear: club
+Environment: 
+Organization: 
+Treasure: 
+Num of Special Abilities: 0
+Description: 

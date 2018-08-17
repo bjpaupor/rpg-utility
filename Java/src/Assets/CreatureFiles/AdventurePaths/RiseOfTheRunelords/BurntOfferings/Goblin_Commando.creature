@@ -1,0 +1,107 @@
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/AdventurePaths/RiseOfTheRunelords/BurntOfferings/
+Name : Goblin Commando
+Basic Name (Dinosaur):
+Short description: This creature stands barely three feet tall, its scrawny, humanoid body dwarfed by its wide, ungainly head.
+Title Name : Goblin Commando
+CR: 1/2
+Type: Humanoid
+Terrain: Forest_Jungle
+Climate: Temperate
+XP:200
+Race: Goblin
+Number of classes with levels in (First is Favored): 1
+Class:  ranger
+Levels in class: 1
+Alignment:NE
+Size:Small
+Number of subtypes:1
+Subtype: goblinoid
+Init:4
+Number of senses (#I means to make italic, for spells):1
+Sense: darkvision 60 ft.
+Perception:+5
+Number of auras (#I means to make italic, for spells):0
+AC:16
+touch:13
+flat-footed:12
+Number of AC modifiers:4
+Modifier:3
+Type of above Modifier: armor
+Modifier:4
+Type of above Modifier: Dex
+Modifier: -2
+Type of above Modifier: rage
+Modifier:1
+Type of above Modifier: size
+Number of Conditional AC modifiers:0
+HP:13
+HP breakdown:1d10+3
+Fast Healing:0
+Regeneration:0
+fort:4
+ref:6
+will:2
+Number of Conditional Save modifiers:0
+Number of Defensive Abilities: 0
+DR: 0
+Immunities : 0
+Resistances: 0
+SR: 0
+Num of Weaknesses: 0
+Speed: 30
+Other Speeds(#B means base speed if reduced normally): 0
+Melee: mwk horsechopper +5 (1d8+3/x3)
+Ranged: shortbow +6 (1d4/x3)
+Space: 5
+Reach: 5
+Num of Special Attacks: 1
+Special Attack: favored enemy (animals +2)
+Psychic Magic CL: 0
+SLA Use Categories (1/day, 3/week, etc.): 0
+Spells Known Levels: 0
+Spells Prepared Levels: 0
+Before Combat:The goblin commando has already imbibed a #Ipotion #Iof #Irage for his fight against the dog and has 2 rounds remaining on its duration (likely the surprise round and the first round of combat).
+During Combat:The commando makes sure to use his Mounted Combat feat to try to negate an attack each round against his mount, and uses his superior mobility to remain out of melee so he can shoot at the PCs with his bow from dogback (taking the standard –4 penalty for using a ranged weapon while mounted). If all of his goblin warriors are defeated, he drops his bow and races in to fight the PCs in melee.
+Morale: The commando fights to the death.
+Base Statistics: Without #Ipotion #Iof #Irage#, #HAC 18, touch 15, flat-footed 14; #Hhp 12 (1d10+2); #HFort +3, #HRef +6, #HWill +1; #HMelee mwk horsechoper +4 (1d8+1/x3); #HStr 12, #HCon 13
+Str:14
+Dex:19
+Con:15
+Int:8
+Wis:12
+Cha:8
+BAB:1
+CMB:2
+Num of Special CMBs:0
+CMD:16
+Num of Special CMDs:0
+Num of Feats: 1
+Feat: Mounted Combat
+Num of Skills: 5
+Skill: Handle Animal +3
+Skill: Perception +5
+Skill: Ride +11
+Skill: Stealth +15
+Skill: Survival +5
+Num of Racial Mods:2
+Racial Mod: +4 Ride
+Racial Mod: +4 Stealth
+Num of Lanugagues: 2
+Language: Common
+Language: Goblin
+Num of Special Languages: 0
+Num of Special Qualities: 2
+SQ: track +1
+SQ: wild empathy +0
+Num of Combat Gear: 1
+Combat Gear: #Ipotion #Iof #Irage (already used)
+Num of Other Gear: 4
+Other Gear: studded leather
+Other Gear: masterwork horsechopper
+Other Gear: light wooden shield
+Other Gear: shortbow with 20 arrows
+Environment: 
+Organization: 
+Treasure: 
+Num of Special Abilities: 0
+Description: 

@@ -1,0 +1,101 @@
+Where to place finished PDF and what to name it (if none, will be name.pdf): /home/brandon/Documents/StatBloccs/AdventurePaths/RiseOfTheRunelords/BurntOfferings/
+Name : Koruvus
+Basic Name (Dinosaur):
+Short description: Drank the waters and was twisted into a monstrous, insane mockery by the fickle cruelty of Lamashtu’s whims.
+Title Name : Koruvus
+CR: 3
+Type: Humanoid
+Terrain: Forest_Jungle
+Climate: Temperate
+XP:800
+Race: Male mutated goblin
+Number of classes with levels in (First is Favored): 1
+Class:  fighter
+Levels in class: 2
+Alignment:CE
+Size:Medium 
+Number of subtypes:1
+Subtype: goblinoid
+Init:5
+Number of senses (#I means to make italic, for spells):1
+Sense: darkvision 60 ft.
+Perception:-1
+Number of auras (#I means to make italic, for spells):0
+AC:15
+touch:11
+flat-footed:14
+Number of AC modifiers:2
+Modifier:1
+Type of above Modifier: Dex
+Modifier:4
+Type of above Modifier: natural
+Number of Conditional AC modifiers:0
+HP:24
+HP breakdown:2d10+9
+Fast Healing:0
+Regeneration:0
+fort:6
+ref:1
+will:-1
+Number of Conditional Save modifiers:1
+Conditional Modifier: +1 
+Condition: vs. fear
+Number of Defensive Abilities: 1
+Defensive Ability: bravery +1
+DR: 0
+Immunities : 0
+Resistances: 0
+SR: 0
+Num of Weaknesses: 0
+Speed: 30
+Other Speeds(#B means base speed if reduced normally): 0
+Melee: #I+1 #Ilongsword +4 (1d8+5/19-20), mwk handaxe +4 (1d6+2/x3), silver dagger +4 (1d4+1/19-20)
+Ranged: 
+Space: 5
+Reach: 5
+Num of Special Attacks: 1
+Special Attack: breath weapon
+Psychic Magic CL: 0
+SLA Use Categories (1/day, 3/week, etc.): 0
+Spells Known Levels: 0
+Spells Prepared Levels: 0
+Before Combat:
+During Combat: Koruvus takes his duty as guardian of this chamber seriously, and immediately attacks anyone who enters the room. He uses his breath weapon on the first round of combat, then moves in to engage the largest, most dangerous-looking foe with his weapons.
+Morale: Koruvus fights to the death, and pursues foes all the way to the glassworks or the northern exit if necessary before returning here.
+Base Statistics:
+Str:19
+Dex:13
+Con:16
+Int:3
+Wis:8
+Cha:10
+BAB:2
+CMB:6
+Num of Special CMBs:0
+CMD:17
+Num of Special CMDs:0
+Num of Feats: 3
+Feat: Improved Initiative
+Feat: Multiweapon Fighting
+Feat: Tougness
+Num of Skills: 1
+Skill: Intimidate +5
+Num of Racial Mods:0
+Num of Lanugagues: 2
+Language: Common
+Language: Goblin
+Num of Special Languages: 0
+Num of Special Qualities: 0
+Num of Combat Gear: 0
+Num of Other Gear: 3
+Other Gear: #I+1 #Ilongsword#
+Other Gear: masterwork handaxe
+Other Gear: alchemical silver dagger
+Environment: 
+Organization: 
+Treasure: 
+Num of Special Abilities: 1
+Special Ability: Breath Weapon (Su)
+Ability Desc.:Once every 1d4 rounds, Koruvus can spew a 20-foot-long line of foul-smelling and acidic blood from his mouth. Any creatures in this area take 2d4 points of acid damage (DC 13 Reflex half). A creature that takes damage from the foul-smelling acid must also make a DC 13 Fortitude save or be nauseated for 1 round. The save DCs are Constitution-based.
+Sub Descriptions: 0
+Description: 
