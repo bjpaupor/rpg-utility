@@ -1,14 +1,17 @@
 package pathfinder;
 
 public class Ability extends Feature {
-	private AbilityType type;
+	public enum Type {
+		EX, SU, SLA;
+	}
+	private Type type;
 
-	public Ability(String name, String description, AbilityType type) {
+	public Ability(String name, String description, Type type) {
 		super(name, description);
 		this.type = type;
 	}
 
-	public AbilityType getType() {
+	public Type getType() {
 		return type;
 	}
 
