@@ -5,14 +5,14 @@ public class Race {
 	private String description; // role physicalDescription society relations alignmentAndReligion adventurers
 	private String[] maleNames;
 	private String[] femaleNames;
-	private Feature[] racialTraits;
+	private Feature[] traits;
 	
-	public Race (String name, String description, String[] maleNames, String[] femaleNames, Feature[] racialTraits) {
+	public Race (String name, String description, String[] maleNames, String[] femaleNames, Feature[] traits) {
 		this.name = name;
 		this.description = description;
 		this.maleNames = maleNames;
 		this.femaleNames = femaleNames;
-		this.racialTraits = racialTraits;
+		this.traits = traits;
 	}
 	public String getName() {
 		return name;
@@ -26,8 +26,8 @@ public class Race {
 	public String[] getFemaleNames() {
 		return femaleNames;
 	}
-	public Feature[] getRacialTraits() {
-		return racialTraits;
+	public Feature[] getTraits() {
+		return traits;
 	}
 	public static void main(String[] args) {
 		
