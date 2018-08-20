@@ -10,5 +10,5 @@ public interface MagicItem {
 	public int getCL();
 	public String getConstruction();
 	public String[] getRequirements();
-	public String getCost();
+	public double getCost();
 }
