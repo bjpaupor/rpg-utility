@@ -7,5 +7,8 @@ public interface MagicItem {
 	public String getAura();
 	public String getActivation();
 	public Slot getSlot();
-	
+	public int getCL();
+	public String getConstruction();
+	public String[] getRequirements();
+	public String getCost();
 }
