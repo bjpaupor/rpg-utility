@@ -4,6 +4,7 @@ public class Trio<X, Y, Z> {
 	private X x;
 	private Y y;
 	private Z z;
+	
 	public Trio(X x, Y y, Z z) {
 		this.x = x;
 		this.y = y;
@@ -26,8 +27,5 @@ public class Trio<X, Y, Z> {
 	}
 	public void setZ(Z z) {
 		this.z = z;
-	}
-	public static void main(String[] args) {
-		
 	}
 }

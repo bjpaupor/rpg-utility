@@ -60,7 +60,4 @@ public enum Terrain {
 	public String getPic() {
 		return "src/Assets/Pictures/CreatureTerrains/Plain.png";
 	}
-	public static void main(String[] args) {
-		
-	}
 }

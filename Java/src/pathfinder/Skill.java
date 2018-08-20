@@ -4,6 +4,7 @@ public class Skill {
 	private String name;
 	private AbilityScore keyAbility;
 	private String description; //description check action tryAgain special restriction untrained
+	
 	public String getName() {
 		return name;
 	}

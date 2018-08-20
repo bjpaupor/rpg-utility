@@ -4,9 +4,9 @@
  * TODO:	Races - Set up
  * 			Classes - Set up
  * 			Skills - Set up
- * 			Feats
- * 			Items
- * 				Weapons
+ * 			Feats - Set up
+ * 			Items - Set up
+ * 				Weapons - Set up
  * 					Magic Weapons
  * 				Armor
  * 					Magic Armor
@@ -23,9 +23,9 @@
  * 					Artifacts
  * 				Siege Engines
  * 					Magic Siege Engines
- * 			Spells
- * 			Creatures - Working on it
- * 			Encounters
+ * 			Spells - Set up
+ * 			Creatures - Set up (Nearly)
+ * 			Encounters - Set up
  * 			Dungeons
  *			Traps
  *			Wilds

@@ -4,6 +4,7 @@ public class Ability extends Feature {
 	public enum Type {
 		EX, SU, SLA;
 	}
+	
 	private Type type;
 
 	public Ability(String name, String description, Type type) {

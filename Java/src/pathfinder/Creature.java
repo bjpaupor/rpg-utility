@@ -1103,7 +1103,6 @@ public class Creature {
 
 		}
 	}
-	
 	public class SubType {
 		private String name;
 		private String description;

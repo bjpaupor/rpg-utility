@@ -15,9 +15,11 @@ public class Feat {
 			return description;
 		}
 	}
+	
 	private String name;
 	private String description;
 	private String type; //Feat type name
+	
 	public Feat(String name, String description, String type) {
 		this.name = name;
 		this.description = description;

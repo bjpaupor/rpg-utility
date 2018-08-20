@@ -8,7 +8,6 @@ import org.apache.pdfbox.pdmodel.font.PDFont;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
 
 public class WrappingText {
-
     private String text; // Text to be separated
     private PDFont font; // Font used
     private float width; // how long the lines can be
@@ -381,7 +380,4 @@ public class WrappingText {
         result.add(text.substring(start));
         return result;
     }
-    public static void main(String[] args) {
-		
-	}
 }

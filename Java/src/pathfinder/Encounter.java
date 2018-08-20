@@ -1,12 +1,14 @@
 package pathfinder;
 
-public class Feature {
+public class Encounter {
 	private String name;
 	private String description;
+	private int xp;
 	
-	public Feature(String name, String description) {
+	public Encounter(String name, String description, int xp) {
 		this.name = name;
 		this.description = description;
+		this.xp = xp;
 	}
 	public String getName() {
 		return name;
@@ -14,5 +16,7 @@ public class Feature {
 	public String getDescription() {
 		return description;
 	}
-
+	public int getXP() {
+		return xp;
+	}
 }
