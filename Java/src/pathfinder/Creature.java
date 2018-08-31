@@ -1235,7 +1235,7 @@ public class Creature {
 	@SuppressWarnings("unchecked")
 	public Creature(String fileName) {
 		if (!fileName.endsWith(".creature")) {
-			System.out.println("-> Incorrect file type, file must be .creature\n");
+			System.out.println("-> " + fileName + ": Incorrect file type, file must be .creature\n");
 			return;
 		}
 		try (BufferedReader read = new BufferedReader(new FileReader(fileName))){

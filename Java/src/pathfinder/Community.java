@@ -5,7 +5,7 @@ public class Community {
 		THORP, HAMLET, VILLAGE, SMALL_TOWN, LARGE_TOWN, SMALL_CITY, LARGE_CITY, METROPOLIS;
 	}
 	private String name;
-	private String description; //Laws, Walls, Guard, Streets, Buildings, Lighting
+	private String description; //Laws, Walls, Guard, Paths, Locations, Lighting
 	private Type type;
 	private double baseValue;
 	private String minorItems;
@@ -43,5 +43,4 @@ public class Community {
 	public String getMajorItems() {
 		return majorItems;
 	}
-	
 }

@@ -14,5 +14,8 @@ public class Feature {
 	public String getDescription() {
 		return description;
 	}
-
+	@Override
+	public String toString() {
+		return "Name:" + name + " Description:" + description;
+	}
 }
