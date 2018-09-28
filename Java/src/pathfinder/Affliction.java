@@ -1,18 +1,26 @@
 package pathfinder;
-
+/**
+ * Persistent negative effect applied to a creature
+ * @author Brandon
+ *
+ */
 public class Affliction {
+	public enum Type {
+		CONTACT, CURSE, DISEASE, INGESTED, INJURY, INHALED, SPELL, TRAP;
+	}
+	
 	private String name;
 	private String description;
-	private String[] types;
+	private Type[] types;
 	private String save;
 	private String onset;
 	private String frequency;
 	private String initialEffect;
-	private String secondaryEffect;
+	private String effect;
 	private String cure;
 	
-	public Affliction(String name, String description, String[] types, String save, String onset, String frequency,
-			String initialEffect, String secondaryEffect, String cure) {
+	public Affliction(String name, String description, Type[] types, String save, String onset, String frequency,
+			String initialEffect, String effect, String cure) {
 		this.name = name;
 		this.description = description;
 		this.types = types;
@@ -20,7 +28,7 @@ public class Affliction {
 		this.onset = onset;
 		this.frequency = frequency;
 		this.initialEffect = initialEffect;
-		this.secondaryEffect = secondaryEffect;
+		this.effect = effect;
 		this.cure = cure;
 	}
 	public String getName() {
@@ -29,7 +37,7 @@ public class Affliction {
 	public String getDescription() {
 		return description;
 	}
-	public String[] getTypes() {
+	public Type[] getTypes() {
 		return types;
 	}
 	public String getSave() {
@@ -44,8 +52,8 @@ public class Affliction {
 	public String getInitialEffect() {
 		return initialEffect;
 	}
-	public String getSecondaryEffect() {
-		return secondaryEffect;
+	public String getEffect() {
+		return effect;
 	}
 	public String getCure() {
 		return cure;

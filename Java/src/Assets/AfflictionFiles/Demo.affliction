@@ -1,0 +1,11 @@
+Name: Demo
+Description: none
+Num of Types: 2
+Type: Curse
+Type: Spell
+Save: Fortitude DC 17 negates, Will DC 17 partial
+Onset: none
+Frequency: none
+Initial Effect: none
+Effect: transforms target into a lizard; see #Ibaleful #Ipolymorph description
+Cure: none

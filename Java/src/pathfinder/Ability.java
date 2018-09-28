@@ -1,5 +1,8 @@
 package pathfinder;
-
+/**
+ * A Feature with a type - Extraordinary, Supernatural, Spell-Like Ability
+ * @author Brandon
+ */
 public class Ability extends Feature {
 	public enum Type {
 		EX, SU, SLA;
