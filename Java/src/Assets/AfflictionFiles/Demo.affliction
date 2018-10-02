@@ -1,8 +1,8 @@
 Name: Demo
 Description: Description.
 Num of Types: 2
-Type: Curse
-Type: Spell
+Type: CURSE
+Type: SPELL
 Save: Fortitude DC 17 negates, Will DC 17 partial
 Onset: 1 minute
 Frequency: 1/round for 6 rounds

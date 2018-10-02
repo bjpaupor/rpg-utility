@@ -47,7 +47,7 @@ public class MagicArmor extends Armor implements MagicItem {
 			int breakDC, int bonus, int maxDex, int armorCheckPenalty, int arcaneSpellFailure, boolean speedReduced,
 			Type type, Size size, int enhancement, SpecialAbility[] specialAbilities, String activation, 
 			String[] requirements, String cost) {
-		super(name, description, price, weight, material, hp, breakDC, bonus, maxDex, armorCheckPenalty,
+		super(name, description, price, weight, material, breakDC, bonus, maxDex, armorCheckPenalty,
 				arcaneSpellFailure, speedReduced, type, size);
 		this.enhancement = enhancement;
 		this.specialAbilities = specialAbilities;

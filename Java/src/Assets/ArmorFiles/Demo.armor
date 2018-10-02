@@ -1,0 +1,13 @@
+Name: Demo
+Description: Description.
+Price: 100
+Weight: 25
+Material: Steel
+Break DC: 26
+Bonus: 4
+Max Dex: 4
+Armor Check Penalty: -2
+Arcane Spell Failure: 20
+Speed Reduced: false
+Type: LIGHT
+Size: MEDIUM

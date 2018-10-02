@@ -8,4 +8,8 @@ public enum Size {
 		result = (char)(result.charAt(0) - 32) + result.substring(1);
 		return result;
 	}
+	public static void main(String[] args) {
+		Size s = Size.MEDIUM;
+		System.out.println(s.compareTo(Size.COLOSSAL));
+	}
 }

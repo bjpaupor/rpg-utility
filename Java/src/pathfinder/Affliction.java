@@ -55,7 +55,7 @@ public class Affliction {
 				cure = Tools.readALine(read);
 			}
 			catch (Exception ex) {
-				System.out.println("->" + getName() + ": Failed to interpret wilderness file!");
+				System.out.println("->" + getName() + ": Failed to interpret affliction file!");
 				ex.printStackTrace();
 				return;
 			}	

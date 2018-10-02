@@ -31,7 +31,7 @@ public class Ability extends Feature {
 				type = Type.valueOf(Tools.readALine(read));
 			}
 			catch (Exception ex) {
-				System.out.println("->" + getName() + ": Failed to interpret wilderness file!");
+				System.out.println("->" + getName() + ": Failed to interpret ability file!");
 				ex.printStackTrace();
 				return;
 			}	
