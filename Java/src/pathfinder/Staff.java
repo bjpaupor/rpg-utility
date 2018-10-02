@@ -5,10 +5,10 @@ public class Staff extends Item implements MagicItem {
 	private Aura aura;
 	private int cl;
 	private String[] requirements;
-	private double cost;
+	private String cost;
 
-	public Staff(String name, String description, double price, double weight, String material, int hp, int breakDC,
-			Pair<Spell, Integer>[] spells, Aura aura, int cl, String[] requirements, double cost) {
+	public Staff(String name, String description, String price, String weight, String material, int hp, int breakDC,
+			Pair<Spell, Integer>[] spells, Aura aura, int cl, String[] requirements, String cost) {
 		super(name, description, price, weight, material, hp, breakDC);
 		this.spells = spells;
 		this.aura = aura;
@@ -43,7 +43,7 @@ public class Staff extends Item implements MagicItem {
 	}
 
 	@Override
-	public double getCost() {
+	public String getCost() {
 		return cost;
 	}
 

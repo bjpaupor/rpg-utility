@@ -1,4 +1,8 @@
 package pathfinder;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+
 /**
  * Persistent negative effect applied to a creature
  * @author Brandon
@@ -30,6 +34,31 @@ public class Affliction {
 		this.initialEffect = initialEffect;
 		this.effect = effect;
 		this.cure = cure;
+	}
+	public Affliction(String fileName) {
+		if (!fileName.endsWith(".affliction")) {
+			System.out.println("-> " + fileName + ": Incorrect file type, file must be .affliction\n");
+			return;
+		}
+		else 
+			try (BufferedReader read = new BufferedReader(new FileReader(fileName))){
+				name = Tools.readALine(read);
+				description = Tools.readALine(read);
+				types = new Type[Integer.parseInt(Tools.readALine(read))];
+				for (int i = 0; i < types.length; i++)
+					types[i] = Type.valueOf(Tools.readALine(read));
+				save = Tools.readALine(read);
+				onset = Tools.readALine(read);
+				frequency = Tools.readALine(read);
+				initialEffect = Tools.readALine(read);
+				effect = Tools.readALine(read);
+				cure = Tools.readALine(read);
+			}
+			catch (Exception ex) {
+				System.out.println("->" + getName() + ": Failed to interpret wilderness file!");
+				ex.printStackTrace();
+				return;
+			}	
 	}
 	public String getName() {
 		return name;

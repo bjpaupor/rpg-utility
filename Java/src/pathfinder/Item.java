@@ -3,13 +3,13 @@ package pathfinder;
 public class Item {
 	private String name;
 	private String description;
-	private double price;
-	private double weight;
+	private String price;
+	private String weight;
 	private String material;
 	private int hp;
 	private int breakDC;
 	
-	public Item(String name, String description, double price, double weight, String material, int hp, int breakDC) {
+	public Item(String name, String description, String price, String weight, String material, int hp, int breakDC) {
 		this.name = name;
 		this.description = description;
 		this.price = price;
@@ -24,10 +24,10 @@ public class Item {
 	public String getDescription() {
 		return description;
 	}
-	public double getPrice() {
+	public String getPrice() {
 		return price;
 	}
-	public double getWeight() {
+	public String getWeight() {
 		return weight;
 	}
 	public String getMaterial() {

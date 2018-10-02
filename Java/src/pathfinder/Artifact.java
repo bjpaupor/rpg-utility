@@ -12,9 +12,9 @@ public class Artifact extends Item implements MagicItem {
 	private Slot slot;
 	private int cl;
 
-	public Artifact(String name, String description, double weight, String material, int hp, int breakDC,
+	public Artifact(String name, String description, String weight, String material, int hp, int breakDC,
 			Aura aura, String activation, Slot slot, int cl, Type type, String destruction) {
-		super(name, description, Double.NaN, weight, material, hp, breakDC);
+		super(name, description, "none", weight, material, hp, breakDC);
 		this.aura = aura;
 		this.activation = activation;
 		this.slot = slot;
@@ -49,8 +49,8 @@ public class Artifact extends Item implements MagicItem {
 	}
 
 	@Override
-	public double getCost() {
-		return Double.NaN;
+	public String getCost() {
+		return "none";
 	}
 
 	public Type getType() {

@@ -9,11 +9,11 @@ public interface MagicItem {
 	public Slot getSlot();
 	public int getCL();
 	public String[] getRequirements();
-	public double getCost();
+	public String getCost();
 	public String getName();
 	public String getDescription();
-	public double getPrice();
-	public double getWeight();
+	public String getPrice();
+	public String getWeight();
 	public String getMaterial();
 	public int getHp();
 	public int getBreakDC();

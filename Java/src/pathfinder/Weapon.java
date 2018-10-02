@@ -16,7 +16,7 @@ public class Weapon extends Item {
 	private Proficiency proficiency;
 	private Size size; //of wielder
 	
-	public Weapon(String name, String description, double price, double weight, String material, int hp, int breakDC,
+	public Weapon(String name, String description, String price, String weight, String material, int hp, int breakDC,
 			String damage, String critical, int range, DamageType damageType, Feature[] features,
 			Proficiency proficiency, Size size) {
 		super(name, description, price, weight, material, hp, breakDC);

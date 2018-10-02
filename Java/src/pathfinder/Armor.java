@@ -13,7 +13,7 @@ public class Armor extends Item {
 	private Type type;
 	private Size size; //of wearer
 	
-	public Armor(String name, String description, double price, double weight, String material, int hp, int breakDC,
+	public Armor(String name, String description, String price, String weight, String material, int hp, int breakDC,
 			int bonus, int maxDex, int armorCheckPenalty, int arcaneSpellFailure, boolean speedReduced, Type type,
 			Size size) {
 		super(name, description, price, weight, material, hp, breakDC);

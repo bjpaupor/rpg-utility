@@ -41,12 +41,12 @@ public class MagicWeapon extends Weapon implements MagicItem {
 	private int highestCL; //highest cl not 3 * enhancement;
 	private String activation;
 	private String[] requirements;
-	private double cost;
+	private String cost;
 	
-	public MagicWeapon(String name, String description, double price, double weight, String material, int hp,
+	public MagicWeapon(String name, String description, String price, String weight, String material, int hp,
 			int breakDC, String damage, String critical, int range, DamageType damageType, Feature[] features,
 			Proficiency proficiency, Size size, int enhancement, SpecialAbility[] specialAbilities, String activation, 
-			String[] requirements, double cost) {
+			String[] requirements, String cost) {
 		super(name, description, price, weight, material, hp, breakDC, damage, critical, range, damageType, features,
 				proficiency, size);
 		this.enhancement = enhancement;
@@ -93,7 +93,7 @@ public class MagicWeapon extends Weapon implements MagicItem {
 	}
 
 	@Override
-	public double getCost() {
+	public String getCost() {
 		return cost;
 	}
 

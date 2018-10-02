@@ -3,10 +3,10 @@ package pathfinder;
 public class Potion extends Item implements MagicItem {
 	private Spell spell;
 	private int cl;
-	private double cost;
+	private String cost;
 	
-	public Potion(String name, String description, double price, double weight, String material, int hp, int breakDC, 
-			Spell spell, int cl, double cost) {
+	public Potion(String name, String description, String price, String weight, String material, int hp, int breakDC, 
+			Spell spell, int cl, String cost) {
 		super(name, description, price, weight, material, hp, breakDC);
 		this.spell = spell;
 		this.cl = cl;
@@ -43,7 +43,7 @@ public class Potion extends Item implements MagicItem {
 	}
 
 	@Override
-	public double getCost() {
+	public String getCost() {
 		return cost;
 	}
 

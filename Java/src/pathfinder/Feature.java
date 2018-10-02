@@ -8,6 +8,7 @@ public class Feature {
 		this.name = name;
 		this.description = description;
 	}
+	
 	public String getName() {
 		return name;
 	}
@@ -17,5 +18,13 @@ public class Feature {
 	@Override
 	public String toString() {
 		return "Name:" + name + " Description:" + description;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 }

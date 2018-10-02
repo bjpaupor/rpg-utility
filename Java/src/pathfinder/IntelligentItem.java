@@ -56,7 +56,7 @@ public class IntelligentItem extends Item implements MagicItem {
 	}
 
 	@Override
-	public double getCost() {
+	public String getCost() {
 		return baseItem.getCost();
 	}
 

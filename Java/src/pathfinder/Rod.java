@@ -5,10 +5,10 @@ public class Rod extends Item implements MagicItem {
 	private String activation;
 	private int cl;
 	private String[] requirements;
-	private double cost;
+	private String cost;
 
-	public Rod(String name, String description, double price, double weight, String material, int hp, int breakDC,
-			Aura aura, String activation, int cl, String[] requirements, double cost) {
+	public Rod(String name, String description, String price, String weight, String material, int hp, int breakDC,
+			Aura aura, String activation, int cl, String[] requirements, String cost) {
 		super(name, description, price, weight, material, hp, breakDC);
 		this.aura = aura;
 		this.activation = activation;
@@ -43,7 +43,7 @@ public class Rod extends Item implements MagicItem {
 	}
 
 	@Override
-	public double getCost() {
+	public String getCost() {
 		return cost;
 	}
 }

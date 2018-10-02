@@ -8,10 +8,10 @@ public class Scroll extends Item implements MagicItem {
 	private Type type;
 	private String language;
 	private int cl;
-	private double cost;
+	private String cost;
 	
-	public Scroll(String name, String description, double price, double weight, String material, int hp, int breakDC,
-			Spell spell, Type type, String language, int cl, double cost) {
+	public Scroll(String name, String description, String price, String weight, String material, int hp, int breakDC,
+			Spell spell, Type type, String language, int cl, String cost) {
 		super(name, description, price, weight, material, hp, breakDC);
 		this.spell = spell;
 		this.type = type;
@@ -46,7 +46,7 @@ public class Scroll extends Item implements MagicItem {
 	}
 
 	@Override
-	public double getCost() {
+	public String getCost() {
 		return cost;
 	}
 
