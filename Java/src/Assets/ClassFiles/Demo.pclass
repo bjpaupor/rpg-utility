@@ -1,0 +1,18 @@
+Name: Demo
+Description: Description.
+Num of Alignments: 2
+Alignment: LG
+Alignment: CN
+HD: d8
+Num of Class Skills: 3
+Skill: Acrobatics
+Skill: Climb
+Skill: Use Magic Device
+Skill Ranks Per Level: 4
+Num of Features: 1
+Feature Name: Demo
+Feature Description: Description.
+BAB Progression: Medium
+Num of Good Saves: 2
+Good Save: Fort
+Good Save: Will
