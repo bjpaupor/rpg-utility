@@ -2,7 +2,11 @@ package pathfinder;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-
+/**
+ * A class for characters 
+ * @author brandon
+ *
+ */
 public class Class {
 	private String name;
 	private String description; //description role
