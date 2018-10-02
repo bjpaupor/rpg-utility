@@ -1,5 +1,9 @@
 package pathfinder;
-
+/**
+ * General conditions of an environment
+ * @author brandon
+ *
+ */
 public enum Climate {
 	COLD {
 		@Override
@@ -23,6 +27,6 @@ public enum Climate {
 		}
 	};
 	public String getPic() {
-		return "src/Assets/Pictures/CreatureClimates/Temperate.png";
+		return null;
 	}
 }
