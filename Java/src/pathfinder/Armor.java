@@ -2,7 +2,11 @@ package pathfinder;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-
+/**
+ * A suit of armor or shield for a creature
+ * @author Brandon
+ *
+ */
 public class Armor extends Item {
 	public enum Type {
 		LIGHT, MEDIUM, HEAVY, SHIELD;
@@ -13,18 +17,20 @@ public class Armor extends Item {
 	private int armorCheckPenalty;
 	private int arcaneSpellFailure; //a percent
 	private boolean speedReduced;
+	private boolean forHumanoid; //if shaped for humanoid
 	private Type type;
 	private Size size; //of wearer
 	
 	public Armor(String name, String description, String price, String weight, String material, int breakDC,
-			int bonus, int maxDex, int armorCheckPenalty, int arcaneSpellFailure, boolean speedReduced, Type type,
-			Size size) {
+			int bonus, int maxDex, int armorCheckPenalty, int arcaneSpellFailure, boolean speedReduced, 
+			boolean forHumanoid, Type type, Size size) {
 		super(name, description, price, weight, material, getArmorHP(bonus, size), breakDC);
 		this.bonus = bonus;
 		this.maxDex = maxDex;
 		this.armorCheckPenalty = armorCheckPenalty;
 		this.arcaneSpellFailure = arcaneSpellFailure;
 		this.speedReduced = speedReduced;
+		this.forHumanoid = forHumanoid;
 		this.type = type;
 		this.size = size;
 	}
@@ -47,6 +53,7 @@ public class Armor extends Item {
 				armorCheckPenalty = Integer.parseInt(Tools.readALine(read));
 				arcaneSpellFailure = Integer.parseInt(Tools.readALine(read));
 				speedReduced = Boolean.parseBoolean(Tools.readALine(read));
+				forHumanoid = Boolean.parseBoolean(Tools.readALine(read));
 				type = Type.valueOf(Tools.readALine(read));
 				size = Size.valueOf(Tools.readALine(read));
 				setHP(getArmorHP(bonus, size));
@@ -86,6 +93,9 @@ public class Armor extends Item {
 
 	public Size getSize() {
 		return size;
+	}
+	public boolean isForHumanoid() {
+		return forHumanoid;
 	}
 
 }
