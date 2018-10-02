@@ -19,8 +19,7 @@ public class Armor extends Item {
 	public Armor(String name, String description, String price, String weight, String material, int breakDC,
 			int bonus, int maxDex, int armorCheckPenalty, int arcaneSpellFailure, boolean speedReduced, Type type,
 			Size size) {
-		super(name, description, price, weight, material, 
-				(int)(bonus * 5 * Math.pow(2, size.compareTo(Size.MEDIUM))), breakDC);
+		super(name, description, price, weight, material, getArmorHP(bonus, size), breakDC);
 		this.bonus = bonus;
 		this.maxDex = maxDex;
 		this.armorCheckPenalty = armorCheckPenalty;
@@ -50,13 +49,16 @@ public class Armor extends Item {
 				speedReduced = Boolean.parseBoolean(Tools.readALine(read));
 				type = Type.valueOf(Tools.readALine(read));
 				size = Size.valueOf(Tools.readALine(read));
-				setHP((int)(bonus * 5 * Math.pow(2, size.compareTo(Size.MEDIUM))));
+				setHP(getArmorHP(bonus, size));
 			}
 			catch (Exception ex) {
 				System.out.println("->" + getName() + ": Failed to interpret armor file!");
 				ex.printStackTrace();
 				return;
 			}	
+	}
+	public static int getArmorHP(int bonus, Size size) {
+		return (int)(bonus * 5 * Math.pow(2, size.compareTo(Size.MEDIUM)));
 	}
 	public int getBonus() {
 		return bonus;
