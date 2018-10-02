@@ -1,5 +1,12 @@
 package pathfinder;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+/**
+ * A difficult to destroy magical item
+ * @author brandon
+ *
+ */
 public class Artifact extends Item implements MagicItem {
 	public enum Type {
 		MINOR, MAJOR;
@@ -22,7 +29,38 @@ public class Artifact extends Item implements MagicItem {
 		this.type = type;
 		this.destruction = destruction;
 	}
-	
+	public Artifact(String fileName) {
+		super(null, null, null, null, null, 0, 0);
+		if (!fileName.endsWith(".artifact")) {
+			System.out.println("-> " + fileName + ": Incorrect file type, file must be .artifact\n");
+			return;
+		}
+		else 
+			try (BufferedReader read = new BufferedReader(new FileReader(fileName))){
+				setName(Tools.readALine(read));
+				setDescription(Tools.readALine(read));
+				setPrice(Tools.readALine(read));
+				setWeight(Tools.readALine(read));
+				setMaterial(Tools.readALine(read));
+				setHP(Integer.parseInt(Tools.readALine(read)));
+				setBreakDC(Integer.parseInt(Tools.readALine(read)));
+				School school = School.valueOf(Tools.readALine(read).toUpperCase());
+				Descriptor[] descriptors = new Descriptor[Integer.parseInt(Tools.readALine(read))];
+				for (int i = 0; i < descriptors.length; i++)
+					descriptors[i] = Descriptor.valueOf(Tools.readALine(read).toUpperCase());
+				activation = Activation.valueOf(Tools.readALine(read).toUpperCase());
+				slot = Slot.valueOf(Tools.readALine(read).toUpperCase());
+				cl = Integer.parseInt(Tools.readALine(read));
+				aura = new Aura(school, descriptors, Aura.getItemStrength(cl));
+				type = Type.valueOf(Tools.readALine(read).toUpperCase());
+				destruction = Tools.readALine(read);
+			}
+			catch (Exception ex) {
+				System.out.println("->" + getName() + ": Failed to interpret artifact file!");
+				ex.printStackTrace();
+				return;
+			}	
+	}
 	@Override
 	public Aura getAura() {
 		return aura;

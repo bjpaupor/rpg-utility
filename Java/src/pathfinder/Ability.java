@@ -28,7 +28,7 @@ public class Ability extends Feature {
 			try (BufferedReader read = new BufferedReader(new FileReader(fileName))){
 				setName(Tools.readALine(read));
 				setDescription(Tools.readALine(read));
-				type = Type.valueOf(Tools.readALine(read));
+				type = Type.valueOf(Tools.readALine(read).toUpperCase());
 			}
 			catch (Exception ex) {
 				System.out.println("->" + getName() + ": Failed to interpret ability file!");

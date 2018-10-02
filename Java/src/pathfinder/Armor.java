@@ -54,7 +54,7 @@ public class Armor extends Item {
 				arcaneSpellFailure = Integer.parseInt(Tools.readALine(read));
 				speedReduced = Boolean.parseBoolean(Tools.readALine(read));
 				forHumanoid = Boolean.parseBoolean(Tools.readALine(read));
-				type = Type.valueOf(Tools.readALine(read));
+				type = Type.valueOf(Tools.readALine(read).toUpperCase());
 				size = Size.valueOf(Tools.readALine(read));
 				setHP(getArmorHP(bonus, size));
 			}

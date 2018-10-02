@@ -1,5 +1,9 @@
 package pathfinder;
-
+/**
+ * A magical aura that can be studied
+ * @author brandon
+ *
+ */
 public class Aura {
 	public enum Strength {
 		FAINT, MODERATE, STRONG, OVERWHELMING;

@@ -46,7 +46,7 @@ public class Affliction {
 				description = Tools.readALine(read);
 				types = new Type[Integer.parseInt(Tools.readALine(read))];
 				for (int i = 0; i < types.length; i++)
-					types[i] = Type.valueOf(Tools.readALine(read));
+					types[i] = Type.valueOf(Tools.readALine(read).toUpperCase());
 				save = Tools.readALine(read);
 				onset = Tools.readALine(read);
 				frequency = Tools.readALine(read);
