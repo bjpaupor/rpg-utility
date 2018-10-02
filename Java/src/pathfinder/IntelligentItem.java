@@ -36,7 +36,7 @@ public class IntelligentItem extends Item implements MagicItem {
 	}
 
 	@Override
-	public String getActivation() {
+	public Activation getActivation() {
 		return baseItem.getActivation();
 	}
 

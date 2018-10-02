@@ -4,8 +4,11 @@ public interface MagicItem {
 	public enum Slot {
 		ARMOR, BELT, BODY, CHEST, EYES, FEET, HANDS, HEAD, HEADBAND, NECK, NONE, RING, SHIELD, SHOULDERS, WRIST;
 	}
+	public enum Activation {
+		COMMAND_WORD, SPELL_COMPLETION, SPELL_TRIGGER, USE_ACTIVATED;
+	}
 	public Aura getAura();
-	public String getActivation();
+	public Activation getActivation();
 	public Slot getSlot();
 	public int getCL();
 	public String[] getRequirements();

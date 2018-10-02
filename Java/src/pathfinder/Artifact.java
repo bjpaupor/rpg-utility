@@ -8,12 +8,12 @@ public class Artifact extends Item implements MagicItem {
 	private Type type;
 	private String destruction;
 	private Aura aura;
-	private String activation;
+	private Activation activation;
 	private Slot slot;
 	private int cl;
 
 	public Artifact(String name, String description, String weight, String material, int hp, int breakDC,
-			Aura aura, String activation, Slot slot, int cl, Type type, String destruction) {
+			Aura aura, Activation activation, Slot slot, int cl, Type type, String destruction) {
 		super(name, description, "none", weight, material, hp, breakDC);
 		this.aura = aura;
 		this.activation = activation;
@@ -29,7 +29,7 @@ public class Artifact extends Item implements MagicItem {
 	}
 
 	@Override
-	public String getActivation() {
+	public Activation getActivation() {
 		return activation;
 	}
 

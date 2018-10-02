@@ -26,8 +26,8 @@ public class Scroll extends Item implements MagicItem {
 	}
 
 	@Override
-	public String getActivation() {
-		return "Spell Completion";
+	public Activation getActivation() {
+		return Activation.SPELL_COMPLETION;
 	}
 
 	@Override

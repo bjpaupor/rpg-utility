@@ -23,8 +23,8 @@ public class Staff extends Item implements MagicItem {
 	}
 
 	@Override
-	public String getActivation() {
-		return "Spell Trigger";
+	public Activation getActivation() {
+		return Activation.SPELL_TRIGGER;
 	}
 
 	@Override

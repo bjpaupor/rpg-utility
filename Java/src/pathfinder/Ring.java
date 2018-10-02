@@ -2,13 +2,13 @@ package pathfinder;
 
 public class Ring extends Item implements MagicItem {
 	private Aura aura;
-	private String activation;
+	private Activation activation;
 	private int cl;
 	private String[] requirements;
 	private String cost;
 
 	public Ring(String name, String description, String price, String weight, String material, int hp, int breakDC,
-			Aura aura, String activation, int cl, String[] requirements, String cost) {
+			Aura aura, Activation activation, int cl, String[] requirements, String cost) {
 		super(name, description, price, weight, material, hp, breakDC);
 		this.aura = aura;
 		this.activation = activation;
@@ -23,7 +23,7 @@ public class Ring extends Item implements MagicItem {
 	}
 
 	@Override
-	public String getActivation() {
+	public Activation getActivation() {
 		return activation;
 	}
 

@@ -39,13 +39,13 @@ public class MagicWeapon extends Weapon implements MagicItem {
 	private int enhancement;
 	private SpecialAbility[] specialAbilities;
 	private int highestCL; //highest cl not 3 * enhancement;
-	private String activation;
+	private Activation activation;
 	private String[] requirements;
 	private String cost;
 	
 	public MagicWeapon(String name, String description, String price, String weight, String material, int hp,
 			int breakDC, String damage, String critical, int range, DamageType damageType, Feature[] features,
-			Proficiency proficiency, Size size, int enhancement, SpecialAbility[] specialAbilities, String activation, 
+			Proficiency proficiency, Size size, int enhancement, SpecialAbility[] specialAbilities, Activation activation, 
 			String[] requirements, String cost) {
 		super(name, description, price, weight, material, hp, breakDC, damage, critical, range, damageType, features,
 				proficiency, size);
@@ -73,7 +73,7 @@ public class MagicWeapon extends Weapon implements MagicItem {
 	}
 
 	@Override
-	public String getActivation() {
+	public Activation getActivation() {
 		return activation;
 	}
 

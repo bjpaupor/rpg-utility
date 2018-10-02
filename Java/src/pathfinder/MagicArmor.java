@@ -39,14 +39,14 @@ public class MagicArmor extends Armor implements MagicItem {
 	private int enhancement;
 	private SpecialAbility[] specialAbilities;
 	private int highestCL; //highest cl not 3 * enhancement;
-	private String activation;
+	private Activation activation;
 	private String[] requirements;
 	private String cost;
 
 	public MagicArmor(String name, String description, String price, String weight, String material, int hp,
 			int breakDC, int bonus, int maxDex, int armorCheckPenalty, int arcaneSpellFailure, boolean speedReduced,
 			boolean forHumanoid, Type type, Size size, int enhancement, SpecialAbility[] specialAbilities, 
-			String activation, String[] requirements, String cost) {
+			Activation activation, String[] requirements, String cost) {
 		super(name, description, price, weight, material, breakDC, bonus, maxDex, armorCheckPenalty,
 				arcaneSpellFailure, speedReduced, forHumanoid, type, size);
 		this.enhancement = enhancement;
@@ -72,7 +72,7 @@ public class MagicArmor extends Armor implements MagicItem {
 	}
 
 	@Override
-	public String getActivation() {
+	public Activation getActivation() {
 		return activation;
 	}
 

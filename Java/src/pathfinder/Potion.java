@@ -23,8 +23,8 @@ public class Potion extends Item implements MagicItem {
 	}
 
 	@Override
-	public String getActivation() {
-		return "Use Activated";
+	public Activation getActivation() {
+		return Activation.USE_ACTIVATED;
 	}
 
 	@Override
