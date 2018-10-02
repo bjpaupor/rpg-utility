@@ -1,7 +1,15 @@
 Name:Varisia
 Description: Dangerous lands scarred by the depravity of ancient wizards and reclaimed by a wilderness of beasts and savages.
-Number of Wilds: 1
+Number of Wilds: 6
+Wild: Churchainian Hills
 Wild: Mierani Forest
+Wild: Mindspin Mountains
+Wild: Storval Plateau
+Wild: The Cinderlands
+Wild: Velashu Uplands
 Number of Locations: 0
-Number of Communities: 1
+Number of Communities: 4
+Community: Janderhoff
+Community: Korvosa
+Community: Magnimar
 Community: Sandpoint

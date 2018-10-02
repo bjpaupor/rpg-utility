@@ -11,19 +11,14 @@ public class Artifact extends Item implements MagicItem {
 	private String activation;
 	private Slot slot;
 	private int cl;
-	private String[] requirements;
-	private double cost;
 
-	public Artifact(String name, String description, double price, double weight, String material, int hp, int breakDC,
-			Aura aura, String activation, Slot slot, int cl, String[] requirements, double cost, Type type, 
-			String destruction) {
-		super(name, description, price, weight, material, hp, breakDC);
+	public Artifact(String name, String description, double weight, String material, int hp, int breakDC,
+			Aura aura, String activation, Slot slot, int cl, Type type, String destruction) {
+		super(name, description, Double.NaN, weight, material, hp, breakDC);
 		this.aura = aura;
 		this.activation = activation;
 		this.slot = slot;
 		this.cl = cl;
-		this.requirements = requirements;
-		this.cost = cost;
 		this.type = type;
 		this.destruction = destruction;
 	}
@@ -50,12 +45,12 @@ public class Artifact extends Item implements MagicItem {
 
 	@Override
 	public String[] getRequirements() {
-		return requirements;
+		return null;
 	}
 
 	@Override
 	public double getCost() {
-		return cost;
+		return Double.NaN;
 	}
 
 	public Type getType() {
