@@ -32,7 +32,7 @@
  *			Communities
  *			Features - Set up
  *				Abilities - Set up
- *			Conditions
+ *				Conditions - Just a Feature
  *			Afflictions
  *			Materials
  *			Creature Types - Set up

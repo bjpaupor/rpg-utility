@@ -1,0 +1,21 @@
+Description: A construct is an animated object or artificially created creature. A construct has the following features.
+Hit Die: d10
+BAB: fast
+Number of Good Saves: 0
+Skill Ranks Per HD: 2
+Number of Class Skills: 0
+Number of Traits: 4
+Trait: No Constitution score. Any DCs or other statistics that rely on a Constitution score treat a construct as having a score of 10 (no bonus or penalty).
+Trait: Low-light vision.
+Trait: Darkvision 60 feet.
+Trait: Immunity to all mind-affecting effects (charms, compulsions, morale effects, patterns, and phantasms).
+Trait: Immunity to bleed, disease, death effects, necromancy effects, paralysis, poison, sleep effects, and stunning.
+Trait: Cannot heal damage on its own, but often can be repaired via exposure to a certain kind of effect (see the creature’s description for details) or through the use of the Craft Construct feat. Constructs can also be healed through spells such as #Imake #Iwhole#. A construct with the fast healing special quality still benefits from that quality.
+Trait: Not subject to ability damage, ability drain, fatigue, exhaustion, energy drain, or nonlethal damage.
+Trait: Immunity to any effect that requires a Fortitude save (unless the effect also works on objects, or is harmless).
+Trait: Not at risk of death from massive damage. Immediately destroyed when reduced to 0 hit points or less.
+Trait: A construct cannot be raised or resurrected.
+Trait: A construct is hard to destroy, and gains bonus hit points based on size, as shown on the following table. #C2x7# Construct Size#E Bonus Hit Points#E Tiny or Smaller#E —#E Small#E 10#E Medium#E 20#E Large#E 30#E Huge#E 40#E Gargantuan#E 60#E Colossal#E 80#E
+Trait: Proficient with its natural weapons only, unless generally humanoid in form, in which case proficient with any weapon mentioned in its entry.
+Trait: Proficient with no armor.
+Trait: Constructs do not breathe, eat, or sleep.
