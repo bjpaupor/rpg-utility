@@ -1,0 +1,128 @@
+Name : Demo
+Short description: Short description.
+Title Name : Demo
+CR: 1
+Type: Animal
+Terrain: Forest_jungle
+Climate: Temperate
+Gender: Male
+Race: demo
+Number of classes with levels in (First is Favored): 1
+Class: demo
+Levels in above Class: 1
+Alignment:N
+Size: Medium
+Number of subtypes:1
+Subtype: demo
+Init:1
+Number of senses (#I means to make italic, for spells):1
+Sense: demo
+Perception: 1
+Number of auras (#I means to make italic, for spells):1
+Aura: demo
+Number of AC modifiers:1
+Modifier:1
+Type of above Modifier: Dex
+Number of Conditional AC modifiers:1
+Modifier: 1
+Condition/Type: vs. demo
+HP:6
+HP breakdown:1d10+1
+Fast Healing:5
+Regeneration:10
+Number of Bypasses: 1
+Bypass: demo
+fort:1
+ref:1
+will:1
+Number of Conditional Save modifiers:1
+Modifier: 1
+Condition/Type: vs. demo
+Number of Defensive Abilities: 1
+Defensive Ability: demo
+DR: 5
+Bypass: demo
+Immunities : 1
+Immunity: demo
+Resistances: 1
+Type: demo
+Amount: 1
+SR: 10
+Num of Weaknesses: 1
+Weakness: demo
+Speed: 30
+Other Speeds(#B means base speed if reduced normally): 1
+Other Speed: demo 30 ft.
+Melee: demo +1 (1d4+1)
+Ranged: demo +1 (1d2+1)
+Space: 5
+Reach: 5
+Num of Special Attacks: 1
+Special Attack: demo
+Psychic Magic CL: 1
+Psychic Magic Concentration: 1
+Psychic Magic Spells: 1 PE—#Idemo (1 PE)
+SLA Sources: 1
+SLA Use Categories (1/day, etc.): 1
+SLA Source: Demo
+SLA CL: 1
+SLA Concentration: 1
+SLA Use Category and Spells: 1/day—#Idemo (DC 10)
+Spells Known Sources: 1
+Spells Known Levels: 1
+Spells Known Class: Demo
+Spells Known CL: 1
+Spells Known Concentration: 1
+Number of Bolded Sections: 1
+Bold Section: #HDemo demo
+Spells Known and Use Level: 0 (at will)—#Idemo (DC 10)
+Spells Prepared Sources: 1
+Spells Prepared Levels: 1
+Spells Prepared Class: Demo
+Spells Prepared CL: 1
+Spells Prepared Concentration: 1
+Number of Bolded Sections: 1
+Bold Section: #HDemo demo
+Spells Prepared at Level: 0 (at will)—#Idemo (DC 10)
+Before Combat: Before combat.
+During Combat: During combat.
+Morale: Morale.
+Base Statistics: Base statistics.
+Str:10
+Dex:10
+Con:10
+Int:10
+Wis:10
+Cha:10
+BAB:1
+CMB:1
+Num of Special CMBs:1
+Special CMB: +2 demo
+CMD:10
+Num of Special CMDs:1
+Special CMD : 11 vs. demo
+Num of Feats: 1
+Feat: Demo
+Num of Skills: 1
+Skill: Demo +1
+Num of Racial Mods: 1
+Racial Mod: +1 Demo
+Num of Lanugagues: 1
+Language: Demo
+Num of Special Languages: 1
+Special Language: demo
+Num of Special Qualities: 1
+SQ: demo
+Num of Combat Gear: 1
+Combat Gear: demo
+Num of Other Gear: 1
+Other Gear: demo
+Environment: any
+Organization: solitary, pair, or pack (3–6)
+Treasure: standard
+Num of Special Abilities:1
+Ability Name: Demo
+Ability Text: Ability text.
+Number of Sub-Descriptions: 1
+Sub-Description: Sub-description.
+Description : Description.

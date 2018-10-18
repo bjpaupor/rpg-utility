@@ -17,8 +17,15 @@ import org.apache.pdfbox.pdmodel.common.PDRectangle;
 import org.apache.pdfbox.pdmodel.font.PDFont;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
 import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject;
-
+/**
+ * A creature in the setting
+ * @author brandon
+ */
 public class Creature {
+	/**
+	 * The kind of creature
+	 * @author brandon
+	 */
 	public enum Type {
 		ABERRATION {
 			private String description;
@@ -1582,7 +1589,7 @@ public class Creature {
 				Tools.writeALine(file, "SLA Use Category and Spells: " + s);
 		}
 		//OPT <[cl, concentration], [use-spells], [className, special, special ...]>
-		Tools.writeALine(file, "Spells Known Levels: " + spellsKnown.length);
+		Tools.writeALine(file, "Spells Known Sources: " + spellsKnown.length);
 		for (int i = 0; i < spellsKnown.length; i++) {
 			Tools.writeALine(file, "Spells Known Levels: " + spellsKnown[i].getY().length);
 			Tools.writeALine(file, "Spells Known Class: " + spellsKnown[i].getZ()[0]);
@@ -1595,7 +1602,7 @@ public class Creature {
 				Tools.writeALine(file, "Spells Known and Use Level: " + s);
 		}
 		//OPT <[cl, concentration], [use-spells], [className, special, special ...]>
-		Tools.writeALine(file, "Spells Prepared Levels: " + spellsPrepared.length);
+		Tools.writeALine(file, "Spells Prepared Sources: " + spellsPrepared.length);
 		for (int i = 0; i < spellsPrepared.length; i++) {
 			Tools.writeALine(file, "Spells Prepared Levels: " + spellsPrepared[i].getY().length);
 			Tools.writeALine(file, "Spells Prepared Class: " + spellsPrepared[i].getZ()[0]);
@@ -2635,7 +2642,7 @@ public class Creature {
 	}
 	private void writeNPC() throws IOException {
 		if (!race.equals("")) {
-			String text = gender + race + " ";
+			String text = gender + " " + race + " ";
 			for (int i = 0; i < classes.length; i++) {
 				if (i > 0) 
 					text += "/";
@@ -2721,7 +2728,7 @@ public class Creature {
 		//	printSet("src/Assets/CreatureFiles/");
 		//for (String s : args)
 		//	printSet(s);
-		Creature boar = new Creature("src/Assets/CreatureFiles/AdventurePaths/RiseOfTheRunelords/BurntOfferings/Boar.creature");
+		Creature boar = new Creature("src/Assets/CreatureFiles/Demo.creature");
 		boar.printToPdf("/home/brandon/Documents/StatBloccs/");
 	//	for (Type c : Type.values())
 	//		System.out.println(c.getDescription());
