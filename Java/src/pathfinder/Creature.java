@@ -2723,5 +2723,7 @@ public class Creature {
 		//	printSet(s);
 		Creature boar = new Creature("src/Assets/CreatureFiles/AdventurePaths/RiseOfTheRunelords/BurntOfferings/Boar.creature");
 		boar.printToPdf("/home/brandon/Documents/StatBloccs/");
+	//	for (Type c : Type.values())
+	//		System.out.println(c.getDescription());
 	}
 }

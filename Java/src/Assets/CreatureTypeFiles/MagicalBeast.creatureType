@@ -1,0 +1,20 @@
+Description: Magical beasts are similar to animals but can have Intelligence scores higher than 2 (in which case the magical beast knows at least one language, but can’t necessarily speak). Magical beasts usually have supernatural or extraordinary abilities, but are sometimes merely bizarre in appearance or habits. A magical beast has the following features.
+Hit Die: d10
+BAB: fast
+Number of Good Saves: 2
+Good Save: Fort
+Good Save: Ref
+Skill Ranks Per HD: 2
+Number of Class Skills: 6
+Class Skill: Acrobatics
+Class Skill: Climb
+Class Skill: Fly
+Class Skill: Perception
+Class Skill: Stealth
+Class Skill: Swim
+Number of Traits: 5
+Trait: Darkvision 60 feet.
+Trait: Low-light vision.
+Trait: Proficient with its natural weapons only. 
+Trait: Proficient with no armor.
+Trait: Magical beasts breathe, eat, and sleep.

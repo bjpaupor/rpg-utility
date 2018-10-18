@@ -1,0 +1,15 @@
+Description: An ooze is an amorphous or mutable creature, usually mindless. An ooze has the following features.
+Hit Die: d8
+BAB: medium
+Number of Good Saves: 0
+Skill Ranks Per HD: 2
+Number of Class Skills: 0
+Number of Traits: 7
+Trait: Mindless: No Intelligence score, and immunity to all mind-affecting effects (charms, compulsions, phantasms, patterns, and morale effects). An ooze with an Intelligence score loses this trait.
+Trait: Blind (but have the blindsight special quality), with immunity to gaze attacks, visual effects, illusions, and other attack forms that rely on sight.
+Trait: Immunity to poison, sleep effects, paralysis, polymorph, and stunning.
+Trait: Some oozes have the ability to deal acid damage to objects.
+Trait: Not subject to critical hits or flanking. Does not take additional damage from precision-based attacks, such as sneak attack.
+Trait: Proficient with its natural weapons only.
+Trait: Proficient with no armor.
+Trait: Oozes eat and breathe, but do not sleep.

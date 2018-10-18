@@ -1,0 +1,16 @@
+Description: This type comprises vegetable creatures. Note that regular plants, such as one finds growing in gardens and fields, lack Wisdom and Charisma scores and are not creatures, but objects, even though they are alive. A plant creature has the following features.
+Hit Die: d8
+BAB: medium
+Number of Good Saves: 1
+Good Save: Fort
+Skill Ranks Per HD: 2
+Number of Class Skills: 2
+Class Skill: Perception
+Class Skill: Stealth
+Number of Traits: 6
+Trait: Low-light vision.
+Trait: Immunity to all mind-affecting effects (charms, compulsions, morale effects, patterns, and phantasms).
+Trait: Immunity to paralysis, poison, polymorph, sleep effects, and stunning.
+Trait: Proficient with its natural weapons only.
+Trait: Proficient with no armor.
+Trait: Oozes eat and breathe, but do not sleep.
