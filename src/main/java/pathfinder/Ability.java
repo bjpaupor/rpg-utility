@@ -1,7 +1,6 @@
 package pathfinder;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
+import org.bson.Document;
 
 /**
  * A Feature with a type - Extraordinary, Supernatural, Spell-Like Ability
@@ -13,31 +12,26 @@ public class Ability extends Feature {
 	}
 	
 	private Type type;
+	
+	/**
+	 * Given document must have a name, description, and type
+	 * @param d
+	 */
+	public Ability(Document d) {
+		super(d.getString("name"), d.getString("description"));
+		type = Type.valueOf(d.getString("type").toUpperCase());
+	}
 
 	public Ability(String name, String description, Type type) {
 		super(name, description);
 		this.type = type;
 	}
-	public Ability(String fileName) {
-		super(null, null);
-		if (!fileName.endsWith(".ability")) {
-			System.out.println("-> " + fileName + ": Incorrect file type, file must be .ability\n");
-			return;
-		}
-		else 
-			try (BufferedReader read = new BufferedReader(new FileReader(fileName))){
-				setName(Tools.readALine(read));
-				setDescription(Tools.readALine(read));
-				type = Type.valueOf(Tools.readALine(read).toUpperCase());
-			}
-			catch (Exception ex) {
-				System.out.println("->" + getName() + ": Failed to interpret ability file!");
-				ex.printStackTrace();
-				return;
-			}	
-	}
 	public Type getType() {
 		return type;
 	}
 
+	@Override
+	public String toString() {
+		return "Ability:" + getName() + ":" + getDescription() + ":" + type;
+	}
 }

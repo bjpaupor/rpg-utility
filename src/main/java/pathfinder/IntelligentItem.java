@@ -103,5 +103,4 @@ public class IntelligentItem extends Item implements MagicItem {
 	public MagicItem getBaseItem() {
 		return baseItem;
 	}
-
 }
