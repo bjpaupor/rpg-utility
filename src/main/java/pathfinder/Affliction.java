@@ -12,6 +12,10 @@ import org.bson.Document;
 public class Affliction {
 	public enum Type {
 		CONTACT, CURSE, DISEASE, INGESTED, INJURY, INHALED, SPELL, TRAP;
+		@Override
+		public String toString() {
+			return name();
+		}
 	}
 	
 	private String name;
@@ -89,9 +93,12 @@ public class Affliction {
 	}
 	@Override
 	public String toString() {
-		return "Affliction:" + getName() + ":" + getDescription() + 
-			":" + getTypes() + ":" + getSave() + ":" + getOnset() + ":" +
-			getFrequency() + ":" + getInitialEffect() + ":" + getEffect()
-			+ ":" + getCure();
+		String result = "Affliction:" + getName() + ":" + getDescription() + 
+			":";
+		for (Type t : getTypes())
+			result += t + ":";
+		result += getSave() + ":" + getOnset() + ":" + getFrequency() + ":" 
+			+ getInitialEffect() + ":" + getEffect() + ":" + getCure();
+		return result;
 	}
 }
