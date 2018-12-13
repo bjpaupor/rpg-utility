@@ -12,10 +12,6 @@ import org.bson.Document;
 public class Affliction {
 	public enum Type {
 		CONTACT, CURSE, DISEASE, INGESTED, INJURY, INHALED, SPELL, TRAP;
-		@Override
-		public String toString() {
-			return name();
-		}
 	}
 	
 	private String name;
