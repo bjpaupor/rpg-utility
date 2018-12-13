@@ -1,7 +1,8 @@
 package pathfinder;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
+import java.util.List;
+
+import org.bson.Document;
 
 /**
  * Persistent negative effect applied to a creature
@@ -22,7 +23,30 @@ public class Affliction {
 	private String initialEffect;
 	private String effect;
 	private String cure;
-	
+
+	/**
+	 * Given document must have a name
+	 * @param d
+	 */
+	@SuppressWarnings("unchecked")
+	public Affliction(Document d) {
+		this.name = d.getString("name");
+		this.description = d.getString("description");
+		try {
+			List<String> temp = (List<String>) d.get("types");
+			types = new Type[temp.size()];
+			for (int i = 0; i < types.length; i++) 
+				types[i] = Type.valueOf(temp.get(i));
+		} catch(ClassCastException e) {
+			types = null;
+		}
+		this.save = d.getString("save");
+		this.onset = d.getString("onset");
+		this.frequency = d.getString("frequency");
+		this.initialEffect =  d.getString("init_effect");
+		this.effect = d.getString("effect");
+		this.cure = d.getString("cure");
+	}
 	public Affliction(String name, String description, Type[] types, String save, String onset, String frequency,
 			String initialEffect, String effect, String cure) {
 		this.name = name;
@@ -35,31 +59,7 @@ public class Affliction {
 		this.effect = effect;
 		this.cure = cure;
 	}
-	public Affliction(String fileName) {
-		if (!fileName.endsWith(".affliction")) {
-			System.out.println("-> " + fileName + ": Incorrect file type, file must be .affliction\n");
-			return;
-		}
-		else 
-			try (BufferedReader read = new BufferedReader(new FileReader(fileName))){
-				name = Tools.readALine(read);
-				description = Tools.readALine(read);
-				types = new Type[Integer.parseInt(Tools.readALine(read))];
-				for (int i = 0; i < types.length; i++)
-					types[i] = Type.valueOf(Tools.readALine(read).toUpperCase());
-				save = Tools.readALine(read);
-				onset = Tools.readALine(read);
-				frequency = Tools.readALine(read);
-				initialEffect = Tools.readALine(read);
-				effect = Tools.readALine(read);
-				cure = Tools.readALine(read);
-			}
-			catch (Exception ex) {
-				System.out.println("->" + getName() + ": Failed to interpret affliction file!");
-				ex.printStackTrace();
-				return;
-			}	
-	}
+	
 	public String getName() {
 		return name;
 	}
@@ -87,5 +87,11 @@ public class Affliction {
 	public String getCure() {
 		return cure;
 	}
-
+	@Override
+	public String toString() {
+		return "Affliction:" + getName() + ":" + getDescription() + 
+			":" + getTypes() + ":" + getSave() + ":" + getOnset() + ":" +
+			getFrequency() + ":" + getInitialEffect() + ":" + getEffect()
+			+ ":" + getCure();
+	}
 }

@@ -9,14 +9,14 @@ import org.bson.Document;
  */
 public class AbilityTest {
     @Test
-    public void testAbility() {
+    public void test() {
         MongoCollection<Document> collection = Pfdb.getDB().getCollection("ability");
-		for (Document d : collection.find(new Document("name", "demo"))) {
+		for (Document d : collection.find(new Document("name", "Demo"))) {
             Ability demo = new Ability(d);
-            assertEquals("demo", demo.getName());
-            assertEquals("description", demo.getDescription());
+            assertEquals("Demo", demo.getName());
+            assertEquals("Description.", demo.getDescription());
             assertEquals(Ability.Type.EX, demo.getType());
+            System.out.println(demo);
         }
-			
     }
 }
