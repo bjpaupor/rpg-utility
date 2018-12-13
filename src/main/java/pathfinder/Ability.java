@@ -25,7 +25,6 @@ public class Ability extends Feature {
 		super(name, description);
 		this.type = type;
 	}
-
 	public Type getType() {
 		return type;
 	}

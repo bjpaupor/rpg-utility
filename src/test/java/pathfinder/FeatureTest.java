@@ -7,15 +7,14 @@ import org.bson.Document;
 /**
  * Tests Abilities
  */
-public class AbilityTest {
+public class FeatureTest {
     @Test
     public void test() {
-        MongoCollection<Document> collection = Pfdb.getDB().getCollection("ability");
+        MongoCollection<Document> collection = Pfdb.getDB().getCollection("feature");
 		for (Document d : collection.find(new Document("name", "Demo"))) {
-            Ability demo = new Ability(d);
+            Feature demo = new Feature(d);
             assertEquals("Demo", demo.getName());
             assertEquals("Description.", demo.getDescription());
-            assertEquals(Ability.Type.EX, demo.getType());
         }
     }
 }

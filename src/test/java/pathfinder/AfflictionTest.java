@@ -22,7 +22,6 @@ public class AfflictionTest {
             assertEquals("1 minute", demo.getOnset());
             assertEquals("1/round for 6 rounds", demo.getFrequency());
             assertEquals("1 Str drain", demo.getInitialEffect());
-            System.out.println(demo);
         }
     }
 }
