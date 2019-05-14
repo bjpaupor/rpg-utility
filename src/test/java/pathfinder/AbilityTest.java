@@ -8,14 +8,14 @@ import org.bson.Document;
  * Tests Abilities
  */
 public class AbilityTest {
-    @Test
-    public void test() {
-        MongoCollection<Document> collection = Pfdb.getDB().getCollection("ability");
-		for (Document d : collection.find(new Document("name", "Demo"))) {
-            Ability demo = new Ability(d);
-            assertEquals("Demo", demo.getName());
-            assertEquals("Description.", demo.getDescription());
-            assertEquals(Ability.Type.EX, demo.getType());
-        }
-    }
+    // @Test
+    // public void test() {
+    //     MongoCollection<Document> collection = Pfdb.getDB().getCollection("ability");
+	// 	for (Document d : collection.find(new Document("name", "Demo"))) {
+    //         Ability demo = new Ability(d);
+    //         assertEquals("Demo", demo.getName());
+    //         assertEquals("Description.", demo.getDescription());
+    //         assertEquals(Ability.Type.EX, demo.getType());
+    //     }
+    // }
 }

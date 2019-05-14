@@ -8,21 +8,21 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.stream.Stream;
 
-public class Race {
+public class Ancestry implements Describable {
 	private String name;
 	private String description; // role physicalDescription society relations alignmentAndReligion adventurers
 	private String[] maleNames;
 	private String[] femaleNames;
 	private Feature[] traits;
 	
-	public Race (String name, String description, String[] maleNames, String[] femaleNames, Feature[] traits) {
+	public Ancestry (String name, String description, String[] maleNames, String[] femaleNames, Feature[] traits) {
 		this.name = name;
 		this.description = description;
 		this.maleNames = maleNames;
 		this.femaleNames = femaleNames;
 		this.traits = traits;
 	}
-	public Race(String fileName) {
+	public Ancestry (String fileName) {
 		if (!fileName.endsWith(".race")) {
 			System.out.println("-> " + fileName + ": Incorrect file type, file must be .race\n");
 			return;
@@ -92,7 +92,7 @@ public class Race {
 		try (Stream<Path> paths = Files.walk(Paths.get(folderPath))) {
 			paths
 			.filter(Files::isRegularFile)
-			.forEach(s -> System.out.println(new Race(s.toString()).toString())); 
+			.forEach(s -> System.out.println(new Ancestry(s.toString()).toString())); 
 		} 
 	}
 	public static void main(String[] args) throws IOException {

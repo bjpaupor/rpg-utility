@@ -7,12 +7,10 @@ import java.io.FileReader;
  * @author brandon
  *
  */
-public class Community {
+public class Community extends Location {
 	public enum Type {
 		THORP, HAMLET, VILLAGE, SMALL_TOWN, LARGE_TOWN, SMALL_CITY, LARGE_CITY, METROPOLIS;
 	}
-	private String name;
-	private String description; //Laws, Walls, Guard, Paths, Locations, Lighting
 	private Type type;
 	private String baseValue; //in gp
 	private String minorItems;
@@ -21,8 +19,8 @@ public class Community {
 	
 	public Community(String name, String description, Type type, String baseValue, String minorItems,
 			String mediumItems, String majorItems) {
-		this.name = name;
-		this.description = description;
+		setName(name);
+		setDescription(description);
 		this.type = type;
 		this.baseValue = baseValue;
 		this.minorItems = minorItems;
@@ -36,8 +34,8 @@ public class Community {
 		}
 		else 
 			try (BufferedReader read = new BufferedReader(new FileReader(fileName))){
-				name = Tools.readALine(read);
-				description = Tools.readALine(read);
+				setName(Tools.readALine(read));
+				setDescription(Tools.readALine(read));
 				type = Type.valueOf(Tools.readALine(read).toUpperCase());
 				baseValue = Tools.readALine(read);
 				minorItems = Tools.readALine(read);
@@ -49,12 +47,6 @@ public class Community {
 				ex.printStackTrace();
 				return;
 			}	
-	}
-	public String getName() {
-		return name;
-	}
-	public String getDescription() {
-		return description;
 	}
 	public Type getType() {
 		return type;

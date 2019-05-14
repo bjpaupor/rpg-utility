@@ -23,7 +23,7 @@ import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject;
  */
 public class Creature {
 	/**
-	 * The kind of creature
+	 * The kind of creature ----MOVE TO ANCESTRY
 	 * @author brandon
 	 */
 	public enum Type {
