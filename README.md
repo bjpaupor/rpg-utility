@@ -1,12 +1,8 @@
 # rpg-utility
-This is a collection of tools for use in roleplaying games, currently with a focus on Pathfinder.
+- Planned to be a collection of tools for use in roleplaying games, currently with a focus on Pathfinder.
 
-What is currently being worked on:
-- Creature Sheets
- -- Easy to create
- -- Very customizable
-
-Creature Sheets
+# Creature Sheets
+- Describing an individual character or type of creature in a nice-looking way. Plans to make a GUI for building characters and converting, but currently being done by command line.
 
 Pictures can be added for Creatures' type, terrain, and climate.
 - Within CreaturePrint/src/ add folder structure Pictures/CreatureClimates
